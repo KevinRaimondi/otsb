@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -263,7 +263,7 @@
                         <ul class="company-social text-align-center">
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
 
@@ -272,7 +272,7 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.8s">
+          <div class="wow bounceInUp" data-wow-delay="0.6s">
             <div class="team boxed-grey">
               <div class="inner">
                 <h5>MegaKingBR</h5>
@@ -282,7 +282,7 @@
                         <ul class="company-social text-align-center">
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
 
@@ -325,13 +325,13 @@
 
             <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
             <div id="errormessage"></div>
-            <form id="contact-form" action="" method="post" role="form" class="contactForm">
+            <form id="contact-form" action="enviar.php" method="post" role="form" class="contactForm">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="name">
+                    <label for="nome">
                                 Nome</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
+                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
                     <div class="validation"></div>
                   </div>
                   <div class="form-group">
@@ -353,12 +353,12 @@
                   <div class="form-group">
                     <label for="name">
                                 Mensagem</label>
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
+                    <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
                     <div class="validation"></div>
                   </div>
                 </div>
                 <div class="col-md-12">
-                  <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                  <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
                             Enviar</button>
                 </div>
               </div>
