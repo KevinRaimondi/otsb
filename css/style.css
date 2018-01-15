@@ -59,6 +59,10 @@ a:focus {
     color: #176e61;
 }
 
+.text-align-center {
+    text-align: center  !important;
+}
+
 .light {
     font-weight: 400;
 }
