@@ -63,6 +63,14 @@ a:focus {
     text-align: center  !important;
 }
 
+.centralizar-divs{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .light {
     font-weight: 400;
 }
