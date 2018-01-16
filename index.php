@@ -1,3 +1,28 @@
+<?php
+
+session_start();
+
+$errStr='';
+if($_SESSION['errStr'])
+{
+  $errStr='</b>Falha no envio do E-Mail!</b>';
+    
+  unset($_SESSION['errStr']);
+}
+
+
+$success='';
+if($_SESSION['sent'])
+{
+  $success='</b>E-Mail enviado com sucesso!</b>';
+    
+  unset($_SESSION['sent']);
+}
+
+?>
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -363,6 +388,8 @@
                 </div>
               </div>
             </form>
+            <?=$errStr?> 
+           <?=$success?>
           </div>
         </div>
 

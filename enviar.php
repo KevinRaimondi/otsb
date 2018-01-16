@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 if (isset($_POST['enviar'])) {
   
   //Variaveis de POST, Alterar somente se necessário 
@@ -36,10 +39,12 @@ if (isset($_POST['enviar'])) {
   //Enviando o email 
   //==================================================== 
   if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
-          echo "</b>E-Mail enviado com sucesso!</b>"; 
-          } 
-      else{ 
-          echo "</b>Falha no envio do E-Mail!</b>"; } 
+      $_SESSION['sent']=1; 
+  } else{ 
+      $_SESSION['errStr']=1
+  } 
+
+  header('Location: /index.php#contact');
   //====================================================
 } 
 ?>
