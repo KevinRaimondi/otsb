@@ -2,19 +2,19 @@
 
 session_start();
 
-$errStr='';
+$success='';
 if(isset($_SESSION["errStr"]))
 {
-  $errStr='</b>Falha no envio do E-Mail!</b>';
+  $success='</b>Falha no envio do E-mail!</b>';
     
   unset($_SESSION['errStr']);
 }
 
 
-$success='';
+
 if(isset($_SESSION["sent"]))
 {
-  $success='</b>E-Mail enviado com sucesso!</b>';
+  $success='</b>E-mail enviado com sucesso!</b>';
     
   unset($_SESSION['sent']);
 }
@@ -381,13 +381,12 @@ if(isset($_SESSION["sent"]))
                   </div>
                 </div>
                 <div class="col-md-12">
+                 <?=$success?>
                   <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
                             Enviar</button>
                 </div>
               </div>
-            </form>
-            <?=$errStr?> 
-           <?=$success?>
+            </form> 
           </div>
         </div>
 
