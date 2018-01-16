@@ -183,7 +183,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.3s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/warframe_logo.png" alt="" />
@@ -196,7 +196,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.3s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/ark_logo.png" alt="" />
@@ -208,7 +208,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.3s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/rust_logo.png" alt="" />
@@ -220,7 +220,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.3s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/dayz_logo.png" alt="" />
@@ -232,7 +232,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.4s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/bp_logo.png" alt="" />
@@ -244,7 +244,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.4s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/rainbow_six_siege_logo.png" alt="" />
@@ -256,7 +256,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.4s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/cs-go-logo-.png" alt="" />
@@ -269,7 +269,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
+          <div class="wow fadeInDown" data-wow-delay="0.4s">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
