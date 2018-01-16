@@ -450,7 +450,6 @@ if(isset($_SESSION["sent"]))
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
 				</address>
-
           </div>
         </div>
       </div>
