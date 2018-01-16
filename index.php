@@ -428,21 +428,21 @@ if(isset($_SESSION["sent"]))
 
         <div class="col-lg-4">
           <div class="widget-contact">
-            <h5>Main Office</h5>
+            <h5>ESCRITÓRIO PRINCIPAL</h5>
 
             <address>
 				  <strong>Squas Design, Inc.</strong><br>
 				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
 				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
+				  <abbr title="Phone">Telefone:</abbr> (123) 456-7890
 				</address>
 
             <address>
 				  <strong>Email</strong><br>
-				  <a href="mailto:#">email.name@example.com</a>
+				  <a href="mailto:#">contato@kraimondi.tech</a>
 				</address>
             <address>
-				  <strong>We're on social networks</strong><br>
+				  <strong>Estamos nas redes sociais</strong><br>
                        	<ul class="company-social">
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
