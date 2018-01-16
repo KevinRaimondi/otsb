@@ -199,6 +199,42 @@ if(isset($_SESSION["sent"]))
           <div class="wow fadeInDown" data-wow-delay="0.2s">
             <div class="service-box">
               <div class="service-icon">
+                <img src="img/icons/ark_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>ARK Survival Evolved</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/rust_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>Rust</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/dayz_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>Dayz</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
                 <img src="img/icons/bp_logo.png" alt="" />
               </div>
               <div class="service-desc">
