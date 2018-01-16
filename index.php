@@ -63,7 +63,7 @@ if(isset($_SESSION["sent"]))
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-        <a class="navbar-brand slogan" href="index.html">
+        <a class="navbar-brand slogan" href="/">
           <h1>OTSB</h1>
         </a>
       </div>
