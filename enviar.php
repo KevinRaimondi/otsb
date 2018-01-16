@@ -41,7 +41,7 @@ if (isset($_POST['enviar'])) {
   if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
       $_SESSION['sent']=1; 
   } else{ 
-      $_SESSION['errStr']=1
+      $_SESSION['errStr']=1;
   } 
 
   header('Location: /index.php#contact');
