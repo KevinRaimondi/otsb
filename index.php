@@ -3,7 +3,7 @@
 session_start();
 
 $errStr='';
-if(isset($_SESSION["errStr"])
+if(isset($_SESSION["errStr"]))
 {
   $errStr='</b>Falha no envio do E-Mail!</b>';
     
@@ -12,14 +12,12 @@ if(isset($_SESSION["errStr"])
 
 
 $success='';
-if(isset($_SESSION["sent"])
+if(isset($_SESSION["sent"]))
 {
   $success='</b>E-Mail enviado com sucesso!</b>';
     
   unset($_SESSION['sent']);
 }
-
-?>
 
 ?>
 
