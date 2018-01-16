@@ -23,9 +23,9 @@ if (isset($_POST['enviar'])) {
   
   //Monta o Corpo da Mensagem
   //====================================================
-  $email_conteudo = "Nome = $nome \n"; 
-  $email_conteudo .= "Email = $email \n";
-  $email_conteudo .= "Mensagem = $mensagem \n"; 
+  $email_conteudo = "Nome: $nome \n"; 
+  $email_conteudo .= "Email: $email \n\n";
+  $email_conteudo .= "$mensagem \n"; 
   //====================================================
   
   //Seta os Headers (Alterar somente caso necessario) 
