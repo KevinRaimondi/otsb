@@ -74,7 +74,8 @@ if(isset($_SESSION["sent"]))
           <li class="active"><a href="#intro">Home</a></li>
           <li><a href="#jogos">Jogos</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contact">Aliste-se Já</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -362,7 +363,7 @@ if(isset($_SESSION["sent"]))
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow bounceInDown" data-wow-delay="0.4s">
               <div class="section-heading">
-                <h2>Aliste-se Já</h2>
+                <h2>Contato</h2>
                 <i class="fa fa-2x fa-angle-down"></i>
 
               </div>
