@@ -324,7 +324,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
                         </ul>
 
               </div>
@@ -343,7 +343,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
                         </ul>
 
               </div>
@@ -450,7 +450,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
                         </ul>
 				</address>
           </div>
