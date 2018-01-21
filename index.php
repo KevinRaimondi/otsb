@@ -433,12 +433,13 @@ if(isset($_SESSION["sent"]))
 		  
             <address>
 				<strong>Servidor TS3</strong><br>
-				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a>
+				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
+
 			</address>
 
         <address>
 				  <strong>Email</strong><br>
-				 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px"></i><a href="mailto:#">contato@kraimondi.tech</a>
+				 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
 				</address>
             <address>
 				  <strong>Estamos nas redes sociais</strong><br>
