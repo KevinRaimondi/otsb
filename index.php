@@ -340,7 +340,7 @@ if(isset($_SESSION["sent"]))
                 <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
 
                         <ul class="company-social text-align-center">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
