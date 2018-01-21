@@ -39,6 +39,7 @@ if(isset($_SESSION["sent"]))
 
   <!-- Fonts -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
 
   <link href="css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
