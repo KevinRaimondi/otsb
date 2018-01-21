@@ -343,7 +343,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
+                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
                         </ul>
 
               </div>
@@ -419,7 +419,7 @@ if(isset($_SESSION["sent"]))
                 </div>
                 <div class="col-md-12">
                  <?=$success?>
-                  <button type="submit" name="enviar" class="btn btn-default" id="btnContactUs">
+                  <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
                             Enviar</button>
                 </div>
               </div>
