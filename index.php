@@ -429,12 +429,16 @@ if(isset($_SESSION["sent"]))
 
         <div class="col-lg-4">
           <div class="widget-contact">
-            <h5>ESCRITÓRIO PRINCIPAL</h5>
-
+		  
             <address>
-				  <strong>Servidor TS3</strong><br>
-				  <a href="ts3server://177.93.106.87?port=3016">IP: 177.93.106.87:3016</a>
-				</address>
+				<strong>Servidor TS3</strong><br>
+				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a>
+			</address>
+				
+			<address>
+				<strong>Grupo Steam OTSB</strong><br>
+				<a href="http://steamcommunity.com/groups/OTSB_Oficial">http://steamcommunity.com/groups/OTSB_Oficial</a>
+			</address>
 
             <address>
 				  <strong>Email</strong><br>
