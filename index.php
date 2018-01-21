@@ -36,7 +36,7 @@ if(isset($_SESSION["sent"]))
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <!-- Fonts -->
-  <link href="font-awesome/css/fontawesome.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
@@ -419,7 +419,7 @@ if(isset($_SESSION["sent"]))
                 </div>
                 <div class="col-md-12">
                  <?=$success?>
-                  <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
+                  <button type="submit" name="enviar" class="btn btn-default" id="btnContactUs">
                             Enviar</button>
                 </div>
               </div>
