@@ -36,7 +36,8 @@ if(isset($_SESSION["sent"]))
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <!-- Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
   <link href="css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
