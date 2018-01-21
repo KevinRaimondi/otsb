@@ -429,14 +429,14 @@ if(isset($_SESSION["sent"]))
 
         <div class="col-lg-4">
           <div class="widget-contact">
-            <h5>ESCRITÓRIO PRINCIPAL</h5>
+ <!--           <h5>ESCRITÓRIO PRINCIPAL</h5>
 
             <address>
 				  <strong>Squas Design, Inc.</strong><br>
 				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
 				  San Francisco, CA 94107<br>
 				  <abbr title="Phone">Telefone:</abbr> (123) 456-7890
-				</address>
+				</address-->
 
             <address>
 				  <strong>Email</strong><br>
