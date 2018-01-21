@@ -33,14 +33,11 @@ if(isset($_SESSION["sent"]))
   <title>OTSB - Operation Tactics Snow Black</title>
 
   <!-- Bootstrap Core CSS -->
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="font-awesome/css/fontawesome-all.css">
 
+  <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
   <link href="css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
