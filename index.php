@@ -438,7 +438,7 @@ if(isset($_SESSION["sent"]))
 
         <address>
 				  <strong>Email</strong><br>
-				 <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:#">contato@kraimondi.tech</a>
+				 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 10px"></i><a href="mailto:#">contato@kraimondi.tech</a>
 				</address>
             <address>
 				  <strong>Estamos nas redes sociais</strong><br>
