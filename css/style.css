@@ -555,6 +555,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 .company-social .social-dribble a{background: #d74980;}
 .company-social .social-deviantart a{background: #8da356;}
 .company-social .social-google a{background: #000;}
+.company-social .social-steam a{background: #000;}
 .company-social .social-vimeo a{background: #51a6d3;}
 .company-social .social-youtube a{background: #e90d0d;}
 .company-social .social-facebook a:hover{background: #4893ce;}
@@ -562,6 +563,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 .company-social .social-dribble a:hover{background: #f769a0;}
 .company-social .social-deviantart a:hover{background: #adc376;}
 .company-social .social-google a:hover{background: #333;}
+.company-social .social-steam a:hover{background: #333;}
 .company-social .social-vimeo a:hover{background: #71c6f3;}
 .company-social .social-youtube a:hover{background: #e90d0d99;}
 

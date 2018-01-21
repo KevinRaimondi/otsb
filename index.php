@@ -325,7 +325,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
+                            <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
                         </ul>
 
               </div>
@@ -344,7 +344,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
+                            <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
                         </ul>
 
               </div>
@@ -435,13 +435,8 @@ if(isset($_SESSION["sent"]))
 				<strong>Servidor TS3</strong><br>
 				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a>
 			</address>
-				
-			<address>
-				<strong>Grupo Steam OTSB</strong><br>
-				<a href="http://steamcommunity.com/groups/OTSB_Oficial">http://steamcommunity.com/groups/OTSB_Oficial</a>
-			</address>
 
-            <address>
+        <address>
 				  <strong>Email</strong><br>
 				  <a href="mailto:#">contato@kraimondi.tech</a>
 				</address>
@@ -451,7 +446,7 @@ if(isset($_SESSION["sent"]))
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-google"><a href="#" target="_blank"><i class="fa fa-steam"></i></a></li>
+                            <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
                         </ul>
 				</address>
           </div>
