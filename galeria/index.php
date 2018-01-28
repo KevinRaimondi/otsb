@@ -35,7 +35,7 @@
   <div id="preloader">
     <div id="load"></div>
   </div>
-
+<section >
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header page-scroll">
@@ -71,6 +71,7 @@
     <!-- /.container -->
   </nav>
 
+</section>
   <!-- Section: intro -->
   <section id="galeria">
 
