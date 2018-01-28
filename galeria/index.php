@@ -32,7 +32,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
- <section>
+ <section class="nav-section">
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header page-scroll">
