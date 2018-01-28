@@ -1,26 +1,3 @@
-<?php
-
-session_start();
-
-$success='';
-if(isset($_SESSION["errStr"]))
-{
-  $success='</b>Falha no envio do E-mail!</b>';
-    
-  unset($_SESSION['errStr']);
-}
-
-
-
-if(isset($_SESSION["sent"]))
-{
-  $success='</b>E-mail enviado com sucesso!</b>';
-    
-  unset($_SESSION['sent']);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,15 +10,15 @@ if(isset($_SESSION["sent"]))
   <title>OTSB - Operation Tactics Snow Black</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   <!-- Fonts -->
 
   <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
-  <link href="css/animate.css" rel="stylesheet" />
+  <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="color/default.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../color/default.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Squadfree
@@ -72,10 +49,10 @@ if(isset($_SESSION["sent"]))
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#jogos">Jogos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/#jogos">Jogos</a></li>
+          <li><a href="/#sobre">Sobre</a></li>
+          <li><a href="/#contact">Contato</a></li>
           <li><a href="/galeria#galeria">Galeria</a></li>
           <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
