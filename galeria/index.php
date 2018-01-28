@@ -32,6 +32,11 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load"></div>
+  </div>
+  
  <section id="galeria" class="nav-section">
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
@@ -147,7 +152,7 @@
   <!-- Core JavaScript Files -->
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/wow.min.js"></script>
-  
+
   <!-- Custom Theme JavaScript -->
   <script src="js/custom.js"></script>
 
