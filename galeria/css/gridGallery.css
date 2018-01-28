@@ -4,8 +4,15 @@ body{
 }
 
 .logo{
-  background: url(../../img/logo.jpg) no-repeat center #ccc;
+  background: url(../../img/logo.jpg) no-repeat content-box fixed center #ccc;
   background-size: cover;
+}
+
+.galeria-section {
+    padding-top: 110px;
+    display:block;
+    position:relative;
+    z-index:120;
 }
 
 img {
