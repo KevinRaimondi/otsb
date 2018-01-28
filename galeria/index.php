@@ -145,9 +145,11 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/wow.min.js"></script>
+  
+  <!-- Custom Theme JavaScript -->
+  <script src="js/custom.js"></script>
 
 </body>
 
