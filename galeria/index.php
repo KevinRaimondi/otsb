@@ -32,7 +32,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
- <section class="nav-section">
+ <section id="galeria" class="nav-section">
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header page-scroll">
@@ -70,9 +70,7 @@
 
 </section>
   <!-- Section: intro -->
- <section>
-
-  <section id="galeria" class="logo galeria-section">
+  <section class="logo galeria-section">
 
     <div id="grid" data-directory="gallery"></div>
 
@@ -145,8 +143,6 @@
       </div>
     </div>
   </footer>
-
-  </section>
 
   <!-- Core JavaScript Files -->
   
