@@ -10,7 +10,6 @@
   <title>OTSB - Operation Tactics Snow Black</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
    <link rel="stylesheet" href="css/gridGallery.css" />
 
   <!-- Fonts -->
@@ -31,10 +30,6 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="load"></div>
-  </div>
 <section >
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
@@ -54,7 +49,7 @@
           <li><a href="/#jogos">Jogos</a></li>
           <li><a href="/#sobre">Sobre</a></li>
           <li><a href="/#contact">Contato</a></li>
-          <li><a href="/galeria#galeria">Galeria</a></li>
+          <li><a href="/galeria">Galeria</a></li>
           <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -148,10 +143,7 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  
-  <script src="../js/bootstrap.min.js"></script>
   <script src="../js/wow.min.js"></script>
-
 </body>
 
 </html>
