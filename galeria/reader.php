@@ -108,7 +108,7 @@
   $imagesInRoot = getImagesList($directory);
 
   //ADD THE IMAGES IN ROOT
-  $output['TODOS'] = fixArray($imagesInRoot, $directory);
+  $output['Todos'] = fixArray($imagesInRoot, $directory);
 
   //GET THE IMAGES OF EACH CATEGORY
   foreach ($folders as $key => $value) {
