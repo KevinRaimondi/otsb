@@ -32,7 +32,6 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-<section >
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header page-scroll">
@@ -68,9 +67,8 @@
     <!-- /.container -->
   </nav>
 
-</section>
   <!-- Section: intro -->
-  <section id="galeria" class="intro">
+  <section id="galeria" class="intro home-section">
 
     <div id="grid" data-directory="gallery"></div>
 
