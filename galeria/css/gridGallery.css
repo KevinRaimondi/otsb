@@ -4,7 +4,8 @@ body{
 }
 
 .logo{
-  background: url(../img/logo.jpg) no-repeat top center;
+  background: url(../../img/logo.jpg) no-repeat top center #ccc;
+  background-size: cover;
 }
 
 img {
