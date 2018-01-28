@@ -3,6 +3,10 @@ body{
   overflow-y: scroll; /* This is optional, but you need it for a full width gallery */
 }
 
+.logo{
+  background: url(../img/logo.jpg) no-repeat top center;
+}
+
 img {
   width: auto\9;
   height: auto;
