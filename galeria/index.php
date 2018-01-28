@@ -68,7 +68,7 @@
   </nav>
 
   <!-- Section: intro -->
-  <section id="galeria" class="intro home-section">
+  <section id="galeria" class="home-section">
 
     <div id="grid" data-directory="gallery"></div>
 
