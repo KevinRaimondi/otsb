@@ -8,6 +8,13 @@ body{
   background-size: cover;
 }
 
+.nav-section {
+    padding-bottom: 6%;
+    display:block;
+    z-index:120;
+    background: url("img/nav-bar.jpg") no-repeat top center #ccc;
+}
+
 .galeria-section {
     padding-top: 110px;
     padding-bottom: 1px;
