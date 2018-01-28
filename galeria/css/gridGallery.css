@@ -16,11 +16,11 @@ body{
 }
 
 .galeria-section {
-    padding-top: 110px;
     padding-bottom: 1px;
     display:block;
     position:relative;
     z-index:120;
+    height: 100%;
 }
 
 img {
