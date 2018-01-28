@@ -1428,7 +1428,7 @@
                     div2.append($img.css('margin-top', -$lbnav.outerHeight()).hide().scale(scale));
 
                     $img.fadeIn(fade).animate({
-                        scale: '2'
+                        scale: '1'
                     },  {duration : ops.lightBoxSpeedFx , complete: function(){ finish(); } });
 
                     fixImage();
