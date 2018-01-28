@@ -30,6 +30,10 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load"></div>
+  </div>
 <section >
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
@@ -68,7 +72,7 @@
 
 </section>
   <!-- Section: intro -->
-  <section id="galeria">
+  <section id="galeria" class="intro">
 
     <div id="grid" data-directory="gallery"></div>
 
@@ -143,7 +147,9 @@
   </footer>
 
   <!-- Core JavaScript Files -->
+  <script src="../js/bootstrap.min.js"></script>
   <script src="../js/wow.min.js"></script>
+
 </body>
 
 </html>
