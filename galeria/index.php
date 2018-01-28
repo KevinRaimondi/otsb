@@ -31,10 +31,7 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="load"></div>
-  </div>
+
 <section >
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
