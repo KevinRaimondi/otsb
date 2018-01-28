@@ -11,6 +11,7 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="css/gridGallery.css" />
 
   <!-- Fonts -->
 
@@ -71,370 +72,53 @@
   </nav>
 
   <!-- Section: intro -->
-  <section id="intro" class="intro">
+  <section id="galeria">
 
-    <div class="slogan">
-      <h2>BEM-VINDOS</h2>
-      <h4>OPERATION TACTICS SNOW BLACK</h4>
-    </div>
-    <div class="page-scroll">
-      <a href="#jogos" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-    </div>
+    <div id="grid" data-directory="gallery"></div>
+
+    <!-- SCRIPTS FOR FOR THE PLUGIN-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/rotate-patch.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/autoGrid.min.js"></script>
+
+    <script>
+      $(function(){
+            //INITIALIZE THE PLUGIN
+            $('#grid').grid({
+                categoriesOrder: 'byName', //byDate, byDateReverse, byName, byNameReverse, random
+                imagesOrder: 'byDate', //byDate, byDateReverse, byName, byNameReverse, random
+                isFitWidth: true, //Nedded to be true if you wish to center the gallery to its container
+                lazyLoad: true, //If you wish to load more images when it reach the bottom of the page
+                showNavBar: true, //Show the navigation bar?
+                smartNavBar: true, //Hide the navigation bar when you don't have categories or just 1
+                imagesToLoadStart: 15, //The number of images to load when it first loads the grid
+                imagesToLoad: 5, //The number of images to load when you click the load more button
+                aleatoryImagesFromCategories: true,//Get few images from each category if not it will get them in order
+                horizontalSpaceBetweenThumbnails: 15, //The space between images horizontally
+                verticalSpaceBetweenThumbnails: 15, //The space between images vertically
+                columnWidth: 'auto', //The width of each columns, if you set it to 'auto' it will use the columns instead
+                columns: 5, //The number of columns when you set columnWidth to 'auto'
+                columnMinWidth: 220, //The minimum width of each columns when you set columnWidth to 'auto'
+                isAnimated: true, //Animation when resizing or filtering with the nav bar
+                caption: true, //Show the caption in mouse over
+                captionCategory: true,//Show the category section of the caption
+                captionType: 'grid', // 'grid', 'grid-fade', 'classic' the type of caption effect
+                lightBox: true, //Do you want the lightbox?
+                lightboxKeyboardNav: true, //Keyboard navigation of the next and prev image
+                lightBoxSpeedFx: 500, //The speed of the lightbox effects
+                lightBoxZoomAnim: true, //Do you want the zoom effect of the images in the lightbox?
+                lightBoxText: true, //If you wish to show the text in the lightbox
+                lightboxPlayBtn: true, //Show the play button?
+                lightBoxAutoPlay: false, //The first time you open the lightbox it start playing the images
+                lightBoxPlayInterval: 4000, //The interval in the auto play mode 
+                lightBoxShowTimer: true, //If you wish to show the timer in auto play mode
+                lightBoxStopPlayOnClose: false, //Stop the auto play mode when you close the lightbox?
+            });
+      });
+    </script>
+
   </section>
-  <!-- /Section: intro -->
-
-    <!-- Section: jogos -->
-  <section id="jogos" class="home-section text-center">
-
-    <div class="heading-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>PRINCIPAIS JOGOS</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/titanfall2_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>TITANFALL 2</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/battlefield_1_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>BATTLEFIELD 1</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/battlefield_4_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>BATTLEFIELD 4</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/gtav_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>GRAND THEFT AUTO V</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/warframe_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>WARFRAME</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/ark_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>ARK Survival Evolved</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/rust_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Rust</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/dayz_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Dayz</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/bp_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Playerunknown's Battlegrounds</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/rainbow_six_siege_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Tom Clancy's Rainbow Six Siege</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/cs-go-logo-.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>COUNTER STRIKE GLOBAL OFFENSIVE</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/creativerse_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>CREATIVERSE</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Section: jogos -->
-
-  <!-- Section: sobre -->
-  <section id="sobre" class="home-section text-center bg-gray">
-    <div class="heading-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Fundadores</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row centralizar-divs">
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.5s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>KLRaimondi</h5>
-                <p class="subtitle">Kevin Raimondi</p>
-                <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                        <ul class="company-social text-align-center">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
-                        </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.6s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>MegaKingBR</h5>
-                <p class="subtitle">Fábio Lucena Ribas</p>
-                <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                        <ul class="company-social text-align-center">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
-                        </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Section: sobre -->
-
-  <!-- Section: contact -->
-  <section id="contact" class="home-section text-center">
-    <div class="heading-contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Contato</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="boxed-grey">
-
-            <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
-            <div id="errormessage"></div>
-            <form id="contact-form" action="enviar.php" method="post" >
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="nome">
-                                Nome</label>
-                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">
-                                E-mail</label>
-                    <div class="form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" />
-                      <div class="validation"></div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="subject">
-                                Assunto</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">
-                                Mensagem</label>
-                    <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                 <?=$success?>
-                  <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
-                            Enviar</button>
-                </div>
-              </div>
-            </form> 
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="widget-contact">
-		  
-            <address>
-				<strong>Servidor TS3</strong><br>
-				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
-
-			</address>
-
-        <address>
-				  <strong>Email</strong><br>
-				 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
-				</address>
-            <address>
-				  <strong>Estamos nas redes sociais</strong><br>
-                       	<ul class="company-social">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
-                        </ul>
-				</address>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- /Section: contact -->
 
   <footer>
     <div class="container">
@@ -463,14 +147,14 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.scrollTo.js"></script>
-  <script src="js/wow.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/jquery.scrollTo.js"></script>
+  <script src="../js/wow.min.js"></script>
   <!-- Custom Theme JavaScript -->
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../contactform/contactform.js"></script>
 
 </body>
 
