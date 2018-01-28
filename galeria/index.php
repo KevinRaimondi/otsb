@@ -10,6 +10,7 @@
   <title>OTSB - Operation Tactics Snow Black</title>
 
   <!-- Bootstrap Core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
    <link rel="stylesheet" href="css/gridGallery.css" />
 
   <!-- Fonts -->
@@ -147,6 +148,7 @@
   </footer>
 
   <!-- Core JavaScript Files -->
+  
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/wow.min.js"></script>
 
