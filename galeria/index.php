@@ -74,7 +74,7 @@
   <!-- Section: intro -->
   <section id="galeria">
 
-    <div id="grid" data-directory="gallery"></div>
+    <div id="grid" data-directory="../galeria/gallery"></div>
 
     <!-- SCRIPTS FOR FOR THE PLUGIN-->
     <script src="js/jquery-1.9.1.min.js"></script>
