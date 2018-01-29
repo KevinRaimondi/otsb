@@ -12,7 +12,8 @@ body{
     padding-bottom: 6%;
     display:block;
     z-index:120;
-    background: url("img/nav-bar.jpg") no-repeat top center #ccc;
+    background: url("../img/nav-bar.jpg") no-repeat top left #ccc;
+    width: 100%;
 }
 
 .galeria-section {
