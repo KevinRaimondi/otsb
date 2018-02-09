@@ -3,20 +3,20 @@
 session_start();
 
 $success='';
-if(isset($_SESSION["errStr"]))
+if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 2)
 {
   $success='</b>Falha no envio do E-mail!</b>';
 
-  unset($_SESSION['errStr']);
+  unset($_SESSION['resultado']);
 }
 
 
 
-if(isset($_SESSION["sent"]))
+if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 1)
 {
   $success='</b>E-mail enviado com sucesso!</b>';
 
-  unset($_SESSION['sent']);
+  unset($_SESSION['resultado']);
 }
 
 ?>
@@ -485,7 +485,7 @@ if(isset($_SESSION["sent"]))
               </div>
               <div class="col-md-12">
                <?=$success?>
-               <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
+               <button type="submit" name="enviar" class="btn btn-default" id="btnContactUs">
                Enviar</button>
              </div>
            </div>

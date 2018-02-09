@@ -39,9 +39,9 @@ if (isset($_POST['enviar'])) {
   //Enviando o email 
   //==================================================== 
   if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
-      $_SESSION['sent']=1; 
+      $_SESSION['resultado']=1; 
   } else{ 
-      $_SESSION['errStr']=1;
+      $_SESSION['resultado']=2;
   } 
 
   header('Location: /index.php#contact');
