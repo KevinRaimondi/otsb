@@ -38,15 +38,11 @@ if (isset($_POST['enviar'])) {
   
   //Enviando o email 
   //==================================================== 
-  if (!$nome == "" || !$email == "" || !$assunto == "" || !$mensagem == ""){
-    if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
-      $_SESSION['cmsg']=1; 
-    } else{ 
-      $_SESSION['cmsg']=2;
-    } 
-  }else{
-    $_SESSION['cmsg']=3; 
-  }
+  if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
+    $_SESSION['cmsg']=1; 
+  } else{ 
+    $_SESSION['cmsg']=2;
+  } 
   
   header('Location: /index.php#contact');
   //====================================================

@@ -17,11 +17,6 @@ if(isset($_SESSION['cmsg'])){
     $msg='</b>Falha no envio do E-mail!</b>';
     unsetMsg();
     break;
-
-    case 3:
-    $msg='</b>Campos obrigatorios não foram preenchidos!</b>';
-    unsetMsg();
-    break;
   }
 
   }
@@ -468,21 +463,21 @@ if(isset($_SESSION['cmsg'])){
                 <div class="form-group">
                   <label for="nome">
                   Nome</label>
-                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
+                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" required="" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
                   <label for="email">
                   E-mail</label>
                   <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" required=""/>
                     <div class="validation"></div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="subject">
                   Assunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" />
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" required=""/>
                   <div class="validation"></div>
                 </div>
               </div>
@@ -490,7 +485,7 @@ if(isset($_SESSION['cmsg'])){
                 <div class="form-group">
                   <label for="name">
                   Mensagem</label>
-                  <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
+                  <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem" required=""></textarea>
                   <div class="validation"></div>
                 </div>
               </div>
