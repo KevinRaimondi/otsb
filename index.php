@@ -2,46 +2,56 @@
 
 session_start();
 
-$success='';
-if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 2)
-{
-  $success='</b>Falha no envio do E-mail!</b>';
+$msg='';
 
-  unset($_SESSION['resultado']);
-}
+if(isset($_SESSION['cmsg'])){
+  $cmsg = $_SESSION['cmsg'];
 
+  switch($cmsg){
+    case 1:
+    $msg='</b>E-mail enviado com sucesso!</b>';
+    unsetMsg();
+    break;
 
+    case 2:
+    $msg='</b>Falha no envio do E-mail!</b>';
+    unsetMsg();
+    break;
 
-if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 1)
-{
-  $success='</b>E-mail enviado com sucesso!</b>';
+    case 3:
+    $msg='</b>Campos obrigatorios não foram preenchidos!</b>';
+    unsetMsg();
+    break;
 
-  unset($_SESSION['resultado']);
-}
+  }
 
-?>
+  function unsetMsg() {
+    unset($_SESSION['cmsg']);
+  }
 
-<!DOCTYPE html>
-<html lang="pt-br">
+  ?>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <!DOCTYPE html>
+  <html lang="pt-br">
 
-  <title>OTSB - Operation Tactics Snow Black</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>OTSB - Operation Tactics Snow Black</title>
 
-  <!-- Fonts -->
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-  <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
-  <link href="css/animate.css" rel="stylesheet" />
-  <!-- Squad theme CSS -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="color/default.css" rel="stylesheet">
+    <!-- Fonts -->
+
+    <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Squadfree
@@ -484,7 +494,7 @@ if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 1)
                 </div>
               </div>
               <div class="col-md-12">
-               <?=$success?>
+               <?=$msg?>
                <button type="submit" name="enviar" class="btn btn-default pull-right" id="btnContactUs">
                Enviar</button>
              </div>

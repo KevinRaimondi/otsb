@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_POST['enviar'])) {
-  
+
   //Variaveis de POST, Alterar somente se necessário 
   //====================================================
   $nome = $_POST['nome'];
@@ -33,15 +33,20 @@ if (isset($_POST['enviar'])) {
   
   //Seta os Headers (Alterar somente caso necessario) 
   //==================================================== 
-  $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+
+  if (!$nome == "" || !$email == "" || !$mensagem == ""){
+    $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+  }else{
+    $_SESSION['msg']=3; 
+  }
   //====================================================
   
   //Enviando o email 
   //==================================================== 
   if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
-      $_SESSION['resultado']=1; 
+    $_SESSION['msg']=1; 
   } else{ 
-      $_SESSION['resultado']=2;
+    $_SESSION['msg']=2;
   } 
 
   header('Location: /index.php#contact');
