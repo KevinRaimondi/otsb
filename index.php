@@ -109,8 +109,8 @@ if(isset($_SESSION["sent"]))
   <!-- /Section: intro -->
 
   <!-- Section: jogos -->
-  <section id="jogos">
-    <div class="home-section text-center">
+  <section id="jogos" class="home-section">
+    <div class="text-center">
       <div class="heading-about">
         <div class="container">
           <div class="row">
@@ -288,11 +288,11 @@ if(isset($_SESSION["sent"]))
       </div>
     </div>
 
-    <div id="moreGames" class="home-section text-center">
+    <div id="moreGames" class="text-center">
       <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
     </div>
 
-    <div id="moreGames" class="home-section text-center">
+    <div id="moreGames" class="text-center">
       <div id="divMoreGames" class="container">
         <div class="col-md-3">
           <div class="wow fadeInDown">
