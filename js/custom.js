@@ -42,21 +42,21 @@
 
 	});
 
-	$(document).ready(function(){
-		$("#btnMoreGames").click(function(){
-			var x = document.getElementById("divMoreGames");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-				$("#btnMoreGames").html("Mostrar Menos");
-			} else {
-				x.style.display = "none";
-				$("#btnMoreGames").html("Mostrar Mais");
-			}
-			
-		});
+})(jQuery);
 
+$(document).ready(function(){
+	$("#btnMoreGames").click(function(){
+		var x = document.getElementById("divMoreGames");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+			$("#btnMoreGames").html("Mostrar Menos");
+		} else {
+			x.style.display = "none";
+			$("#btnMoreGames").html("Mostrar Mais");
+		}
+		
 	});
 
-})(jQuery);
+});
 
 
