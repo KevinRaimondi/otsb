@@ -22,6 +22,7 @@ if(isset($_SESSION['cmsg'])){
     $msg='</b>Campos obrigatorios não foram preenchidos!</b>';
     unsetMsg();
     break;
+  }
 
   }
 
