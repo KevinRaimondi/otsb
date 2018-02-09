@@ -288,14 +288,14 @@ if(isset($_SESSION["sent"]))
       </div>
     </div>
 
-    <div id="moreGames" class="text-center wow fadeInDown" data-wow-delay="0.4s">
+    <div id="moreGames" class="text-center fadeInDown">
       <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
     </div>
 
     <div id="moreGames" class="text-center">
       <div id="divMoreGames" class="container">
         <div class="col-md-3">
-          <div class="wow fadeInDown">
+          <div class="fadeInDown">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
@@ -308,7 +308,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown">
+          <div class="fadeInDown">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
@@ -321,7 +321,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown">
+          <div class="fadeInDown">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
@@ -334,7 +334,7 @@ if(isset($_SESSION["sent"]))
           </div>
         </div>
         <div class="col-md-3">
-          <div class="wow fadeInDown">
+          <div class="fadeInDown">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
