@@ -49,12 +49,12 @@ $(document).ready(function(){
 		var x = document.getElementById("divMoreGames");
 		if (x.style.display === "none") {
 			x.style.display = "block";
-			$("#btnMoreGames").html("Mostrar Menos");
+			$("#btnMoreGames").css("display", "none");
 		} else {
 			x.style.display = "none";
 			$("#btnMoreGames").html("Mostrar Mais");
 		}
-		
+
 	});
 
 });
