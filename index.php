@@ -284,235 +284,238 @@ if(isset($_SESSION["sent"]))
             </div>
           </div>
         </div>
-
-        <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
-
-        <div id="divMoreGames">
-          <div class="col-md-3">
-            <div class="wow fadeInDown" data-wow-delay="0.4s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <img src="img/icons/creativerse_logo.png" alt="" />
-                </div>
-                <div class="service-desc">
-                  <h5>TESTE</h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wow fadeInDown" data-wow-delay="0.4s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <img src="img/icons/creativerse_logo.png" alt="" />
-                </div>
-                <div class="service-desc">
-                  <h5>TESTE</h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wow fadeInDown" data-wow-delay="0.4s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <img src="img/icons/creativerse_logo.png" alt="" />
-                </div>
-                <div class="service-desc">
-                  <h5>TESTE</h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wow fadeInDown" data-wow-delay="0.4s">
-              <div class="service-box">
-                <div class="service-icon">
-                  <img src="img/icons/creativerse_logo.png" alt="" />
-                </div>
-                <div class="service-desc">
-                  <h5>CREATIVERSE</h5>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-  <!-- /Section: jogos -->
 
-  <!-- Section: sobre -->
-  <section id="sobre" class="home-section text-center bg-gray">
-    <div class="heading-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Fundadores</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
+  <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
 
-              </div>
+  <section id="moreGames" class="home-section text-center">
+    <div id="divMoreGames" class="container">
+      <div class="col-md-3">
+        <div class="wow fadeInDown" data-wow-delay="0.4s">
+          <div class="service-box">
+            <div class="service-icon">
+              <img src="img/icons/creativerse_logo.png" alt="" />
+            </div>
+            <div class="service-desc">
+              <h5>TESTE</h5>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="wow fadeInDown" data-wow-delay="0.4s">
+          <div class="service-box">
+            <div class="service-icon">
+              <img src="img/icons/creativerse_logo.png" alt="" />
+            </div>
+            <div class="service-desc">
+              <h5>TESTE</h5>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="wow fadeInDown" data-wow-delay="0.4s">
+          <div class="service-box">
+            <div class="service-icon">
+              <img src="img/icons/creativerse_logo.png" alt="" />
+            </div>
+            <div class="service-desc">
+              <h5>TESTE</h5>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="wow fadeInDown" data-wow-delay="0.4s">
+          <div class="service-box">
+            <div class="service-icon">
+              <img src="img/icons/creativerse_logo.png" alt="" />
+            </div>
+            <div class="service-desc">
+              <h5>TESTE</h5>
+              <p></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row centralizar-divs">
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.5s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>KLRaimondi</h5>
-                <p class="subtitle">Kevin Raimondi</p>
-                <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                <ul class="company-social text-align-center">
-                  <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                  <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.6s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>MegaKingBR</h5>
-                <p class="subtitle">Fábio Lucena Ribas</p>
-                <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
-
-                <ul class="company-social text-align-center">
-                  <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                  <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Section: sobre -->
-
-  <!-- Section: contact -->
-  <section id="contact" class="home-section text-center">
-    <div class="heading-contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>Contato</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="boxed-grey">
-
-            <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
-            <div id="errormessage"></div>
-            <form id="contact-form" action="enviar.php" method="post" >
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="nome">
-                    Nome</label>
-                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="email">
-                    E-mail</label>
-                    <div class="form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" />
-                      <div class="validation"></div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="subject">
-                    Assunto</label>
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">
-                    Mensagem</label>
-                    <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                 <?=$success?>
-                 <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
-                 Enviar</button>
-               </div>
-             </div>
-           </form> 
-         </div>
-       </div>
-
-       <div class="col-lg-4">
-        <div class="widget-contact">
-
-          <address>
-            <strong>Servidor TS3</strong><br>
-            <a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
-
-          </address>
-
-          <address>
-            <strong>Email</strong><br>
-            <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
-          </address>
-          <address>
-            <strong>Estamos nas redes sociais</strong><br>
-            <ul class="company-social">
-              <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-              <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
-            </ul>
-          </address>
-        </div>
-      </div>
-    </div>
-
   </div>
+</section>
+<!-- /Section: jogos -->
+
+<!-- Section: sobre -->
+<section id="sobre" class="home-section text-center bg-gray">
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Fundadores</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row centralizar-divs">
+      <div class="col-md-3">
+        <div class="wow bounceInUp" data-wow-delay="0.5s">
+          <div class="team boxed-grey">
+            <div class="inner">
+              <h5>KLRaimondi</h5>
+              <p class="subtitle">Kevin Raimondi</p>
+              <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
+
+              <ul class="company-social text-align-center">
+                <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="wow bounceInUp" data-wow-delay="0.6s">
+          <div class="team boxed-grey">
+            <div class="inner">
+              <h5>MegaKingBR</h5>
+              <p class="subtitle">Fábio Lucena Ribas</p>
+              <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
+
+              <ul class="company-social text-align-center">
+                <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Section: sobre -->
+
+<!-- Section: contact -->
+<section id="contact" class="home-section text-center">
+  <div class="heading-contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Contato</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="boxed-grey">
+
+          <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
+          <div id="errormessage"></div>
+          <form id="contact-form" action="enviar.php" method="post" >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nome">
+                  Nome</label>
+                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">
+                  E-mail</label>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">
+                  Assunto</label>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">
+                  Mensagem</label>
+                  <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+               <?=$success?>
+               <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
+               Enviar</button>
+             </div>
+           </div>
+         </form> 
+       </div>
+     </div>
+
+     <div class="col-lg-4">
+      <div class="widget-contact">
+
+        <address>
+          <strong>Servidor TS3</strong><br>
+          <a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
+
+        </address>
+
+        <address>
+          <strong>Email</strong><br>
+          <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
+        </address>
+        <address>
+          <strong>Estamos nas redes sociais</strong><br>
+          <ul class="company-social">
+            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
+          </ul>
+        </address>
+      </div>
+    </div>
+  </div>
+
+</div>
 </section>
 <!-- /Section: contact -->
 
