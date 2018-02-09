@@ -61,7 +61,9 @@ if(isset($_SESSION['cmsg'])){
   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
     <!-- Preloader -->
     <div id="preloader">
-      <div id="load"></div>
+      <div id="load">
+        <i class="fas fa-circle-notch"></i>
+      </div>
     </div>
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
