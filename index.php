@@ -293,7 +293,7 @@ if(isset($_SESSION["sent"]))
     </div>
 
     <div id="moreGames" class="text-center">
-      <div id="divMoreGames" class="container divMoreGames">
+      <div id="divMoreGames" class="container" style="display: none;">
         <div class="col-md-3">
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="service-box">
