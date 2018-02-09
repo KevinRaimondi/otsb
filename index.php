@@ -288,7 +288,9 @@ if(isset($_SESSION["sent"]))
     </div>
   </section>
 
-  <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
+  <section id="moreGames" class="home-section text-center">
+    <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
+  </section>
 
   <section id="moreGames" class="home-section text-center">
     <div id="divMoreGames" class="container">
