@@ -289,7 +289,7 @@ if(isset($_SESSION["sent"]))
     </div>
 
     <div id="moreGames" class="text-center wow fadeInDown" data-wow-delay="0.4s">
-      <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
+      <button id="btnMoreGames" class="btn btn-default">Mostrar Mais</button>
     </div>
 
     <div id="moreGames" class="text-center">
