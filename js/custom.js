@@ -50,7 +50,10 @@ $(document).ready(function(){
 		if (x.style.display === "none") {
 			x.style.display = "block";
 			$("#btnMoreGames").css("display", "none");
-		} 
+		} else {
+			x.style.display = "none";
+		}
+
 	});
 
 });
