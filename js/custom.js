@@ -23,8 +23,8 @@
 		$('.navbar-nav li a').on('click', function(event) {
 
 			if( $(this).is('a:not([href^="#"])') || $(this).attr("href") == '#' ) {
-	     return;
-	    }
+				return;
+			}
 			var $anchor = $(this);
 			$('html, body').stop().animate({
 				scrollTop: $($anchor.attr('href')).offset().top
@@ -42,4 +42,21 @@
 
 	});
 
+	$(document).ready(function(){
+		$("#btnMoreGames").click(function(){
+			var x = document.getElementById("divMoreGames");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				$("#btnMoreGames").html("Mostrar Menos");
+			} else {
+				x.style.display = "none";
+				$("#btnMoreGames").html("Mostrar Mais");
+			}
+			
+		});
+
+	});
+
 })(jQuery);
+
+

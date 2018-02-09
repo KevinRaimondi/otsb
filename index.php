@@ -6,7 +6,7 @@ $success='';
 if(isset($_SESSION["errStr"]))
 {
   $success='</b>Falha no envio do E-mail!</b>';
-    
+
   unset($_SESSION['errStr']);
 }
 
@@ -15,7 +15,7 @@ if(isset($_SESSION["errStr"]))
 if(isset($_SESSION["sent"]))
 {
   $success='</b>E-mail enviado com sucesso!</b>';
-    
+
   unset($_SESSION['sent']);
 }
 
@@ -48,36 +48,36 @@ if(isset($_SESSION["sent"]))
     Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
-  ======================================================= -->
+    ======================================================= -->
 
-</head>
+  </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="load"></div>
-  </div>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="load"></div>
+    </div>
 
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-        <a class="navbar-brand slogan" href="/">
-          <h1>OTSB</h1>
-        </a>
-      </div>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand slogan" href="/">
+            <h1>OTSB</h1>
+          </a>
+        </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#jogos">Jogos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
-          <li><a href="/galeria">Galeria</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#intro">Home</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="/galeria">Galeria</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -102,13 +102,13 @@ if(isset($_SESSION["sent"]))
     </div>
     <div class="page-scroll">
       <a href="#jogos" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
+        <i class="fa fa-angle-double-down animated"></i>
+      </a>
     </div>
   </section>
   <!-- /Section: intro -->
 
-    <!-- Section: jogos -->
+  <!-- Section: jogos -->
   <section id="jogos" class="home-section text-center">
 
     <div class="heading-about">
@@ -284,6 +284,63 @@ if(isset($_SESSION["sent"]))
             </div>
           </div>
         </div>
+
+        <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
+
+        <div id="divMoreGames">
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/creativerse_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>TESTE</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/creativerse_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>TESTE</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/creativerse_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>TESTE</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/creativerse_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>CREATIVERSE</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -322,12 +379,12 @@ if(isset($_SESSION["sent"]))
                 <p class="subtitle">Kevin Raimondi</p>
                 <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
 
-                        <ul class="company-social text-align-center">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
-                        </ul>
+                <ul class="company-social text-align-center">
+                  <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  <li class="social-steam"><a href="http://steamcommunity.com/profiles/76561198122201759" target="_blank"><i class="fa fa-steam"></i></a></li>
+                </ul>
 
               </div>
             </div>
@@ -341,12 +398,12 @@ if(isset($_SESSION["sent"]))
                 <p class="subtitle">Fábio Lucena Ribas</p>
                 <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
 
-                        <ul class="company-social text-align-center">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
-                        </ul>
+                <ul class="company-social text-align-center">
+                  <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  <li class="social-steam"><a href="http://steamcommunity.com/id/MegaKingBR" target="_blank"><i class="fa fa-steam" aria-hidden="true"></i></a></li>
+                </ul>
 
               </div>
             </div>
@@ -392,13 +449,13 @@ if(isset($_SESSION["sent"]))
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="nome">
-                                Nome</label>
+                    Nome</label>
                     <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
                     <div class="validation"></div>
                   </div>
                   <div class="form-group">
                     <label for="email">
-                                E-mail</label>
+                    E-mail</label>
                     <div class="form-group">
                       <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Por favor digite um email válido" />
                       <div class="validation"></div>
@@ -406,7 +463,7 @@ if(isset($_SESSION["sent"]))
                   </div>
                   <div class="form-group">
                     <label for="subject">
-                                Assunto</label>
+                    Assunto</label>
                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres de assunto" />
                     <div class="validation"></div>
                   </div>
@@ -414,64 +471,64 @@ if(isset($_SESSION["sent"]))
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="name">
-                                Mensagem</label>
+                    Mensagem</label>
                     <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Escreva algo para nós" placeholder="Mensagem"></textarea>
                     <div class="validation"></div>
                   </div>
                 </div>
                 <div class="col-md-12">
                  <?=$success?>
-                  <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
-                            Enviar</button>
-                </div>
-              </div>
-            </form> 
-          </div>
-        </div>
+                 <button type="submit" name="enviar" class="btn btn-skin pull-right" id="btnContactUs">
+                 Enviar</button>
+               </div>
+             </div>
+           </form> 
+         </div>
+       </div>
 
-        <div class="col-lg-4">
-          <div class="widget-contact">
-		  
-            <address>
-				<strong>Servidor TS3</strong><br>
-				<a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
+       <div class="col-lg-4">
+        <div class="widget-contact">
 
-			</address>
+          <address>
+            <strong>Servidor TS3</strong><br>
+            <a href="ts3server://177.93.106.87?port=3016">177.93.106.87:3016</a><i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px"></i>
 
-        <address>
-				  <strong>Email</strong><br>
-				 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
-				</address>
-            <address>
-				  <strong>Estamos nas redes sociais</strong><br>
-                       	<ul class="company-social">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
-                        </ul>
-				</address>
-          </div>
+          </address>
+
+          <address>
+            <strong>Email</strong><br>
+            <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i><a href="mailto:#">contato@kraimondi.tech</a>
+          </address>
+          <address>
+            <strong>Estamos nas redes sociais</strong><br>
+            <ul class="company-social">
+              <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="social-youtube"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li class="social-steam"><a href="http://steamcommunity.com/groups/OTSB_Oficial" target="_blank"><i class="fa fa-steam"></i></a></li>
+            </ul>
+          </address>
         </div>
       </div>
-
     </div>
-  </section>
-  <!-- /Section: contact -->
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-12">
-          <div class="wow shake" data-wow-delay="0.4s">
-            <div class="page-scroll marginbot-30">
-              <a href="#intro" id="totop" class="btn btn-circle">
-							<i class="fa fa-angle-double-up animated"></i>
-						</a>
-            </div>
-          </div>
-          <p>&copy;SquadFREE. All rights reserved.</p>
-          <div class="credits">
+  </div>
+</section>
+<!-- /Section: contact -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <div class="wow shake" data-wow-delay="0.4s">
+          <div class="page-scroll marginbot-30">
+            <a href="#intro" id="totop" class="btn btn-circle">
+             <i class="fa fa-angle-double-up animated"></i>
+           </a>
+         </div>
+       </div>
+       <p>&copy;SquadFREE. All rights reserved.</p>
+       <div class="credits">
             <!--
               All the links in the footer should remain intact. 
               You can delete the links only if you purchased the pro version.
