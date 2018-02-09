@@ -485,7 +485,7 @@ if(isset($_SESSION["resultado"]) && $_SESSION["resultado"] == 1)
               </div>
               <div class="col-md-12">
                <?=$success?>
-               <button type="submit" name="enviar" class="btn btn-default" id="btnContactUs">
+               <button type="submit" name="enviar" class="btn btn-default pull-right" id="btnContactUs">
                Enviar</button>
              </div>
            </div>
