@@ -109,245 +109,247 @@ if(isset($_SESSION["sent"]))
   <!-- /Section: intro -->
 
   <!-- Section: jogos -->
-  <section id="jogos" class="home-section text-center">
+  <section id="jogos">
+    <div class="home-section text-center">
+      <div class="heading-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow bounceInDown" data-wow-delay="0.4s">
+                <div class="section-heading">
+                  <h2>PRINCIPAIS JOGOS</h2>
+                  <i class="fa fa-2x fa-angle-down"></i>
 
-    <div class="heading-about">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>PRINCIPAIS JOGOS</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
-
+          <div class="col-lg-2 col-lg-offset-5">
+            <hr class="marginbot-50">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/titanfall2_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>TITANFALL 2</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/battlefield_1_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>BATTLEFIELD 1</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/battlefield_4_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>BATTLEFIELD 4</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.2s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/gtav_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>GRAND THEFT AUTO V</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.3s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/warframe_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>WARFRAME</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.3s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/ark_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>ARK Survival Evolved</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.3s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/rust_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>Rust</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.3s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/dayz_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>Dayz</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/bp_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>Playerunknown's Battlegrounds</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/rainbow_six_siege_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>Tom Clancy's Rainbow Six Siege</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/cs-go-logo-.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>COUNTER STRIKE GLOBAL OFFENSIVE</h5>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow fadeInDown" data-wow-delay="0.4s">
+              <div class="service-box">
+                <div class="service-icon">
+                  <img src="img/icons/creativerse_logo.png" alt="" />
+                </div>
+                <div class="service-desc">
+                  <h5>CREATIVERSE</h5>
+                  <p></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
+
+    <div id="moreGames" class="home-section text-center">
+      <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
+    </div>
+
+    <div id="moreGames" class="home-section text-center">
+      <div id="divMoreGames" class="container">
         <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/titanfall2_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>TITANFALL 2</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/battlefield_1_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>BATTLEFIELD 1</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/battlefield_4_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>BATTLEFIELD 4</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.2s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/gtav_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>GRAND THEFT AUTO V</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/warframe_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>WARFRAME</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/ark_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>ARK Survival Evolved</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/rust_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Rust</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.3s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/dayz_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Dayz</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/bp_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Playerunknown's Battlegrounds</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/rainbow_six_siege_logo.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>Tom Clancy's Rainbow Six Siege</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
-            <div class="service-box">
-              <div class="service-icon">
-                <img src="img/icons/cs-go-logo-.png" alt="" />
-              </div>
-              <div class="service-desc">
-                <h5>COUNTER STRIKE GLOBAL OFFENSIVE</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow fadeInDown" data-wow-delay="0.4s">
+          <div class="wow fadeInDown">
             <div class="service-box">
               <div class="service-icon">
                 <img src="img/icons/creativerse_logo.png" alt="" />
               </div>
               <div class="service-desc">
-                <h5>CREATIVERSE</h5>
+                <h5>TESTE</h5>
                 <p></p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="moreGames" class="home-section text-center">
-    <button id="btnMoreGames" class="btn-default">Mostrar Mais</button>
-  </section>
-
-  <section id="moreGames" class="home-section text-center">
-    <div id="divMoreGames" class="container">
-      <div class="col-md-3">
-        <div class="wow fadeInDown">
-          <div class="service-box">
-            <div class="service-icon">
-              <img src="img/icons/creativerse_logo.png" alt="" />
-            </div>
-            <div class="service-desc">
-              <h5>TESTE</h5>
-              <p></p>
+        <div class="col-md-3">
+          <div class="wow fadeInDown">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/creativerse_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>TESTE</h5>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="wow fadeInDown">
-          <div class="service-box">
-            <div class="service-icon">
-              <img src="img/icons/creativerse_logo.png" alt="" />
-            </div>
-            <div class="service-desc">
-              <h5>TESTE</h5>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="wow fadeInDown">
-          <div class="service-box">
-            <div class="service-icon">
-              <img src="img/icons/creativerse_logo.png" alt="" />
-            </div>
-            <div class="service-desc">
-              <h5>TESTE</h5>
-              <p></p>
+        <div class="col-md-3">
+          <div class="wow fadeInDown">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/creativerse_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>TESTE</h5>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="wow fadeInDown">
-          <div class="service-box">
-            <div class="service-icon">
-              <img src="img/icons/creativerse_logo.png" alt="" />
-            </div>
-            <div class="service-desc">
-              <h5>TESTE</h5>
-              <p></p>
+        <div class="col-md-3">
+          <div class="wow fadeInDown">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/creativerse_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>TESTE</h5>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 <!-- /Section: jogos -->
 
