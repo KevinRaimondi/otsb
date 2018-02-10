@@ -40,6 +40,7 @@ if(isset($_SESSION['cmsg'])){
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/74923df66d.css">
 
     <!-- Fonts -->
 
