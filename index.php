@@ -10,44 +10,40 @@ if(isset($_SESSION['cmsg'])){
   switch($cmsg){
     case 1:
     $msg='</b>E-mail enviado com sucesso!</b>';
-    unsetMsg();
+    unset($_SESSION['cmsg']);
     break;
 
     case 2:
     $msg='</b>Falha no envio do E-mail!</b>';
-    unsetMsg();
+    unset($_SESSION['cmsg']);
     break;
   }
 
-  }
+}
 
-  function unsetMsg() {
-    unset($_SESSION['cmsg']);
-  }
+?>
 
-  ?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-  <!DOCTYPE html>
-  <html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <title>OTSB - Operation Tactics Snow Black</title>
 
-    <title>OTSB - Operation Tactics Snow Black</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- Fonts -->
 
-    <!-- Fonts -->
-
-    <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
-    <link href="css/animate.css" rel="stylesheet" />
-    <!-- Squad theme CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="color/default.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- Squad theme CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="color/default.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Squadfree
@@ -62,7 +58,7 @@ if(isset($_SESSION['cmsg'])){
     <!-- Preloader -->
     <div id="preloader">
       <div id="load">
-      <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw margin-bottom"></i>
+        <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw margin-bottom"></i>
       </div>
     </div>
 
