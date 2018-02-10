@@ -40,7 +40,6 @@ if(isset($_SESSION['cmsg'])){
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/74923df66d.css">
 
     <!-- Fonts -->
 
@@ -108,6 +107,7 @@ if(isset($_SESSION['cmsg'])){
     <div class="slogan">
       <h2>BEM-VINDOS</h2>
       <h4>OPERATION TACTICS SNOW BLACK</h4>
+      <i class="fas fa-circle-notch"></i>
     </div>
     <div class="page-scroll">
       <a href="#jogos" class="btn btn-circle">
