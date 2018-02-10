@@ -247,7 +247,7 @@ a:focus {
     width: 0;
     position: absolute;
     top: 50%;
-    margin: 0 auto 0 auto;
+    margin: -5px auto 0 auto;
     left: -50px;
     right: 0;
 }
