@@ -45,17 +45,20 @@ if (isset($_POST['cadastrar'])) {
 		// Calculando a proporção
 		$ratio_orig = $largura_orig/$altura_orig;
 
-		if ($largura_max/$altura_max > $ratio_orig) {
-			$largura_max = $altura_max*$ratio_orig;
+		// inverte a comparação e calcula o offset
+		if ($largura_max/$altura_max < $ratio_orig) { 
+			$dif_w = $altura_max*$ratio_orig/2-$altura_max;
+			$dif_h = 0;
 		} else {
-			$altura_max = $largura_max/$ratio_orig;
+			$dif_w = 0;
+			$dif_h = $largura_max/$ratio_orig/2-$largura_max;
 		}
 
 		$image_p = imagecreatetruecolor($largura_max, $altura_max);
 		$image = imagecreatefromjpeg($foto);
-		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
+		imagecopyresampled($image_p, $image, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
 
-		$foto = imagejpeg($image_p, $foto["name"], 75);
+		$foto = imagejpeg($image, $foto["name"], 75);
 
 
 
