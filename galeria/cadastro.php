@@ -170,14 +170,9 @@ if (isset($_POST['cadastrar'])) {
   <section id="intro" class="intro">
 
     <div class="container">
-      <div class="row">
+      <div class="row centralizar-divs">
         <div class="col-lg-8">
-          <div class="boxed-grey" style="
-          background: #3e3e3ee0;
-          border: #fff solid 1px;
-          border-radius: 5px;
-          color: #fff;
-          ">
+          <div class="boxed-grey style-form">
 
           <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
             <fieldset>
@@ -223,7 +218,7 @@ if (isset($_POST['cadastrar'])) {
             <tr>
             <td colspan="5">
                <label class="control-label" for="filebutton">Foto do Perfil</label>
-               <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
+               <input id="filebutton" name="filebutton" class="input-file width-100" type="file" accept="image/jpeg">
              </td>
            </tr>
 
