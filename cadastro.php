@@ -75,7 +75,7 @@ if (isset($_POST['cadastrar'])) {
 		if (count($error) == 0) {
 
 			// Pega extensão da imagem
-			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $image_p["name"], $ext);
 
         	// Gera um nome único para a imagem
 			$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
@@ -84,7 +84,7 @@ if (isset($_POST['cadastrar'])) {
 			$caminho_imagem = $path . $nome_imagem;
 
 			// Faz o upload da imagem para seu respectivo caminho
-			move_uploaded_file($image["tmp_name"], $caminho_imagem);
+			move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
 			// Insere os dados no banco
 			$sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$nome."', '".$email."', '".$nome_imagem."')");
