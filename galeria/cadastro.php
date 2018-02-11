@@ -6,7 +6,7 @@ $path = "../img/profile/";
 $msg = '';
 
 // Se o usuário clicou no botão cadastrar efetua as ações
-if (isset($_POST['cadastrar'])) {
+if (isset($_POST['btnConfirmar'])) {
 
   // Recupera os dados dos campos
   $usuario = $_POST['usuario'];
