@@ -16,7 +16,7 @@ if (isset($_POST['btnConfirmar'])) {
   $foto = $_FILES["file-input"];
 
   if($senha != $senhaConfim){
-    $msg = "<p style='color: red;'>As senhas não conferem!</p>";
+    $msg = "<p style='color: red; font: bold;'>As senhas não conferem!</p>";
   }else{  
   // Se a foto estiver sido selecionada
     if (!empty($foto["name"])) {
