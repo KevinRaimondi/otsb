@@ -1,7 +1,7 @@
 <?php
 // Conexão com o banco de dados
 
-$path = "/img/profile/";
+$path = "/home/u163043632/public_html/teste/img/profile/";
 require $path;
 
 require ("conexao.php");
