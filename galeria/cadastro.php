@@ -17,6 +17,7 @@ if (isset($_POST['btnConfirmar'])) {
 
   if($senha != $senhaConfim){
     $msg = "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
+    echo "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
   }else{  
   // Se a foto estiver sido selecionada
     if (!empty($foto["name"])) {
