@@ -188,26 +188,28 @@ if (isset($_POST['cadastrar'])) {
                 <tr>
                  <td colspan="3">
                   <!-- Text input-->
-                  <div class="form-group" class="col-md-4">
+                  <div class="form-group">
                     <label class="col-md-4 control-label" for="usuario">Usuário</label>  
                     <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                   </div>
                 </td>
+                <td style="display: table; float:left; margin-right:10px"/>
+
+                <!-- Prepended text-->
+                <td>
+                  <div class="form-group">
+                    <label class="control-label" for="">E-mail</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
+                    </div>
+                  </div>
+                </td>
+
               </tr>
             </table>
 
 
-            <!-- Prepended text-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="">E-mail</label>
-              <div class="col-md-4">
-                <div class="input-group">
-                  <span class="input-group-addon">@</span>
-                  <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
-                </div>
-
-              </div>
-            </div>
 
             <!-- Password input-->
             <div class="form-group">
