@@ -847,7 +847,7 @@ td.align-center {
     text-align: center;
 }
 
-div.align-center {
+div, table.align-center {
     margin: 0px auto;
 }
 
