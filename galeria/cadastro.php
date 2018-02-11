@@ -232,7 +232,7 @@ if (isset($_POST['btnConfirmar'])) {
              <!-- Button (Double) -->
              <table class="align-center width-100">
               <tr>
-                <td class="align-center col-70">
+                <td  style="width: 70%;" class="align-center">
                   <?=$msg?>
                 </td>
 
