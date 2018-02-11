@@ -55,10 +55,7 @@ if (isset($_POST['cadastrar'])) {
 		}
 
 		$image_p = imagecreatetruecolor($largura_max, $altura_max);
-		$image = imagecreatefromjpeg($foto);
-		imagecopyresampled($image_p, $image, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
-
-		$foto = imagejpeg($image, $foto["name"], 75);
+		imagecopyresampled($image_p, $foto, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
 
 
 
