@@ -184,7 +184,7 @@ if (isset($_POST['cadastrar'])) {
 
               <!-- Form Name -->
               <legend>Cadastro</legend>
-              <table class="form-group">
+              <table>
                 <tr>
                  <td colspan="3">
                   <!-- Text input-->
