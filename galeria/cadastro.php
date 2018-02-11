@@ -3,6 +3,7 @@
 require ("conexao.php");
 
 $path = "../img/profile/";
+$msg = '';
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
@@ -13,7 +14,6 @@ if (isset($_POST['cadastrar'])) {
   $senha = $_POST['passwordinput'];
   $senhaConfim = $_POST['passwordinput'];
   $foto = $_FILES["foto"];
-  $msg = '';
 
   if($senha != $senhaConfim){
     $msg = "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
@@ -231,21 +231,18 @@ if (isset($_POST['cadastrar'])) {
              </table>
 
              <!-- Button (Double) -->
-
              <table class="align-center width-100">
               <tr>
-                <td>
+                <td style="width: 70%;">
                   <?=$msg?>
                 </td>
 
-                <td>
+                <td style="width: 21%;">
                   <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
                   <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
                 </td>
               </tr>
-
             </table>
-
 
           </fieldset>
         </form>
