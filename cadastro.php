@@ -45,18 +45,17 @@ if (isset($_POST['cadastrar'])) {
 		// Calculando a proporção
 		$ratio_orig = $largura_orig/$altura_orig;
 
-		// inverte a comparação e calcula o offset
-		if ($largura_max/$altura_max < $ratio_orig) { 
-			$dif_w = $altura_max*$ratio_orig/2-$altura_max;
-			$dif_h = 0;
-		} else {
-			$dif_w = 0;
-			$dif_h = $largura_max/$ratio_orig/2-$largura_max;
+		// Se largura é maior que altura, dividimos a largura determinada pela original e multiplicamos a altura pelo resultado, para manter a proporção da imagem
+		if($largura_orig > $altura_orig){
+			$altura_max = ($largura_max/$largura_orig)*$altura_orig;
+		// Se altura é maior que largura, dividimos a altura determinada pela original e multiplicamos a largura pelo resultado, para manter a proporção da imagem
+		} elseif($largura_orig < $altura_orig) {
+			$largura_max = ($altura_max/$altura_orig)*$largura_orig;
 		}
 
 		$image_p = imagecreatetruecolor($largura_max, $altura_max);
 		$image = imagecreatefromjpeg($foto["tmp_name"]);
-		imagecopyresampled($image_p, $image, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
+		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $height_orig);
 
 
 		// Verifica se a largura da imagem é maior que a largura permitida
