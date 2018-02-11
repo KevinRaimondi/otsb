@@ -205,7 +205,7 @@ if (isset($_POST['cadastrar'])) {
 
               <!-- Password input-->
               <tr>
-               <td colspan="2">
+               <td colspan="3">
                 <label class="control-label" for="passwordinput">Senha</label>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
               </td>
