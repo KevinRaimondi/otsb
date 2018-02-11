@@ -17,27 +17,26 @@ if (isset($_POST['cadastrar'])) {
 
   if($senha != $senhaConfim){
     $msg = "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
-  }
-  
+  }else{  
   // Se a foto estiver sido selecionada
-  if (!empty($foto["name"])) {
+    if (!empty($foto["name"])) {
 
     // Largura máxima em pixels
-    $largura_max = 151;
+      $largura_max = 151;
     // Altura máxima em pixels
-    $altura_max = 151;
+      $altura_max = 151;
     // Tamanho máximo do arquivo em bytes
-    $tamanho = 100000;
+      $tamanho = 100000;
 
-    $error = array();
+      $error = array();
 
       // Verifica se o arquivo é uma imagem
-    if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
-      $error[1] = "Isso não é uma imagem.";
-    } 
+      if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
+        $error[1] = "Isso não é uma imagem.";
+      } 
 
     // Pega as dimensões da imagem
-    $dimensoes = getimagesize($foto["tmp_name"]);
+      $dimensoes = getimagesize($foto["tmp_name"]);
 
     // Verifica se a largura da imagem é maior que a largura permitida
     //if($dimensoes[0] > $largura) {
@@ -50,49 +49,49 @@ if (isset($_POST['cadastrar'])) {
     //}
 
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
-    if($foto["size"] > $tamanho) {
-      $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
-    }
+      if($foto["size"] > $tamanho) {
+        $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+      }
 
-    $largura_orig = $dimensoes[0];
-    $altura_orig = $dimensoes[1];
+      $largura_orig = $dimensoes[0];
+      $altura_orig = $dimensoes[1];
 
-    $image_p = imagecreatetruecolor($largura_max, $altura_max);
-    $image = imagecreatefromjpeg($foto["tmp_name"]);
-    imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);   
+      $image_p = imagecreatetruecolor($largura_max, $altura_max);
+      $image = imagecreatefromjpeg($foto["tmp_name"]);
+      imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);   
 
     // Se não houver nenhum erro
-    if (count($error) == 0) {
+      if (count($error) == 0) {
 
       // Pega extensão da imagem
-      preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
 
           // Gera um nome único para a imagem
-      $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+        $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
 
           // Caminho de onde ficará a imagem
-      $caminho_imagem = $path . $nome_imagem;
+        $caminho_imagem = $path . $nome_imagem;
 
       // Faz o upload da imagem para seu respectivo caminho
-      imagejpeg($image_p, $caminho_imagem);
+        imagejpeg($image_p, $caminho_imagem);
       //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
       // Insere os dados no banco
-      $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$nome_imagem."')");
+        $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$nome_imagem."')");
 
       // Se os dados forem inseridos com sucesso
-      if ($sql){
-        echo "Você foi cadastrado com sucesso.";
-      }else{
-        unlink($caminho_imagem);
-        echo $caminho_imagem;
+        if ($sql){
+          $msg = "Você foi cadastrado com sucesso.";
+        }else{
+          unlink($caminho_imagem);
+        }
       }
-    }
 
     // Se houver mensagens de erro, exibe-as
-    if (count($error) != 0) {
-      foreach ($error as $erro) {
-        echo $erro . "<br />";
+      if (count($error) != 0) {
+        foreach ($error as $erro) {
+          $msg = $erro;
+        }
       }
     }
   }
