@@ -13,7 +13,7 @@ if (isset($_POST['btnConfirmar'])) {
   $email = $_POST['email'];
   $senha = $_POST['passwordinput'];
   $senhaConfim = $_POST['passwordinputConfirm'];
-  $foto = $_FILES["foto"];
+  $foto = $_FILES["file-input"];
 
   if($senha != $senhaConfim){
     $msg = "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
@@ -223,7 +223,7 @@ if (isset($_POST['btnConfirmar'])) {
                 <tr>
                   <td colspan="5">
                    <label class="control-label" for="filebutton">Foto do Perfil</label>
-                   <input id="filebutton" name="filebutton" class="input-file width-100" type="file" accept="image/jpeg">
+                   <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
                  </td>
                </tr>
 
