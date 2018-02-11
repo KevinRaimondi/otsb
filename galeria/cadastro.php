@@ -6,7 +6,7 @@ $path = "img/profile/";
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
-  
+
   // Recupera os dados dos campos
   $nome = $_POST['nome'];
   $email = $_POST['email'];
@@ -15,7 +15,7 @@ if (isset($_POST['cadastrar'])) {
   
   // Se a foto estiver sido selecionada
   if (!empty($foto["name"])) {
-    
+
     // Largura máxima em pixels
     $largura_max = 151;
     // Altura máxima em pixels
@@ -227,6 +227,7 @@ if (isset($_POST['cadastrar'])) {
 
   <!-- Custom Theme JavaScript -->
   <script src="../js/custom.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
 
 </body>
 
