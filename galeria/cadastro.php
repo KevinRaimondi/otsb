@@ -10,8 +10,14 @@ if (isset($_POST['cadastrar'])) {
   // Recupera os dados dos campos
   $usuario = $_POST['usuario'];
   $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  $senha = $_POST['passwordinput'];
+  $senhaConfim = $_POST['passwordinput'];
   $foto = $_FILES["foto"];
+  $msg = '';
+
+  if($senha != $senhaConfim){
+    $msg = "<div id='errormessage'><b>Erro</b>: As senhas não conferem!</div>";
+  }
   
   // Se a foto estiver sido selecionada
   if (!empty($foto["name"])) {
@@ -174,70 +180,71 @@ if (isset($_POST['cadastrar'])) {
         <div class="col-lg-8">
           <div class="boxed-grey style-form">
 
-          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
-            <fieldset>
+            <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
+              <fieldset>
 
-              <!-- Form Name -->
-              <legend>Cadastro</legend>
-              <table class="align-center width-100">
+                <!-- Form Name -->
+                <legend>Cadastro</legend>
+                <table class="align-center width-100">
+                  <tr>
+                   <td colspan="3" style="width: 49%;">
+                    <!-- Text input-->
+                    <label class="control-label" for="usuario">Usuário:</label>  
+                    <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
+                  </td>
+
+                  <td style="width: 2%;"/>
+
+                  <!-- Prepended text-->
+                  <td style="width: 49%;">
+                    <label class="control-label" for="">E-mail:</label>
+                    <div class="input-group width-100">
+                      <span class="input-group-addon">@</span>
+                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Password input-->
                 <tr>
-                 <td colspan="3" style="width: 49%;">
-                  <!-- Text input-->
-                  <label class="control-label" for="usuario">Usuário:</label>  
-                  <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
-                </td>
+                  <td colspan="3" style="width: 49%;">
+                    <label class="control-label" for="passwordinput">Senha:</label>
+                    <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
+                  </td>
 
-                <td style="width: 2%;"/>
+                  <td style="width: 2%;"/>
 
-                <!-- Prepended text-->
-                <td style="width: 49%;">
-                  <label class="control-label" for="">E-mail:</label>
-                  <div class="input-group width-100">
-                    <span class="input-group-addon">@</span>
-                    <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
-                  </div>
-                </td>
-              </tr>
+                  <td colspan="3" style="width: 49%;">
+                    <label class="control-label" for="passwordinputConfirm">Confirme sua senha:</label>
+                    <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
+                  </td>
+                </tr>
 
-              <!-- Password input-->
-              <tr>
-              <td colspan="3" style="width: 49%;">
-                <label class="control-label" for="passwordinput">Senha:</label>
-                <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
-              </td>
+                <!-- File Button --> 
+                <tr>
+                  <td colspan="5">
+                   <label class="control-label" for="filebutton">Foto do Perfil</label>
+                   <input id="filebutton" name="filebutton" class="input-file width-100" type="file" accept="image/jpeg">
+                 </td>
+               </tr>
 
-              <td style="width: 2%;"/>
+             </table>
 
-             <td colspan="3" style="width: 49%;">
-                <label class="control-label" for="passwordinputConfirm">Confirmar senha:</label>
-                <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
-              </td>
-            </tr>
+             <!-- Button (Double) -->
+             <div class="form-group" style="float: right;">
+              <div class="col-md-12">
+                <?=$msg?>
+                <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
+              </div>
+            </div>
 
-            <!-- File Button --> 
-            <tr>
-            <td colspan="5">
-               <label class="control-label" for="filebutton">Foto do Perfil</label>
-               <input id="filebutton" name="filebutton" class="input-file width-100" type="file" accept="image/jpeg">
-             </td>
-           </tr>
+          </fieldset>
+        </form>
 
-         </table>
-
-         <!-- Button (Double) -->
-         <div class="form-group" style="float: right;">
-          <div class="col-md-12">
-            <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-            <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-          </div>
-        </div>
-
-      </fieldset>
-    </form>
-
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
 
 </section>
