@@ -50,7 +50,7 @@ if (isset($_POST['cadastrar'])) {
 		if (count($error) == 0) {
 		
 			// Pega extensão da imagem
-			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+			preg_match("/\.(jpg|jpeg){1}$/i", $foto["name"], $ext);
 
         	// Gera um nome único para a imagem
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
