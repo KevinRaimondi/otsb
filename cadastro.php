@@ -58,6 +58,8 @@ if (isset($_POST['cadastrar'])) {
 		$image = imagecreatefromjpeg($foto["tmp_name"]);
 		imagecopyresampled($image_p, $image, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
 
+		imagejpeg($image_p, $foto["name"], 75);
+
 
 
 		// Verifica se a largura da imagem é maior que a largura permitida
@@ -75,7 +77,7 @@ if (isset($_POST['cadastrar'])) {
 		if (count($error) == 0) {
 
 			// Pega extensão da imagem
-			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $image_p["name"], $ext);
 
         	// Gera um nome único para a imagem
 			$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
