@@ -186,71 +186,64 @@ if (isset($_POST['cadastrar'])) {
               <legend>Cadastro</legend>
               <table>
                 <tr>
-                 <td colspan="3">
+                 <td colspan="2">
                   <!-- Text input-->
-                  <div class="form-group">
-                    <label class="col-md-4 control-label" for="usuario">Usuário</label>  
-                    <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
-                  </div>
+                  <label class="col-md-4 control-label" for="usuario">Usuário</label>  
+                  <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                 </td>
                 <td style="display: table; float:left; margin-right:10px"/>
 
                 <!-- Prepended text-->
                 <td>
-                  <div class="form-group">
-                    <label class="control-label" for="">E-mail</label>
-                    <div class="input-group">
-                      <span class="input-group-addon">@</span>
-                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
-                    </div>
+                  <label class="control-label" for="">E-mail</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
                   </div>
                 </td>
 
               </tr>
-            </table>
-
-
-
-            <!-- Password input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="passwordinput">Senha</label>
-              <div class="col-md-4">
+              <!-- Password input-->
+              <tr>
+               <td colspan="2">
+                <label class="control-label" for="passwordinput">Senha</label>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
+              </td>
 
-              </div>
-            </div>
-
-            <!-- Password input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="passwordinputConfirm">Confirmar senha</label>
-              <div class="col-md-4">
+              <td>
+                <label class="control-label" for="passwordinputConfirm">Confirmar senha</label>
                 <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
+              </td>
+            </tr>
 
-              </div>
+            
+
+          </table>
+
+
+
+          <!-- File Button --> 
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="filebutton">Foto do Perfil</label>
+            <div class="col-md-4">
+              <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
             </div>
+          </div>
 
-            <!-- File Button --> 
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="filebutton">Foto do Perfil</label>
-              <div class="col-md-4">
-                <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
-              </div>
+          <!-- Button (Double) -->
+          <div class="form-group" style="float: right;">
+            <div class="col-md-12">
+              <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+              <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
             </div>
+          </div>
 
-            <!-- Button (Double) -->
-            <div class="form-group" style="float: right;">
-              <div class="col-md-12">
-                <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-                <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-              </div>
-            </div>
+        </fieldset>
+      </form>
 
-          </fieldset>
-        </form>
-
-      </div>
     </div>
   </div>
+</div>
 </div>
 
 </section>
