@@ -108,7 +108,7 @@ Foto de exibição:<br />
 <h1>Usuários cadastrados</h1>
 <?php
 // Seleciona todos os usuários
-$sql = mysql_query("SELECT * FROM usuarios ORDER BY nome");
+$sql = mysqli_query($conn, "SELECT * FROM usuarios ORDER BY nome");
 
 // Exibe as informações de cada usuário
 while ($usuario = mysql_fetch_object($sql)) {
