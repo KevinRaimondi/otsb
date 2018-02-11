@@ -33,32 +33,6 @@ if (isset($_POST['cadastrar'])) {
 		// Pega as dimensões da imagem
 		$dimensoes = getimagesize($foto["tmp_name"]);
 
-		// Verifica se o tamanho da imagem é maior que o tamanho permitido
-		if($foto["size"] > $tamanho) {
-			$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
-		}
-
-		$largura_orig = $dimensoes[0];
-		$altura_orig = $dimensoes[1];
-
-
-		// Calculando a proporção
-		$ratio_orig = $largura_orig/$altura_orig;
-
-		// inverte a comparação e calcula o offset
-		if ($largura_max/$altura_max < $ratio_orig) { 
-			$dif_w = $altura_max*$ratio_orig/2-$altura_max;
-			$dif_h = 0;
-		} else {
-			$dif_w = 0;
-			$dif_h = $largura_max/$ratio_orig/2-$largura_max;
-		}
-
-		$image_p = imagecreatetruecolor($largura_max, $altura_max);
-		$image = imagecreatefromjpeg($foto["tmp_name"]);
-		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
-
-
 		// Verifica se a largura da imagem é maior que a largura permitida
 		//if($dimensoes[0] > $largura) {
 		//	$error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
@@ -68,7 +42,18 @@ if (isset($_POST['cadastrar'])) {
 		//if($dimensoes[1] > $altura) {
 		//	$error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
 		//}
-		
+
+		// Verifica se o tamanho da imagem é maior que o tamanho permitido
+		if($foto["size"] > $tamanho) {
+			$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+		}
+
+		$largura_orig = $dimensoes[0];
+		$altura_orig = $dimensoes[1];
+
+		$image_p = imagecreatetruecolor($largura_max, $altura_max);
+		$image = imagecreatefromjpeg($foto["tmp_name"]);
+		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);		
 
 		// Se não houver nenhum erro
 		if (count($error) == 0) {
