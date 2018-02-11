@@ -16,7 +16,7 @@ if (isset($_POST['btnConfirmar'])) {
   $foto = $_FILES["file-input"];
 
   if($senha != $senhaConfim){
-    $msg = "As senhas não conferem!";
+    $msg = "<p style='color: red;'>As senhas não conferem!</p>";
   }else{  
   // Se a foto estiver sido selecionada
     if (!empty($foto["name"])) {
@@ -82,7 +82,6 @@ if (isset($_POST['btnConfirmar'])) {
       // Se os dados forem inseridos com sucesso
         if ($sql){
           $msg = "Você foi cadastrado com sucesso.";
-          echo "Você foi cadastrado com sucesso.";
         }else{
           unlink($caminho_imagem);
         }
@@ -92,7 +91,6 @@ if (isset($_POST['btnConfirmar'])) {
       if (count($error) != 0) {
         foreach ($error as $erro) {
           $msg = $erro;
-          echo $erro . "<br />";
         }
       }
     }
@@ -234,7 +232,7 @@ if (isset($_POST['btnConfirmar'])) {
              <!-- Button (Double) -->
              <table class="align-center width-100">
               <tr>
-                <td style="width: 70%;">
+                <td class="align-centercol-70">
                   <?=$msg?>
                 </td>
 
