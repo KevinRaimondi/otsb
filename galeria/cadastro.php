@@ -82,6 +82,7 @@ if (isset($_POST['btnConfirmar'])) {
       // Se os dados forem inseridos com sucesso
         if ($sql){
           $msg = "Você foi cadastrado com sucesso.";
+          echo "Você foi cadastrado com sucesso.";
         }else{
           unlink($caminho_imagem);
         }
@@ -91,6 +92,7 @@ if (isset($_POST['btnConfirmar'])) {
       if (count($error) != 0) {
         foreach ($error as $erro) {
           $msg = $erro;
+          echo $erro . "<br />";
         }
       }
     }
