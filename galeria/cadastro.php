@@ -2,7 +2,7 @@
 // Conexão com o banco de dados
 require ("conexao.php");
 
-$path = "img/profile/";
+$path = "../img/profile/";
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
