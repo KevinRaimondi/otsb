@@ -50,7 +50,7 @@ if (isset($_POST['cadastrar'])) {
 		if (count($error) == 0) {
 		
 			// Pega extensão da imagem
-			preg_match("/\.(jpg|jpeg){1}$/i", $foto["name"], $ext);
+			preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
 
         	// Gera um nome único para a imagem
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
@@ -96,7 +96,8 @@ Email:<br />
 Senha:<br />
 <input type="password" name="senha" /><br /><br />
 Foto de exibição:<br />
-<input type="file" name="foto" /><br /><br />
+
+<input type="file" name="foto" accept="image/jpeg" /><br /><br />
 <input type="submit" name="cadastrar" value="Cadastrar" />
 </form>
 
