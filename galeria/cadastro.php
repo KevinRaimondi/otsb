@@ -186,9 +186,9 @@ if (isset($_POST['cadastrar'])) {
               <legend>Cadastro</legend>
               <table>
                 <tr>
-                 <td colspan="2">
+                 <td colspan="3">
                   <!-- Text input-->
-                  <label class="col-md-4 control-label" for="usuario">Usuário</label>  
+                  <label class="control-label" for="usuario">Usuário</label>  
                   <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                 </td>
                 <td style="display: table; float:left; margin-right:10px"/>
@@ -210,13 +210,15 @@ if (isset($_POST['cadastrar'])) {
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
               </td>
 
+              <td style="display: table; float:left; margin-right:10px"/>
+
               <td>
                 <label class="control-label" for="passwordinputConfirm">Confirmar senha</label>
                 <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
               </td>
             </tr>
 
-            
+
 
           </table>
 
