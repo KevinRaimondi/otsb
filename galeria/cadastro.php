@@ -15,9 +15,9 @@ if (isset($_POST['btnConfirmar'])) {
   $senhaConfim = $_POST['passwordinputConfirm'];
   $foto = $_FILES["file-input"];
 
-  if($senha != $senhaConfim){
-    $msg = "<p style='color: red; font: bold;'>As senhas não conferem!</p>";
-  }else{  
+  $msg = validar($senha, $senhaConfim, $conn, $usuario, $email );
+
+  if(empty($msg)){ 
   // Se a foto estiver sido selecionada
     if (!empty($foto["name"])) {
 
@@ -95,20 +95,51 @@ if (isset($_POST['btnConfirmar'])) {
         }
       }
     }else{
-        $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
+      $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
 
         // Insere os dados no banco
-        $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
+      $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
 
         // Se os dados forem inseridos com sucesso
-        if ($sql){
-          $msg = "Você foi cadastrado com sucesso.";
-        }else{
-          unlink($caminho_imagem);
-        }
+      if ($sql){
+        $msg = "Você foi cadastrado com sucesso.";
+      }else{
+        unlink($caminho_imagem);
       }
+    }
   }
 }
+
+
+function validar($senha, $senhaConfim, $conn, $usuario, $email ){
+
+  $msg = "";
+
+  if($senha != $senhaConfim){
+    $msg = "<p style='color: red; font: bold;'>As senhas não conferem!</p>";
+  }else{
+
+    $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
+    $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
+
+    if ($rowUsuarios > 0){
+      $msg = "<p style='color: red; font: bold;'>Já existe um usuário cadastrado!</p>";
+    }else{
+
+      $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
+      $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
+
+      if ($rowEmail > 0){
+        $msg = "<p style='color: red; font: bold;'>Já existe um e-mail cadastrado!</p>";
+      }
+    }
+
+  }
+
+  return $msg;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
