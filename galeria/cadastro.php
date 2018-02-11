@@ -233,7 +233,7 @@ if (isset($_POST['cadastrar'])) {
               </div>
 
               <!-- Button (Double) -->
-              <div class="form-group">
+              <div class="form-group" style="float: right;">
                 <label class="col-md-4 control-label" for="btnLimpar"></label>
                 <div class="col-md-8">
                   <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
