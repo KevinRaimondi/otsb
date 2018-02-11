@@ -188,7 +188,7 @@ if (isset($_POST['cadastrar'])) {
                 <tr>
                  <td colspan="3" style="width: 49%;">
                   <!-- Text input-->
-                  <label class="control-label" for="usuario">Usuário</label>  
+                  <label class="control-label" for="usuario">Usuário:</label>  
                   <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                 </td>
 
@@ -196,7 +196,7 @@ if (isset($_POST['cadastrar'])) {
 
                 <!-- Prepended text-->
                 <td style="width: 49%;">
-                  <label class="control-label" for="">E-mail</label>
+                  <label class="control-label" for="">E-mail:</label>
                   <div class="input-group width-100">
                     <span class="input-group-addon">@</span>
                     <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
@@ -207,14 +207,14 @@ if (isset($_POST['cadastrar'])) {
               <!-- Password input-->
               <tr>
               <td colspan="3" style="width: 49%;">
-                <label class="control-label" for="passwordinput">Senha</label>
+                <label class="control-label" for="passwordinput">Senha:</label>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
               </td>
 
               <td style="width: 2%;"/>
 
              <td colspan="3" style="width: 49%;">
-                <label class="control-label" for="passwordinputConfirm">Confirmar senha</label>
+                <label class="control-label" for="passwordinputConfirm">Confirmar senha:</label>
                 <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
               </td>
             </tr>
