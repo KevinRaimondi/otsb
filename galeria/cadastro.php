@@ -184,7 +184,7 @@ if (isset($_POST['cadastrar'])) {
 
               <!-- Form Name -->
               <legend>Cadastro</legend>
-              <table class="align-center">
+              <table class="align-center width-100">
                 <tr>
                  <td colspan="3" style="width: 49%;">
                   <!-- Text input-->
@@ -221,7 +221,7 @@ if (isset($_POST['cadastrar'])) {
 
             <!-- File Button --> 
             <tr>
-            <td colspan="3">
+            <td colspan="5">
                <label class="control-label" for="filebutton">Foto do Perfil</label>
                <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
              </td>
