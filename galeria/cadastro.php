@@ -227,7 +227,7 @@ if (isset($_POST['cadastrar'])) {
 
   <!-- Custom Theme JavaScript -->
   <script src="../js/custom.js"></script>
-  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.min.js"></script>
 
 </body>
 
