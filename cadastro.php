@@ -1,7 +1,6 @@
 <?php
 // Conexão com o banco de dados
-$conn = @mysql_connect("mysql.hostinger.com.br", "u163043632_otsb", "teste123") or die ("Problemas na conexão.");
-$db = @mysql_select_db("u163043632_otsb", $conn) or die ("Problemas na conexão");
+require ("conexao.php");
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
