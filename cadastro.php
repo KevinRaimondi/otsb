@@ -58,9 +58,6 @@ if (isset($_POST['cadastrar'])) {
 		$image = imagecreatefromjpeg($foto["tmp_name"]);
 		imagecopyresampled($image_p, $image, -$dif_w, -$dif_h, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
 
-		imagejpeg($image_p, $foto["name"], 75);
-
-
 
 		// Verifica se a largura da imagem é maior que a largura permitida
 		//if($dimensoes[0] > $largura) {
