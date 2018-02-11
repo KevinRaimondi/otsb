@@ -1,5 +1,9 @@
 <?php
 // Conexão com o banco de dados
+
+$path = "/img/profile/";
+require $path;
+
 require ("conexao.php");
 
 // Se o usuário clicou no botão cadastrar efetua as ações
@@ -56,7 +60,7 @@ if (isset($_POST['cadastrar'])) {
         	$nome_imagem = md5(uniqid(time())) . "." . $ext[1];
 
         	// Caminho de onde ficará a imagem
-        	$caminho_imagem = "img/profile/" . $nome_imagem;
+        	$caminho_imagem = $path . $nome_imagem;
 
 			// Faz o upload da imagem para seu respectivo caminho
 			move_uploaded_file($foto["tmp_name"], $caminho_imagem);
