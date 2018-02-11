@@ -194,7 +194,7 @@ if (isset($_POST['cadastrar'])) {
                 <td style="display: table; float:left; margin-right:10px"/>
 
                 <!-- Prepended text-->
-                <td>
+                <td colspan="3">
                   <label class="control-label" for="">E-mail</label>
                   <div class="input-group">
                     <span class="input-group-addon">@</span>
@@ -212,7 +212,7 @@ if (isset($_POST['cadastrar'])) {
 
               <td style="display: table; float:left; margin-right:10px"/>
 
-              <td>
+              <td colspan="3">
                 <label class="control-label" for="passwordinputConfirm">Confirmar senha</label>
                 <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
               </td>
