@@ -69,6 +69,8 @@ if (isset($_POST['cadastrar'])) {
 			// Se os dados forem inseridos com sucesso
 			if ($sql){
 				echo "Você foi cadastrado com sucesso.";
+			}else{
+				unlink($caminho_imagem);
 			}
 		}
 	
@@ -111,7 +113,7 @@ Foto de exibição:<br />
 $sql = mysqli_query($conn, "SELECT * FROM usuarios ORDER BY nome");
 
 // Exibe as informações de cada usuário
-while ($usuario = mysql_fetch_object($sql)) {
+while ($usuario = mysqli_fetch_object($sql)) {
 	// Exibimos a foto
 	echo "<img src='fotos/".$usuario->foto."' alt='Foto de exibição' /><br />";
 	// Exibimos o nome e email
