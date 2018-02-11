@@ -17,9 +17,9 @@ if (isset($_POST['cadastrar'])) {
 	if (!empty($foto["name"])) {
 		
 		// Largura máxima em pixels
-		$largura = 151;
+		$largura_max = 151;
 		// Altura máxima em pixels
-		$altura = 151;
+		$altura_max = 151;
 		// Tamanho máximo do arquivo em bytes
 		$tamanho = 100000;
 
@@ -38,22 +38,22 @@ if (isset($_POST['cadastrar'])) {
 			$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
 		}
 
-		$width_orig = $dimensoes[1];
-		$height_orig = $dimensoes[0];
+		$largura_orig = $dimensoes[0];
+		$altura_orig = $dimensoes[1];
 
 
 		// Calculando a proporção
-		$ratio_orig = $width_orig/$height_orig;
+		$ratio_orig = $largura_orig/$altura_orig;
 
-		if ($width/$height > $ratio_orig) {
-			$width = $height*$ratio_orig;
+		if ($largura_max/$altura_max > $ratio_orig) {
+			$largura_max = $altura_max*$ratio_orig;
 		} else {
-			$height = $width/$ratio_orig;
+			$altura_max = $largura_max/$ratio_orig;
 		}
 
-		$image_p = imagecreatetruecolor($width, $height);
+		$image_p = imagecreatetruecolor($largura_max, $altura_max);
 		$image = imagecreatefromjpeg($foto);
-		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
+		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $largura_max, $altura_max, $largura_orig, $altura_orig);
 
 		$foto = imagejpeg($image_p, $foto["name"], 75);
 
