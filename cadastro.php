@@ -86,7 +86,7 @@ if (isset($_POST['cadastrar'])) {
 			$caminho_imagem = $path . $nome_imagem;
 
 			// Faz o upload da imagem para seu respectivo caminho
-			imagejpeg($image_p, $caminho.$nomearquivo);
+			imagejpeg($image_p, $caminho_imagem);
 			//move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
 			// Insere os dados no banco
