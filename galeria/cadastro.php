@@ -231,13 +231,21 @@ if (isset($_POST['cadastrar'])) {
              </table>
 
              <!-- Button (Double) -->
-             <div class="form-group" style="float: right;">
-              <div class="col-md-12">
-                <?=$msg?>
-                <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-                <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-              </div>
-            </div>
+
+             <table class="align-center width-100">
+              <tr>
+                <td>
+                  <?=$msg?>
+                </td>
+
+                <td>
+                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                  <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
+                </td>
+              </tr>
+
+            </table>
+
 
           </fieldset>
         </form>
