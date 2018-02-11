@@ -201,8 +201,8 @@ if (isset($_POST['cadastrar'])) {
                     <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
                   </div>
                 </td>
-
               </tr>
+
               <!-- Password input-->
               <tr>
                <td colspan="2">
@@ -218,33 +218,29 @@ if (isset($_POST['cadastrar'])) {
               </td>
             </tr>
 
+            <!-- File Button --> 
+            <tr>
+            <td colspan="3">
+               <label class="control-label" for="filebutton">Foto do Perfil</label>
+               <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
+             </td>
+           </tr>
 
+         </table>
 
-          </table>
-
-
-
-          <!-- File Button --> 
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="filebutton">Foto do Perfil</label>
-            <div class="col-md-4">
-              <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
-            </div>
+         <!-- Button (Double) -->
+         <div class="form-group" style="float: right;">
+          <div class="col-md-12">
+            <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+            <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
           </div>
+        </div>
 
-          <!-- Button (Double) -->
-          <div class="form-group" style="float: right;">
-            <div class="col-md-12">
-              <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-              <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-            </div>
-          </div>
+      </fieldset>
+    </form>
 
-        </fieldset>
-      </form>
-
-    </div>
   </div>
+</div>
 </div>
 </div>
 
