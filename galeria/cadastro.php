@@ -12,7 +12,7 @@ if (isset($_POST['cadastrar'])) {
   $usuario = $_POST['usuario'];
   $email = $_POST['email'];
   $senha = $_POST['passwordinput'];
-  $senhaConfim = $_POST['passwordinput'];
+  $senhaConfim = $_POST['passwordinputConfirm'];
   $foto = $_FILES["foto"];
 
   if($senha != $senhaConfim){
