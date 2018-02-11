@@ -72,19 +72,20 @@ if (isset($_POST['btnConfirmar'])) {
           // Caminho de onde ficará a imagem
         $caminho_imagem = $path . $nome_imagem;
 
-      // Faz o upload da imagem para seu respectivo caminho
+        // Faz o upload da imagem para seu respectivo caminho
         imagejpeg($image_p, $caminho_imagem);
-      //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
+        //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
-      // Insere os dados no banco
+        // Insere os dados no banco
         $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
 
-      // Se os dados forem inseridos com sucesso
+        // Se os dados forem inseridos com sucesso
         if ($sql){
           $msg = "Você foi cadastrado com sucesso.";
         }else{
           unlink($caminho_imagem);
         }
+
       }
 
     // Se houver mensagens de erro, exibe-as
@@ -93,7 +94,19 @@ if (isset($_POST['btnConfirmar'])) {
           $msg = $erro;
         }
       }
-    }
+    }else{
+        $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
+
+        // Insere os dados no banco
+        $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
+
+        // Se os dados forem inseridos com sucesso
+        if ($sql){
+          $msg = "Você foi cadastrado com sucesso.";
+        }else{
+          unlink($caminho_imagem);
+        }
+      }
   }
 }
 ?>
