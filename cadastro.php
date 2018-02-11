@@ -38,8 +38,8 @@ if (isset($_POST['cadastrar'])) {
 			$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
 		}
 
-		$width_orig = $dimensoes[1]
-		$height_orig = $dimensoes[0]
+		$width_orig = $dimensoes[1];
+		$height_orig = $dimensoes[0];
 
 
 		// Calculando a proporção
