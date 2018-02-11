@@ -6,16 +6,16 @@ $path = "../img/profile/";
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
-  
+
   // Recupera os dados dos campos
-  $nome = $_POST['nome'];
+  $usuario = $_POST['usuario'];
   $email = $_POST['email'];
   $senha = $_POST['senha'];
   $foto = $_FILES["foto"];
   
   // Se a foto estiver sido selecionada
   if (!empty($foto["name"])) {
-    
+
     // Largura máxima em pixels
     $largura_max = 151;
     // Altura máxima em pixels
@@ -72,7 +72,7 @@ if (isset($_POST['cadastrar'])) {
       //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
       // Insere os dados no banco
-      $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$nome."', '".$email."', '".$nome_imagem."')");
+      $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$nome_imagem."')");
 
       // Se os dados forem inseridos com sucesso
       if ($sql){
@@ -169,22 +169,79 @@ if (isset($_POST['cadastrar'])) {
   <!-- Section: intro -->
   <section id="intro" class="intro">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="boxed-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="boxed-grey" style="
+          background: #3e3e3ee0;
+          border: #fff solid 1px;
+          border-radius: 5px;
+          color: #fff;
+          ">
 
-          <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro" >
-            Nome:<br />
-            <input type="text" name="nome" /><br /><br />
-            Email:<br />
-            <input type="text" name="email" /><br /><br />
-            Senha:<br />
-            <input type="password" name="senha" /><br /><br />
-            Foto de exibição:<br />
+          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
+            <fieldset>
 
-            <input type="file" name="foto" accept="image/jpeg" /><br /><br />
-            <input type="submit" name="cadastrar" value="Cadastrar" />
+              <!-- Form Name -->
+              <legend>Cadastro</legend>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="usuario">Usuário</label>  
+                <div class="col-md-4">
+                  <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- Prepended text-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="">E-mail</label>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinput">Senha</label>
+                <div class="col-md-4">
+                  <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="passwordinputConfirm">Confirmar senha</label>
+                <div class="col-md-4">
+                  <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
+
+                </div>
+              </div>
+
+              <!-- File Button --> 
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="filebutton">Foto do Perfil</label>
+                <div class="col-md-4">
+                  <input id="filebutton" name="filebutton" class="input-file" type="file" accept="image/jpeg">
+                </div>
+              </div>
+
+              <!-- Button (Double) -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="btnLimpar"></label>
+                <div class="col-md-8">
+                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                  <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
+                </div>
+              </div>
+
+            </fieldset>
           </form>
 
         </div>
@@ -192,17 +249,17 @@ if (isset($_POST['cadastrar'])) {
     </div>
   </div>
 
-  </section>
+</section>
 
-  <!-- Core JavaScript Files -->
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery.easing.min.js"></script>
-  <script src="../js/jquery.scrollTo.js"></script>
-  <script src="../js/wow.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src="../js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+<!-- Core JavaScript Files -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.scrollTo.js"></script>
+<script src="../js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="../js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
 
 </body>
 
