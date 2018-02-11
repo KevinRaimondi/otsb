@@ -6,7 +6,7 @@ $path = "img/profile/";
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['cadastrar'])) {
-
+  
   // Recupera os dados dos campos
   $nome = $_POST['nome'];
   $email = $_POST['email'];
@@ -15,7 +15,7 @@ if (isset($_POST['cadastrar'])) {
   
   // Se a foto estiver sido selecionada
   if (!empty($foto["name"])) {
-
+    
     // Largura máxima em pixels
     $largura_max = 151;
     // Altura máxima em pixels
@@ -105,7 +105,6 @@ if (isset($_POST['cadastrar'])) {
 
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/gridGallery.css" />
 
   <!-- Fonts -->
 
@@ -125,33 +124,33 @@ if (isset($_POST['cadastrar'])) {
   </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
     <!-- Preloader -->
     <div id="preloader">
-      <div id="load"></div>
+      <div id="load">
+        <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw margin-bottom"></i>
+      </div>
     </div>
 
-    <section id="galeria" class="nav-section">
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-              <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand slogan" href="/">
-              <h1>OTSB</h1>
-            </a>
-          </div>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand slogan" href="/">
+            <h1>OTSB</h1>
+          </a>
+        </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/#jogos">Jogos</a></li>
-              <li><a href="/#sobre">Sobre</a></li>
-              <li><a href="/#contact">Contato</a></li>
-              <li class="active"><a href="/galeria">Galeria</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#intro">Home</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="/galeria">Galeria</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -167,9 +166,9 @@ if (isset($_POST['cadastrar'])) {
     <!-- /.container -->
   </nav>
 
-</section>
-<!-- Section: intro -->
-<section class="logo galeria-section">
+  <!-- Section: intro -->
+  <section id="intro" class="intro">
+
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -193,7 +192,8 @@ if (isset($_POST['cadastrar'])) {
     </div>
   </div>
 
-</section>
+  </section>
+  <!-- /Section: intro -->
 
 <footer>
   <div class="container">
@@ -201,7 +201,7 @@ if (isset($_POST['cadastrar'])) {
       <div class="col-md-12 col-lg-12">
         <div class="wow shake" data-wow-delay="0.4s">
           <div class="page-scroll marginbot-30">
-            <a href="#galeria" id="totop" class="btn btn-circle">
+            <a href="#intro" id="totop" class="btn btn-circle">
              <i class="fa fa-angle-double-up animated"></i>
            </a>
          </div>
@@ -222,12 +222,14 @@ if (isset($_POST['cadastrar'])) {
   </footer>
 
   <!-- Core JavaScript Files -->
+  <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/jquery.scrollTo.js"></script>
   <script src="../js/wow.min.js"></script>
-
   <!-- Custom Theme JavaScript -->
   <script src="../js/custom.js"></script>
-  <script src="js/jquery.min.js"></script>
+  <script src="contactform/contactform.js"></script>
 
 </body>
 
