@@ -186,33 +186,34 @@ if (isset($_POST['cadastrar'])) {
               <legend>Cadastro</legend>
               <table>
                 <tr>
-                 <td colspan="3">
+                 <td colspan="3" style="width: 49%;">
                   <!-- Text input-->
                   <label class="control-label" for="usuario">Usuário</label>  
                   <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                 </td>
-                <td style="display: table; float:left; margin-right:10px"/>
+                
+                <td style="width: 2%;"/>
 
                 <!-- Prepended text-->
-                <td colspan="3">
+                <td style="width: 49%;">
                   <label class="control-label" for="">E-mail</label>
                   <div class="input-group">
                     <span class="input-group-addon">@</span>
-                    <input id="email" name="email" class="form-control" placeholder="E-mail" type="text" required="">
+                    <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
                   </div>
                 </td>
               </tr>
 
               <!-- Password input-->
               <tr>
-               <td colspan="3">
+              <td colspan="3" style="width: 49%;">
                 <label class="control-label" for="passwordinput">Senha</label>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Senha" class="form-control input-md" required="">
               </td>
 
-              <td style="display: table; float:left; margin-right:10px"/>
+              <td style="width: 2%;"/>
 
-              <td colspan="3">
+             <td colspan="3" style="width: 49%;">
                 <label class="control-label" for="passwordinputConfirm">Confirmar senha</label>
                 <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirmar senha" class="form-control input-md" required="">
               </td>
