@@ -8,6 +8,7 @@ if (isset($_POST['cadastrar'])) {
 	// Recupera os dados dos campos
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
+	$senha = $_POST['senha'];
 	$foto = $_FILES["foto"];
 	
 	// Se a foto estiver sido selecionada
@@ -92,6 +93,8 @@ Nome:<br />
 <input type="text" name="nome" /><br /><br />
 Email:<br />
 <input type="text" name="email" /><br /><br />
+Senha:<br />
+<input type="password" name="senha" /><br /><br />
 Foto de exibição:<br />
 <input type="file" name="foto" /><br /><br />
 <input type="submit" name="cadastrar" value="Cadastrar" />
