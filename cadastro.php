@@ -2,7 +2,7 @@
 // Conexão com o banco de dados
 
 $path = "img/profile/";
-require $path;
+include $path;
 
 require ("conexao.php");
 
