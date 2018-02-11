@@ -38,8 +38,12 @@ if (isset($_POST['cadastrar'])) {
 			$error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
 		}
 
-		   // Calculando a proporção
-		$ratio_orig = $dimensoes[1]/$dimensoes[0];
+		$width_orig = $dimensoes[1]
+		$height_orig = $dimensoes[0]
+
+
+		// Calculando a proporção
+		$ratio_orig = $width_orig/$height_orig;
 
 		if ($width/$height > $ratio_orig) {
 			$width = $height*$ratio_orig;
@@ -48,7 +52,7 @@ if (isset($_POST['cadastrar'])) {
 		}
 
 		$image_p = imagecreatetruecolor($width, $height);
-		$image = imagecreatefromjpeg($filename);
+		$image = imagecreatefromjpeg($foto);
 		imagecopyresampled($image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
 
 		$foto = imagejpeg($image_p, $foto["name"], 75);
