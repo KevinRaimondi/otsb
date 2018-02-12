@@ -58,9 +58,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#btnLimpar").click(function(){
-		var x = document.getElementById("mensagem");
-		$("#usuario").text("");
-		$("#email").text("");
+		$("#usuario").val("");
+		$("#email").val("");
 		$("#mensagem").text("");
 	});
 
