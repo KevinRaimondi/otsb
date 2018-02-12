@@ -260,7 +260,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <!-- Text input-->
                     <label class="control-label" for="usuario"><span style="color: red;">*</span>Usuário:</label>  
                     <div class="input-group width-100">
-                      <span class="input-group-addon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                      <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
                       <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
                     </div>
                   </td>
@@ -283,7 +283,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <label class="control-label" for="passwordinput"><span style="color: red;">*</span>Senha:</label>
                     <div class="input-group width-100">
                       <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-                      <button class="input-group-addon"><i class="fas fa-eye" aria-hidden="true"></i></button>
+                      <span class="input-group-addon" ><i class="fa fa-eye" aria-hidden="true"></i></span>
                     </div>
                   </td>
 
@@ -292,7 +292,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td colspan="3" style="width: 49%;">
                     <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span>Confirme sua senha:</label>
                     <div class="input-group width-100">
-                      <span class="input-group-addon"><i class="fas fa-lock" aria-hidden="true"></i></span>
+                      <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
                       <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
                     </div>
                   </td>
