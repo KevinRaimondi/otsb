@@ -258,7 +258,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 <tr>
                   <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
-                    <label class="control-label" for="usuario"><span style="color: red;">*</span>Usuário:</label>  
+                    <label class="control-label" for="usuario"><span style="color: red;">*</span> Usuário:</label>  
                     <div class="input-group width-100">
                       <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
                       <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
@@ -269,7 +269,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                   <!-- Prepended text-->
                   <td style="width: 49%;">
-                    <label class="control-label" for=""><span style="color: red;">*</span>E-mail:</label>
+                    <label class="control-label" for=""><span style="color: red;">*</span> E-mail:</label>
                     <div class="input-group width-100">
                       <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                       <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
@@ -280,7 +280,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 <!-- Password input-->
                 <tr>
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinput"><span style="color: red;">*</span>Senha:</label>
+                    <label class="control-label" for="passwordinput"><span style="color: red;">*</span> Senha:</label>
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
                       <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
@@ -290,7 +290,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td style="width: 2%;"/>
 
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span>Confirme sua senha:</label>
+                    <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span> Confirme sua senha:</label>
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
                       <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
@@ -309,7 +309,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                   <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
-                    <label class="control-label" for="token"><span style="color: red;">*</span>Token:</label>
+                    <label class="control-label" for="token"><span style="color: red;">*</span> Token:</label>
                     <div class="input-group width-100">
                       <span class="input-group-addon" style="width: 11%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
                       <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
