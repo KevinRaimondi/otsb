@@ -88,8 +88,7 @@ if (isset($_POST['btnConfirmar'])) {
       }
     }else{
       $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
-
-      $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem );
+      $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, "" );
     }
   }
 }
@@ -127,7 +126,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
   $msg = "";
 
   // Insere os dados no banco
-  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('kk', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
+  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUE ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
 
   // Se os dados forem inseridos com sucesso
   if ($sql){
