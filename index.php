@@ -45,6 +45,10 @@ if(isset($_SESSION['cmsg'])){
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
 
+  <script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+  <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
   <!-- =======================================================
     Theme Name: Squadfree
     Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
@@ -81,7 +85,7 @@ if(isset($_SESSION['cmsg'])){
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contact">Contato</a></li>
             <li><a href="/galeria">Galeria</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
+            <li><a id="fancybox" href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
             <ul class="dropdown-menu">
