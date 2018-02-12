@@ -98,21 +98,21 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
   $msg = "";
 
   if($senha != $senhaConfim){
-    $msg = "<p style='color: red; font: bold;'>As senhas não conferem!</p>";
+    $msg = "<p style='color: red; margin: 0;'>As senhas não conferem!</p>";
   }else{
 
     $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
     $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
 
     if ($rowUsuarios > 0){
-      $msg = "<p style='color: red; font: bold;'>Já existe um usuário cadastrado!</p>";
+      $msg = "<p style='color: red; margin: 0;'>Já existe um usuário cadastrado!</p>";
     }else{
 
       $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
       $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
 
       if ($rowEmail > 0){
-        $msg = "<p style='color: red; font: bold;'>Já existe um e-mail cadastrado!</p>";
+        $msg = "<p style='color: red; margin: 0;'>Já existe um e-mail cadastrado!</p>";
       }
     }
 
@@ -136,7 +136,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
       unlink($caminho_imagem);
     }
 
-    $msg = "<p style='color: red; font: bold;'>Erro ao cadastrar! Favor entra em contato com o administrador</p>";
+    $msg = "<p style='color: red; margin: 0;'>Erro ao cadastrar! Favor entra em contato com o administrador</p>";
   }
 
   return $msg;
@@ -275,27 +275,27 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
                </tr>
 
              </table>
+           </br>
+           <!-- Button (Double) -->
+           <table class="align-center width-100">
+            <tr>
+              <td  style="width: 70%;" class="align-center">
+                <?=$msg?>
+              </td>
 
-             <!-- Button (Double) -->
-             <table class="align-center width-100">
-              <tr>
-                <td  style="width: 70%;" class="align-center">
-                  <?=$msg?>
-                </td>
+              <td style="width: 21%;">
+                <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
+              </td>
+            </tr>
+          </table>
 
-                <td style="width: 21%;">
-                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-                  <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-                </td>
-              </tr>
-            </table>
+        </fieldset>
+      </form>
 
-          </fieldset>
-        </form>
-
-      </div>
     </div>
   </div>
+</div>
 </div>
 
 </section>
