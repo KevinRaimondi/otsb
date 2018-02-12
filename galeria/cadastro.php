@@ -107,7 +107,7 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
     $verificarExistenciaToken = mysqli_query($conn,"SELECT * FROM tokens WHERE  token = '$token'");
     $rowToken = mysqli_num_rows($verificarExistenciaToken);
 
-    if ($rowToken > 0){
+    if ($rowToken == 0){
       $msg = "<p style='color: red; margin: 0;'>Token informado é Invalido!</p>";
     }else{
 
