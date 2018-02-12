@@ -5,6 +5,9 @@ require ("conexao.php");
 $path = "../img/profile/";
 $msg = '';
 
+$usuario = "";
+$email = "";
+
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['btnConfirmar'])) {
 
@@ -108,7 +111,7 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
     $rowToken = mysqli_num_rows($verificarExistenciaToken);
 
     if ($rowToken == 0){
-      $msg = "<p style='color: red; margin: 0;'>Token informado é Invalido!</p>";
+      $msg = "<p style='color: red; margin: 0;'>Token Invalido!</p>";
     }else{
 
       $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
@@ -127,6 +130,10 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
       }
 
     }
+
+  }
+
+  if(!empty($msg)){
 
   }
 
@@ -252,7 +259,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
                     <label class="control-label" for="usuario"><span style="color: red;">*</span>Usuário:</label>  
-                    <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
+                    <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
                   </td>
 
                   <td style="width: 2%;"/>
@@ -262,7 +269,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <label class="control-label" for=""><span style="color: red;">*</span>E-mail:</label>
                     <div class="input-group width-100">
                       <span class="input-group-addon">@</span>
-                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
+                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
                     </div>
                   </td>
                 </tr>
@@ -332,7 +339,6 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 <script src="../js/wow.min.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="../js/custom.js"></script>
-<script src="contactform/contactform.js"></script>
 
 </body>
 
