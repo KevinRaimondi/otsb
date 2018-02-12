@@ -135,6 +135,8 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
     if(!empty($caminho_imagem)){
       unlink($caminho_imagem);
     }
+
+    $msg = "<p style='color: red; font: bold;'>Erro ao cadastrar! Favor entra em contato com o administrador</p>";
   }
 
   return $msg;
