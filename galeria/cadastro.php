@@ -247,94 +247,100 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
   <div class="container">
     <div class="row centralizar-divs">
       <div class="col-lg-8">
-        <div class="boxed-grey style-form">
+        <div class="panel panel-default" >
+          <div class="panel-heading">
+            <div class="panel-title text-center">Bootsnipp.com</div>
+          </div>     
 
-          <form id="cadastro" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
-            <fieldset>
+          <div class="panel-body" >
 
-              <!-- Form Name -->
-              <legend>Cadastro</legend>
+            <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
+              <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro</legend>
+                <table class="align-center width-100">
+                  <tr>
+                    <td colspan="3" style="width: 49%;">
+                      <!-- Text input-->
+                      <label class="control-label" for="usuario"><span style="color: red;">*</span> Usuário:</label>  
+                      <div class="input-group width-100">
+                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
+                      </div>
+                    </td>
+
+                    <td style="width: 2%;"/>
+
+                    <!-- Prepended text-->
+                    <td style="width: 49%;">
+                      <label class="control-label" for=""><span style="color: red;">*</span> E-mail:</label>
+                      <div class="input-group width-100">
+                        <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- Password input-->
+                  <tr>
+                    <td colspan="3" style="width: 49%;">
+                      <label class="control-label" for="passwordinput"><span style="color: red;">*</span> Senha:</label>
+                      <div class="input-group width-100" style="display: flex;">
+                        <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
+                        <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                      </div>
+                    </td>
+
+                    <td style="width: 2%;"/>
+
+                    <td colspan="3" style="width: 49%;">
+                      <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span> Confirme sua senha:</label>
+                      <div class="input-group width-100" style="display: flex;">
+                        <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
+                        <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- File Button --> 
+                  <tr>
+                    <td colspan="3" style="width: 49%;">
+                      <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
+                      <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
+                    </td>
+
+                    <td style="width: 2%;"/>
+
+                    <td colspan="3" style="width: 49%;">
+                      <!-- Text input-->
+                      <label class="control-label" for="token"><span style="color: red;">*</span> Token:</label>
+                      <div class="input-group width-100">
+                        <span class="input-group-addon" style="width: 11%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
+                      </div>
+                    </td>
+                  </tr>
+
+                </table>
+              </br>
+              <!-- Button (Double) -->
               <table class="align-center width-100">
                 <tr>
-                  <td colspan="3" style="width: 49%;">
-                    <!-- Text input-->
-                    <label class="control-label" for="usuario"><span style="color: red;">*</span> Usuário:</label>  
-                    <div class="input-group width-100">
-                      <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                      <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
-                    </div>
+                  <td  style="width: 70%;" class="align-center">
+                    <?=$msg?>
                   </td>
 
-                  <td style="width: 2%;"/>
-
-                  <!-- Prepended text-->
-                  <td style="width: 49%;">
-                    <label class="control-label" for=""><span style="color: red;">*</span> E-mail:</label>
-                    <div class="input-group width-100">
-                      <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                      <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
-                    </div>
+                  <td style="width: 21%;">
+                    <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="button">Limpar</button>
+                    <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
                   </td>
                 </tr>
-
-                <!-- Password input-->
-                <tr>
-                  <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinput"><span style="color: red;">*</span> Senha:</label>
-                    <div class="input-group width-100" style="display: flex;">
-                      <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-                      <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                    </div>
-                  </td>
-
-                  <td style="width: 2%;"/>
-
-                  <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span> Confirme sua senha:</label>
-                    <div class="input-group width-100" style="display: flex;">
-                      <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
-                      <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- File Button --> 
-                <tr>
-                  <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
-                    <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
-                  </td>
-
-                  <td style="width: 2%;"/>
-
-                  <td colspan="3" style="width: 49%;">
-                    <!-- Text input-->
-                    <label class="control-label" for="token"><span style="color: red;">*</span> Token:</label>
-                    <div class="input-group width-100">
-                      <span class="input-group-addon" style="width: 11%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                      <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
-                    </div>
-                  </td>
-                </tr>
-
               </table>
-            </br>
-            <!-- Button (Double) -->
-            <table class="align-center width-100">
-              <tr>
-                <td  style="width: 70%;" class="align-center">
-                  <?=$msg?>
-                </td>
 
-                <td style="width: 21%;">
-                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="button">Limpar</button>
-                  <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-                </td>
-              </tr>
-            </table>
-
-          </fieldset>
-        </form>
+            </fieldset>
+          </form>
+        </div>                     
 
       </div>
     </div>
