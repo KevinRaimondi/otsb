@@ -44,7 +44,7 @@ if(isset($_SESSION['cmsg'])){
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
   <script>
     !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
   </script>
@@ -574,7 +574,6 @@ if(isset($_SESSION['cmsg'])){
   </footer>
 
   <!-- Core JavaScript Files -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/jquery.scrollTo.js"></script>
