@@ -46,7 +46,7 @@ if(isset($_SESSION['cmsg'])){
   <link href="color/default.css" rel="stylesheet">
 
   <script>
-    !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+    !window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
   </script>
 
   <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
