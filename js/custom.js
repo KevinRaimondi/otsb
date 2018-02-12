@@ -57,6 +57,36 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$("#btnPasswordinput").click(function(){
+		var x = document.getElementById('passwordinput')
+		var btn = document.createElement('btnPasswordinput');
+		if(x.type === 'password'){
+			x.type == 'text'
+			btn.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+		}else{
+			x.type = 'password'
+			btn.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+		}
+	});
+
+});
+
+$(document).ready(function(){
+	$("#btnPasswordinputConfirm").click(function(){
+		var x = document.getElementById('passwordinputConfirm')
+		var btn = document.createElement('btnPasswordinputConfirm');
+		if(x.type === 'password'){
+			x.type == 'text'
+			btn.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+		}else{
+			x.type = 'password'
+			btn.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+		}
+	});
+
+});
+
+$(document).ready(function(){
 	$("#btnLimpar").click(function(){
 		$("#usuario").val("");
 		$("#email").val("");
