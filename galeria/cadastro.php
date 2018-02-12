@@ -76,7 +76,7 @@ if (isset($_POST['btnConfirmar'])) {
         imagejpeg($image_p, $caminho_imagem);
         //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
-        $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem );
+        $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem );
 
       }
 
@@ -122,7 +122,7 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
   return $msg;
 }
 
-function inserir($conn, $usuario, $email, $senha, $nome_imagem ){
+function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem){
 
   $msg = "";
 
@@ -133,7 +133,9 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem ){
   if ($sql){
     $msg = "Você foi cadastrado com sucesso.";
   }else{
-    unlink($caminho_imagem);
+    if(!empty($caminho_imagem)){
+      unlink($caminho_imagem);
+    }
   }
 
   return $msg;
