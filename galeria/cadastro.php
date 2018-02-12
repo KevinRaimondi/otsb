@@ -7,6 +7,7 @@ $msg = '';
 
 $usuario = "";
 $email = "";
+$foto = "";
 
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['btnConfirmar'])) {
@@ -293,7 +294,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 <tr>
                   <td colspan="3" style="width: 49%;">
                     <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
-                    <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
+                    <input id="filebutton" name="file-input" class="input-file width-100" type="file" value="<?php echo $foto ?>" accept="image/jpeg">
                   </td>
 
                   <td style="width: 2%;"/>
@@ -315,7 +316,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 </td>
 
                 <td style="width: 21%;">
-                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default">Limpar</button>
+                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="button">Limpar</button>
                   <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
                 </td>
               </tr>

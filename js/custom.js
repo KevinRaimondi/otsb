@@ -58,7 +58,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#btnLimpar").click(function(){
-		$("#cadastro").find('input:text, input:password, input:file').val('');
+		$("#cadastro").find('input:text, input:email, input:password, input:file').val('');
 		$("#mensagem").text("");
 	});
 
