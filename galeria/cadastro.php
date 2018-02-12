@@ -315,7 +315,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 </td>
 
                 <td style="width: 21%;">
-                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default">Limpar</button>
                   <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
                 </td>
               </tr>
