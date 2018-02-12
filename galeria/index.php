@@ -11,7 +11,7 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-   <link rel="stylesheet" href="css/gridGallery.css" />
+  <link rel="stylesheet" href="css/gridGallery.css" />
 
   <!-- Fonts -->
 
@@ -21,43 +21,62 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script>
+    !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".ifancybox").fancybox({
+        'width' : '85%',
+        'height' : '85%',
+        'autoScale' : false,
+        'transitionIn' : 'none',
+        'transitionOut' : 'none',
+        'type' : 'iframe'
+      });
+    });
+  </script>
+
   <!-- =======================================================
     Theme Name: Squadfree
     Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
-  ======================================================= -->
+    ======================================================= -->
 
-</head>
+  </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div id="load"></div>
-  </div>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="load"></div>
+    </div>
 
- <section id="galeria" class="nav-section">
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-        <a class="navbar-brand slogan" href="/">
-          <h1>OTSB</h1>
-        </a>
-      </div>
+    <section id="galeria" class="nav-section">
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand slogan" href="/">
+              <h1>OTSB</h1>
+            </a>
+          </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/#jogos">Jogos</a></li>
-          <li><a href="/#sobre">Sobre</a></li>
-          <li><a href="/#contact">Contato</a></li>
-          <li class="active"><a href="/galeria">Galeria</a></li>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/#jogos">Jogos</a></li>
+              <li><a href="/#sobre">Sobre</a></li>
+              <li><a href="/#contact">Contato</a></li>
+              <li class="active"><a href="/galeria">Galeria</a></li>
+              <li><a class="ifancybox" href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
       <!--    <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -74,19 +93,19 @@
   </nav>
 
 </section>
-  <!-- Section: intro -->
-  <section class="logo galeria-section">
+<!-- Section: intro -->
+<section class="logo galeria-section">
 
-    <div id="grid" data-directory="gallery"></div>
+  <div id="grid" data-directory="gallery"></div>
 
-    <!-- SCRIPTS FOR FOR THE PLUGIN-->
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/rotate-patch.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/autoGrid.min.js"></script>
+  <!-- SCRIPTS FOR FOR THE PLUGIN-->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/rotate-patch.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/autoGrid.min.js"></script>
 
-    <script>
-      $(function(){
+  <script>
+    $(function(){
             //INITIALIZE THE PLUGIN
             $('#grid').grid({
                 categoriesOrder: 'byName', //byDate, byDateReverse, byName, byNameReverse, random
@@ -117,25 +136,25 @@
                 lightBoxPlayInterval: 4000, //The interval in the auto play mode 
                 lightBoxShowTimer: true, //If you wish to show the timer in auto play mode
                 lightBoxStopPlayOnClose: false, //Stop the auto play mode when you close the lightbox?
-            });
-      });
-    </script>
+              });
+          });
+        </script>
 
-  </section>
+      </section>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-12">
-          <div class="wow shake" data-wow-delay="0.4s">
-            <div class="page-scroll marginbot-30">
-              <a href="#galeria" id="totop" class="btn btn-circle">
-							<i class="fa fa-angle-double-up animated"></i>
-						</a>
-            </div>
-          </div>
-          <p>&copy;SquadFREE. All rights reserved.</p>
-          <div class="credits">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <div class="wow shake" data-wow-delay="0.4s">
+                <div class="page-scroll marginbot-30">
+                  <a href="#galeria" id="totop" class="btn btn-circle">
+                   <i class="fa fa-angle-double-up animated"></i>
+                 </a>
+               </div>
+             </div>
+             <p>&copy;SquadFREE. All rights reserved.</p>
+             <div class="credits">
             <!--
               All the links in the footer should remain intact. 
               You can delete the links only if you purchased the pro version.
