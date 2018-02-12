@@ -99,6 +99,8 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
 
   if($senha != $senhaConfim){
     $msg = "<p style='color: red; margin: 0;'>As senhas não conferem!</p>";
+  }else if (strlen($senha) < 8) {
+    $msg = "<p style='color: red; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
   }else{
 
     $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
