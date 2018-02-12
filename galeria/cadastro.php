@@ -14,8 +14,9 @@ if (isset($_POST['btnConfirmar'])) {
   $senha = $_POST['passwordinput'];
   $senhaConfim = $_POST['passwordinputConfirm'];
   $foto = $_FILES["file-input"];
+  $token = $_POST['token'];
 
-  $msg = validar($senha, $senhaConfim, $conn, $usuario, $email );
+  $msg = validar($senha, $senhaConfim, $conn, $usuario, $email, $token);
 
   if(empty($msg)){ 
   // Se a foto estiver sido selecionada
@@ -50,7 +51,7 @@ if (isset($_POST['btnConfirmar'])) {
 
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
       if($foto["size"] > $tamanho) {
-        $error[2] = "A imagem deve ter no máximo ".$tamanho." bytes";
+        $error[2] = "<p style='color: red; margin: 0;'>A imagem deve ter no máximo ".$tamanho." bytes!</p>";
       }
 
       $largura_orig = $dimensoes[0];
@@ -76,7 +77,7 @@ if (isset($_POST['btnConfirmar'])) {
         imagejpeg($image_p, $caminho_imagem);
         //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
-        $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem );
+        $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem, $token);
 
       }
 
@@ -88,12 +89,12 @@ if (isset($_POST['btnConfirmar'])) {
       }
     }else{
       $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
-      $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, "" );
+      $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, "", $token);
     }
   }
 }
 
-function validar($senha, $senhaConfim, $conn, $usuario, $email ){
+function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
 
   $msg = "";
 
@@ -103,19 +104,28 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
     $msg = "<p style='color: red; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
   }else{
 
-    $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
-    $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
+    $verificarExistenciaToken = mysqli_query($conn,"SELECT * FROM tokens WHERE  token = '$token'");
+    $rowToken = mysqli_num_rows($verificarExistenciaToken);
 
-    if ($rowUsuarios > 0){
-      $msg = "<p style='color: red; margin: 0;'>Já existe um usuário cadastrado!</p>";
+    if ($rowToken > 0){
+      $msg = "<p style='color: red; margin: 0;'>Token informado é Invalido!</p>";
     }else{
 
-      $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
-      $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
+      $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
+      $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
 
-      if ($rowEmail > 0){
-        $msg = "<p style='color: red; margin: 0;'>Já existe um e-mail cadastrado!</p>";
+      if ($rowUsuarios > 0){
+        $msg = "<p style='color: red; margin: 0;'>Já existe um usuário cadastrado!</p>";
+      }else{
+
+        $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
+        $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
+
+        if ($rowEmail > 0){
+          $msg = "<p style='color: red; margin: 0;'>Já existe um e-mail cadastrado!</p>";
+        }
       }
+
     }
 
   }
@@ -123,7 +133,7 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
   return $msg;
 }
 
-function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem){
+function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem, $token){
 
   $msg = "";
 
@@ -131,6 +141,8 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
 
   // Insere os dados no banco
   $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$enrypt."', '".$nome_imagem."')");
+
+  $sqlToken = mysqli_query($conn, "DELETE FROM `tokens` WHERE `tokens`.`token` = '".$token."'");
 
   // Se os dados forem inseridos com sucesso
   if ($sql){
@@ -171,75 +183,75 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
   <link href="../color/default.css" rel="stylesheet">
 
   <!-- =======================================================
-    Theme Name: Squadfree
-    Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-    ======================================================= -->
+  Theme Name: Squadfree
+  Theme URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  Author: BootstrapMade
+  Author URL: https://bootstrapmade.com
+  ======================================================= -->
 
-  </head>
+</head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-    <!-- Preloader -->
-    <div id="preloader">
-      <div id="load">
-        <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw margin-bottom"></i>
-      </div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load">
+      <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw margin-bottom"></i>
     </div>
+  </div>
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand slogan" href="/">
-            <h1>OTSB</h1>
-          </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#intro">Home</a></li>
-            <li><a href="#jogos">Jogos</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
-            <li><a href="/galeria">Galeria</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
-      <!--    <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-            </ul>
-          </li-->
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
-
-  <!-- Section: intro -->
-  <section id="intro" class="intro">
-
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="row centralizar-divs">
-        <div class="col-lg-8">
-          <div class="boxed-grey style-form">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand slogan" href="/">
+          <h1>OTSB</h1>
+        </a>
+      </div>
 
-            <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
-              <fieldset>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="/galeria">Galeria</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
+  <!--    <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+  <li><a href="#">Example menu</a></li>
+  <li><a href="#">Example menu</a></li>
+  <li><a href="#">Example menu</a></li>
+  </ul>
+</li-->
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
 
-                <!-- Form Name -->
-                <legend>Cadastro</legend>
-                <table class="align-center width-100">
-                  <tr>
-                   <td colspan="3" style="width: 49%;">
+<!-- Section: intro -->
+<section id="intro" class="intro">
+
+  <div class="container">
+    <div class="row centralizar-divs">
+      <div class="col-lg-8">
+        <div class="boxed-grey style-form">
+
+          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
+            <fieldset>
+
+              <!-- Form Name -->
+              <legend>Cadastro</legend>
+              <table class="align-center width-100">
+                <tr>
+                  <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
-                    <label class="control-label" for="usuario">*Usuário:</label>  
+                    <label class="control-label" for="usuario"><span style="color: red;">*</span>Usuário:</label>  
                     <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                   </td>
 
@@ -247,7 +259,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
 
                   <!-- Prepended text-->
                   <td style="width: 49%;">
-                    <label class="control-label" for="">*E-mail:</label>
+                    <label class="control-label" for=""><span style="color: red;">*</span>E-mail:</label>
                     <div class="input-group width-100">
                       <span class="input-group-addon">@</span>
                       <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
@@ -258,48 +270,56 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
                 <!-- Password input-->
                 <tr>
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinput">*Senha:</label>
+                    <label class="control-label" for="passwordinput"><span style="color: red;">*</span>Senha:</label>
                     <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
                   </td>
 
                   <td style="width: 2%;"/>
 
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinputConfirm">*Confirme sua senha:</label>
+                    <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span>Confirme sua senha:</label>
                     <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
                   </td>
                 </tr>
 
                 <!-- File Button --> 
                 <tr>
-                  <td colspan="5">
-                   <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
-                   <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
-                 </td>
-               </tr>
+                  <td colspan="3" style="width: 49%;">
+                    <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
+                    <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
+                  </td>
 
-             </table>
-           </br>
-           <!-- Button (Double) -->
-           <table class="align-center width-100">
-            <tr>
-              <td  style="width: 70%;" class="align-center">
-                <?=$msg?>
-              </td>
+                  <td style="width: 2%;"/>
 
-              <td style="width: 21%;">
-                <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
-                <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
-              </td>
-            </tr>
-          </table>
+                  <td colspan="3" style="width: 49%;">
+                    <!-- Text input-->
+                    <label class="control-label" for="token"><span style="color: red;">*</span>Token:</label>
+                    <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
+                  </td>
+                </tr>
 
-        </fieldset>
-      </form>
+              </table>
+            </br>
+            <!-- Button (Double) -->
+            <table class="align-center width-100">
+              <tr>
+                <td  style="width: 70%;" class="align-center">
+                  <?=$msg?>
+                </td>
 
+                <td style="width: 21%;">
+                  <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="reset">Limpar</button>
+                  <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
+                </td>
+              </tr>
+            </table>
+
+          </fieldset>
+        </form>
+
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 </section>
