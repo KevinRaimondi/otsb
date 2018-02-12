@@ -59,8 +59,8 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#btnLimpar").click(function(){
 		var x = document.getElementById("mensagem");
-		$("#usuario").val("");
-		$("#email").val("");
+		$("#usuario").text("");
+		$("#email").text("");
 		$("#mensagem").text("");
 	});
 
