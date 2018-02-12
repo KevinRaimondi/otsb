@@ -955,16 +955,3 @@ td .col-100 {
     color: #fff;
     background-color: rgba(19, 19, 19, 0.3);
 }
-
-.btxt {
-    background: #fff;
-    color: #000; 
-    width: 17em;
-    margin: 0.1em auto;
-    min-height: 18px;
-    height: 90%;
-    line-height: 1.0em;
-    font-size: 1.3em;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
