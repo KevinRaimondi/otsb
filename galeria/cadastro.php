@@ -268,7 +268,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td style="width: 49%;">
                     <label class="control-label" for=""><span style="color: red;">*</span>E-mail:</label>
                     <div class="input-group width-100">
-                      <span class="input-group-addon">@</span>
+                      <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                       <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
                     </div>
                   </td>
