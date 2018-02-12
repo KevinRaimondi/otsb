@@ -44,6 +44,11 @@ if(isset($_SESSION['cmsg'])){
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
+
+  <script>
+    !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+  </script>
+
   <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
   <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <script type="text/javascript">
