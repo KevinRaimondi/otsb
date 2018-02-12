@@ -319,10 +319,10 @@ if(isset($_SESSION['cmsg'])){
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="service-box">
               <div class="service-icon">
-                <img src="img/icons/creativerse_logo.png" alt="" />
+                <img src="img/icons/league_of_legends_logo.png" alt="" />
               </div>
               <div class="service-desc">
-                <h5>TESTE</h5>
+                <h5>LEAGUE OF LEGENDS</h5>
                 <p></p>
               </div>
             </div>
@@ -332,10 +332,10 @@ if(isset($_SESSION['cmsg'])){
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="service-box">
               <div class="service-icon">
-                <img src="img/icons/creativerse_logo.png" alt="" />
+                <img src="img/icons/rocket_league.png" alt="" />
               </div>
               <div class="service-desc">
-                <h5>TESTE</h5>
+                <h5>ROCKET LEAGUE</h5>
                 <p></p>
               </div>
             </div>
@@ -345,10 +345,10 @@ if(isset($_SESSION['cmsg'])){
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="service-box">
               <div class="service-icon">
-                <img src="img/icons/creativerse_logo.png" alt="" />
+                <img src="img/icons/dota2_logo.png" alt="" />
               </div>
               <div class="service-desc">
-                <h5>TESTE</h5>
+                <h5>DOTA 2</h5>
                 <p></p>
               </div>
             </div>
@@ -358,10 +358,76 @@ if(isset($_SESSION['cmsg'])){
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="service-box">
               <div class="service-icon">
-                <img src="img/icons/creativerse_logo.png" alt="" />
+                <img src="img/icons/fortnite_logo.png" alt="" />
               </div>
               <div class="service-desc">
-                <h5>TESTE</h5>
+                <h5>FORTNITE</h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/hearthstone_logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>HEARTHSTONE</h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/overwatch-logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>OVERWATCH</h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/paladins-logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>PALADINS</h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/smite-logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>SMITE</h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/warface-logo.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>WARFACE</h5>
                 <p></p>
               </div>
             </div>
