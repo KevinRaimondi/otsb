@@ -53,8 +53,8 @@ if(isset($_SESSION['cmsg'])){
   <script type="text/javascript">
     $(document).ready(function(){
       $(".ifancybox").fancybox({
-        'width' : '85%',
-        'height' : '85%',
+        'width' : '95%',
+        'height' : '95%',
         'autoScale' : false,
         'transitionIn' : 'none',
         'transitionOut' : 'none',
