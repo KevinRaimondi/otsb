@@ -577,7 +577,7 @@ if(isset($_SESSION['cmsg'])){
 <!-- Core JavaScript Files -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
+
 
 <script src="js/wow.min.js"></script>
 <!-- Custom Theme JavaScript -->
