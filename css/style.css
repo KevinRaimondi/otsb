@@ -937,13 +937,6 @@ td .col-100 {
     width: 100%;
 }
 
-.style-form{
-  background: #3e3e3ee0;
-  border: #fff solid 1px;
-  border-radius: 5px;
-  color: #fff;
-}
-
 #form > div {
     margin-bottom: 25px;
 }
@@ -962,3 +955,21 @@ td .col-100 {
     color: #fff;
     background-color: rgba(19, 19, 19, 0.3);
 }
+
+.btxt {
+    background: #fff;
+    /* color: #000; */
+    width: 3em;
+    margin: 0.1em auto;
+    min-height: 18px;
+    height: 90%;
+    line-height: 1.0em;
+    font-size: 1.3em;
+    /* font-family: Consolas,
+ "Courier New",
+ "Bitstream Vera Sans Mono",
+ "DejaVu Sans Mono",
+ monospace; */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;

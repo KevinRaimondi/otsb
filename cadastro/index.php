@@ -320,7 +320,9 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
             <table class="align-center width-100">
               <tr>
                 <td  style="width: 70%;" class="align-center">
-                  <?=$msg?>
+                  <div class="btxt">
+                    <?=$msg?>
+                  </div>
                 </td>
 
                 <td style="width: 21%;">
