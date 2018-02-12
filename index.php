@@ -44,10 +44,9 @@ if(isset($_SESSION['cmsg'])){
   <!-- Squad theme CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  <script>
-    !window.jQuery && document.write('<script src="js/jquery-1.4.3.min.js"><\/script>');
-  </script>
+
 
   <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
   <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
@@ -575,7 +574,6 @@ if(isset($_SESSION['cmsg'])){
   </footer>
 
 <!-- Core JavaScript Files -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.scrollTo.js"></script>
