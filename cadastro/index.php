@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-require ("conexao.php");
+require ("../conexao.php");
 
 $path = "../img/profile/";
 $msg = '';
