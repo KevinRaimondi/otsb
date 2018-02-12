@@ -281,9 +281,9 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 <tr>
                   <td colspan="3" style="width: 49%;">
                     <label class="control-label" for="passwordinput"><span style="color: red;">*</span>Senha:</label>
-                    <div class="input-group width-100">
+                    <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-                      <span class="input-group-addon" ><i class="fa fa-eye" aria-hidden="true"></i></span>
+                      <button id="btnPasswordinput" class="input-group-addon" style="width: 11%;"><i class="fa fa-eye" aria-hidden="true"></i></button>
                     </div>
                   </td>
 
@@ -291,9 +291,9 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                   <td colspan="3" style="width: 49%;">
                     <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span>Confirme sua senha:</label>
-                    <div class="input-group width-100">
-                      <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
+                      <button id="btnPasswordinput" class="input-group-addon" style="width: 11%;"><i class="fa fa-eye" aria-hidden="true"></i></button>
                     </div>
                   </td>
                 </tr>
@@ -310,7 +310,10 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
                     <label class="control-label" for="token"><span style="color: red;">*</span>Token:</label>
-                    <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
+                    <div class="input-group width-100">
+                      <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                      <input id="token" name="token" type="text" placeholder="Informe seu Token" class="form-control input-md" required="">
+                    </div>
                   </td>
                 </tr>
 
