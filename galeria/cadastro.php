@@ -258,7 +258,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
               <table class="align-center width-100">
                 <tr>
-                  <td colspan="3" style="width: 49%;">
+                  <td colspan="3">
                     <!-- Text input-->
                     <div class="input-group width-100">
                       <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -269,7 +269,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                   <td style="width: 2%;"/>
 
                   <!-- Prepended text-->
-                  <td style="width: 49%;">
+                  <td>
                     <div class="input-group width-100">
                       <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                       <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
@@ -279,7 +279,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                 <!-- Password input-->
                 <tr>
-                  <td colspan="3" style="width: 49%; height: 65px;">
+                  <td colspan="3" style="height: 65px;">
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
                       <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
@@ -288,7 +288,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                   <td style="width: 2%;"/>
 
-                  <td colspan="3" style="width: 49%;">
+                  <td colspan="3">
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
                       <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
@@ -298,14 +298,14 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
                 <!-- File Button --> 
                 <tr>
-                  <td colspan="3" style="width: 49%; height: 65px; vertical-align: top;">
+                  <td colspan="3" style="vertical-align: top;">
                     <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
                     <span style="font-size: 12px;">*Foto do perfil</span>
                   </td>
 
                   <td style="width: 2%;"/>
 
-                  <td colspan="3" style="width: 49%; vertical-align: top;">
+                  <td colspan="3" style="vertical-align: top;">
                     <!-- Text input-->
                     <div class="input-group width-100">
                       <span class="input-group-addon" style="width: 11%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
