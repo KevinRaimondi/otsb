@@ -36,7 +36,7 @@ if (isset($_POST['btnConfirmar'])) {
 
       // Verifica se o arquivo é uma imagem
       if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
-        $error[1] = "<p id='mensagem' style='color: red; margin: 0;'>Formato de imagem Invalido!</p>";
+        $error[1] = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>Formato de imagem Invalido!</p></div>";
       } 
 
     // Pega as dimensões da imagem
@@ -54,7 +54,7 @@ if (isset($_POST['btnConfirmar'])) {
 
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
       if($foto["size"] > $tamanho) {
-        $error[2] = "<p id='mensagem' style='color: red; margin: 0;'>A imagem deve ter no máximo ".$tamanho." bytes!</p>";
+        $error[2] = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>A imagem deve ter no máximo ".$tamanho." bytes!</p></div>";
       }
 
       $largura_orig = $dimensoes[0];
@@ -102,30 +102,30 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
   $msg = "";
 
   if($senha != $senhaConfim){
-    $msg = "<p id='mensagem' style='color: red; margin: 0;'>As senhas não conferem!</p>";
+    $msg = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>As senhas não conferem!</p></div>";
   }else if (strlen($senha) < 8) {
-    $msg = "<p id='mensagem' style='color: red; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
+    $msg = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>Senha com no minimo 8 caracteres!</p></div>";
   }else{
 
     $verificarExistenciaToken = mysqli_query($conn,"SELECT * FROM tokens WHERE  token = '$token'");
     $rowToken = mysqli_num_rows($verificarExistenciaToken);
 
     if ($rowToken == 0){
-      $msg = "<p id='mensagem' style='color: red; margin: 0;'>Token Invalido!</p>";
+      $msg = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>Token Invalido!</p></div>";
     }else{
 
       $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
       $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
 
       if ($rowUsuarios > 0){
-        $msg = "<p id='mensagem' style='color: red; margin: 0;'>Já existe um usuário cadastrado!</p>";
+        $msg = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>Já existe um usuário cadastrado!</p></div>";
       }else{
 
         $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
         $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
 
         if ($rowEmail > 0){
-          $msg = "<p id='mensagem' style='color: red; margin: 0;'>Já existe um e-mail cadastrado!</p>";
+          $msg = "<div class='btxt'><p id='mensagem' style='color: red; margin: 0;'>Já existe um e-mail cadastrado!</p></div>";
         }
       }
 
@@ -320,9 +320,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
             <table class="align-center width-100">
               <tr>
                 <td  style="width: 70%;" class="align-center">
-                  <div class="btxt">
-                    <?=$msg?>
-                  </div>
+                  <?=$msg?>
                 </td>
 
                 <td style="width: 21%;">
