@@ -58,8 +58,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$("#btnLimpar").click(function(){
-		$("#usuario").val("");
-		$("#email").val("");
+		$("#cadastro").find('input:text, input:password, input:file').val('');
 		$("#mensagem").text("");
 	});
 

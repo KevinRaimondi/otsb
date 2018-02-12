@@ -249,7 +249,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
       <div class="col-lg-8">
         <div class="boxed-grey style-form">
 
-          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
+          <form id="cadastro" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro">
             <fieldset>
 
               <!-- Form Name -->
