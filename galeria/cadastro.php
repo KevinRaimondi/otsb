@@ -283,7 +283,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <label class="control-label" for="passwordinput"><span style="color: red;">*</span>Senha:</label>
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-                      <button id="btnPasswordinput" class="input-group-addon" type="button" style="width: 11%;"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
                     </div>
                   </td>
 
@@ -293,7 +293,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <label class="control-label" for="passwordinputConfirm"><span style="color: red;">*</span>Confirme sua senha:</label>
                     <div class="input-group width-100" style="display: flex;">
                       <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
-                      <button id="btnPasswordinputConfirm" class="input-group-addon" type="button" style="width: 11%;"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                      <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
                     </div>
                   </td>
                 </tr>

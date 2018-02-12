@@ -56,34 +56,30 @@ $(document).ready(function(){
 
 });
 
-$(document).ready(function(){
-	$("#btnPasswordinput").click(function(){
-		var x = document.getElementById('passwordinput')
-		var btn = document.createElement('btnPasswordinput');
-		if(x.type === 'password'){
-			x.type == 'text'
-			btn.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
-		}else{
-			x.type = 'password'
-			btn.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
-		}
-	});
-
+$(function() {
+  $("#btnPasswordinput").click(function(){
+        var pass_input = document.getElementById("passwordinput");
+        if (pass_input.type === "password") {
+            pass_input.type = "text";
+            $(this).removeClass("fa-eye").addClass("fa-eye-slash")
+        } else {
+            pass_input.type = "password";
+            $(this).removeClass("fa-eye-slash").addClass("fa-eye")
+        }
+   });
 });
 
-$(document).ready(function(){
-	$("#btnPasswordinputConfirm").click(function(){
-		var x = document.getElementById('passwordinputConfirm')
-		var btn = document.createElement('btnPasswordinputConfirm');
-		if(x.type === 'password'){
-			x.type == 'text'
-			btn.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
-		}else{
-			x.type = 'password'
-			btn.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
-		}
-	});
-
+$(function() {
+  $("#btnPasswordinputConfirm").click(function(){
+        var pass_input = document.getElementById("passwordinputConfirm");
+        if (pass_input.type === "password") {
+            pass_input.type = "text";
+            $(this).removeClass("fa-eye").addClass("fa-eye-slash")
+        } else {
+            pass_input.type = "password";
+            $(this).removeClass("fa-eye-slash").addClass("fa-eye")
+        }
+   });
 });
 
 $(document).ready(function(){
