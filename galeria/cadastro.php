@@ -76,7 +76,7 @@ if (isset($_POST['btnConfirmar'])) {
         imagejpeg($image_p, $caminho_imagem);
         //move_uploaded_file($image_p["tmp_name"], $caminho_imagem);
 
-        inserir($conn, $usuario, $email, $senha, $nome_imagem );
+        $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem );
 
       }
 
@@ -93,24 +93,6 @@ if (isset($_POST['btnConfirmar'])) {
     }
   }
 }
-
-function inserir($conn, $usuario, $email, $senha, $nome_imagem ){
-
-  $msg = "";
-
-  // Insere os dados no banco
-  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
-
-  // Se os dados forem inseridos com sucesso
-  if ($sql){
-    $msg = "Você foi cadastrado com sucesso.";
-  }else{
-    unlink($caminho_imagem);
-  }
-
-  return $msg;
-}
-
 
 function validar($senha, $senhaConfim, $conn, $usuario, $email ){
 
@@ -135,6 +117,23 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email ){
       }
     }
 
+  }
+
+  return $msg;
+}
+
+function inserir($conn, $usuario, $email, $senha, $nome_imagem ){
+
+  $msg = "";
+
+  // Insere os dados no banco
+  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$senha."', '".$nome_imagem."')");
+
+  // Se os dados forem inseridos com sucesso
+  if ($sql){
+    $msg = "Você foi cadastrado com sucesso.";
+  }else{
+    unlink($caminho_imagem);
   }
 
   return $msg;
