@@ -22,9 +22,9 @@ if (isset($_POST['btnConfirmar'])) {
     if (!empty($foto["name"])) {
 
     // Largura máxima em pixels
-      $largura_max = 151;
+      $largura_max = 150;
     // Altura máxima em pixels
-      $altura_max = 151;
+      $altura_max = 150;
     // Tamanho máximo do arquivo em bytes
       $tamanho = 100000;
 
@@ -50,7 +50,7 @@ if (isset($_POST['btnConfirmar'])) {
 
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
       if($foto["size"] > $tamanho) {
-        $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+        $error[2] = "A imagem deve ter no máximo ".$tamanho." bytes";
       }
 
       $largura_orig = $dimensoes[0];
@@ -235,7 +235,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
                   <tr>
                    <td colspan="3" style="width: 49%;">
                     <!-- Text input-->
-                    <label class="control-label" for="usuario">Usuário:</label>  
+                    <label class="control-label" for="usuario">*Usuário:</label>  
                     <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" required="">
                   </td>
 
@@ -243,7 +243,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
 
                   <!-- Prepended text-->
                   <td style="width: 49%;">
-                    <label class="control-label" for="">E-mail:</label>
+                    <label class="control-label" for="">*E-mail:</label>
                     <div class="input-group width-100">
                       <span class="input-group-addon">@</span>
                       <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" required="">
@@ -254,14 +254,14 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
                 <!-- Password input-->
                 <tr>
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinput">Senha:</label>
+                    <label class="control-label" for="passwordinput">*Senha:</label>
                     <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
                   </td>
 
                   <td style="width: 2%;"/>
 
                   <td colspan="3" style="width: 49%;">
-                    <label class="control-label" for="passwordinputConfirm">Confirme sua senha:</label>
+                    <label class="control-label" for="passwordinputConfirm">*Confirme sua senha:</label>
                     <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
                   </td>
                 </tr>
@@ -269,7 +269,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem)
                 <!-- File Button --> 
                 <tr>
                   <td colspan="5">
-                   <label class="control-label" for="filebutton">Foto do Perfil</label>
+                   <label class="control-label" for="filebutton">Foto do perfil (150 X 150):</label>
                    <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
                  </td>
                </tr>
