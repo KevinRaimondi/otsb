@@ -95,7 +95,6 @@
   <div id="grid" data-directory="gallery"></div>
 
   <!-- SCRIPTS FOR FOR THE PLUGIN-->
-  <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/rotate-patch.js"></script>
   <script src="js/waypoints.min.js"></script>
   <script src="js/autoGrid.min.js"></script>
@@ -165,13 +164,12 @@
   </footer>
 
   <!-- Core JavaScript Files -->
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery.easing.min.js"></script>
-  <script src="../js/jquery.scrollTo.js"></script>
-  <script src="../js/wow.min.js"></script>
-
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/wow.min.js"></script>
   <!-- Custom Theme JavaScript -->
-  <script src="../js/custom.js"></script>
+  <script src="js/custom.js"></script>
 
 </body>
 
