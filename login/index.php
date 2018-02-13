@@ -175,7 +175,7 @@ if (isset($_POST['btnLogin'])) {
                   </td>
 
                   <td style="width: 50%;" class="align-right">
-                    <span>Não tem conta?</span><a href="#">CADASTRE-SE.</a>
+                    <span>Não tem conta?</span><a href="/cadastro">CADASTRE-SE.</a>
                   </td>
                 </tr>
               </table>
