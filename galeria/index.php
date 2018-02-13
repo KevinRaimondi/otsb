@@ -65,6 +65,13 @@
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
+
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/login">Entrar</a></li>
+            </ul>
+          </div>
+
           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
               <li><a href="/">Home</a></li>
@@ -83,13 +90,6 @@
         </li-->
       </ul>
     </div>
-
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/login">Entrar</a></li>
-      </ul>
-    </div>
-
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container -->

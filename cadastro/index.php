@@ -220,6 +220,13 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
+
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/login">Entrar</a></li>
+        </ul>
+      </div>
+
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#intro">Home</a></li>
@@ -236,12 +243,6 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
           <li><a href="#">Example menu</a></li>
           </ul>
         </li-->
-      </ul>
-    </div>
-
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/login">Entrar</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
