@@ -238,13 +238,13 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/login">Entrar</a></li>
+          <li><a href="/login">Entrar</a></li>
         </ul>
       </div>
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#intro">Home</a></li>
           <li><a href="#jogos">Jogos</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contact">Contato</a></li>

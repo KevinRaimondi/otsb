@@ -119,7 +119,7 @@ if (isset($_POST['btnLogin'])) {
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#jogos">Jogos</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contact">Contato</a></li>
