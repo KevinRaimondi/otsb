@@ -955,3 +955,7 @@ td .col-100 {
     color: #fff;
     background-color: rgba(19, 19, 19, 0.3);
 }
+.panel-footer {
+    padding: 1px 15px;
+    color: #A0A0A0;
+}

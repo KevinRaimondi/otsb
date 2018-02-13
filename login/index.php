@@ -166,19 +166,8 @@ if (isset($_POST['btnLogin'])) {
               <div class="input-group width-100">
                 <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-              </div>
-              
-              <table class="width-100">
-                <tr>
-                  <td style="width: 40%;" class="align-left">
-                    <a href="/recovery">Esqueceu sua senha?</a>
-                  </td>
-
-                  <td style="width: 60%;" class="align-right">
-                    <span>Não tem conta?</span><a href="/cadastro" style="text-decoration: underline;"> cadastre-se.</a>
-                  </td>
-                </tr>
-              </table>
+              </div>              
+              <a href="/recovery">Esqueceu sua senha?</a>
 
               <div class="form-group">
                 <!-- Button -->
@@ -188,8 +177,10 @@ if (isset($_POST['btnLogin'])) {
               </div>
 
             </form>     
-
-          </div>                     
+          </div>   
+          <div class="panel-footer ">
+            Não tem uma conta! <a href="/cadastro"> Cadastre-se Aqui </a>
+          </div>                  
         </div>  
       </div>
     </div>
