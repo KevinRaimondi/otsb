@@ -21,7 +21,7 @@ if (isset($_POST['btnEnviar'])) {
    $enrypt = md5($senha);
 
   // Insere os dados no banco
-   $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enrypt."' WHERE `usuarios`.`email` = '"$email;"'");
+   $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enrypt."' WHERE `usuarios`.`email` = '".$email."'");
 
   // Se os dados forem atualizado com sucesso
    if ($sql){
