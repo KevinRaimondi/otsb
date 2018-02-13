@@ -163,7 +163,7 @@ if (isset($_POST['btnLogin'])) {
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
-                  <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i> Entrar</button>                          
+                  <button id="btnLogin" type="submit" class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i> Entrar</button>      
                 </div>
               </div>
 
