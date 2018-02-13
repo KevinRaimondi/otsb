@@ -95,8 +95,6 @@ if(isset($_SESSION['cmsg'])){
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
           <ul class="nav navbar-nav">
             <?php 
-            session_start();
-
             if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
               echo "<li><a href='/sair.php'><i class='fa fa-sign-out' aria-hidden='true'></i> Sair</a></li>";
             }else{
