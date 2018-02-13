@@ -19,7 +19,8 @@ if (isset($_POST['btnLogin'])) {
   session_destroy();
   $email = $_POST['email'];
   $senha = $_POST['senha'];
-  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'");
+  $enrypt = md5($senha);
+  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
   $dados = mysqli_fetch_assoc($query);
   $row = mysqli_num_rows($query);
   if ($row > 0){
