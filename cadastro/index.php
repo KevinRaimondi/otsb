@@ -8,6 +8,12 @@ $msg = '';
 $usuario = "";
 $email = "";
 
+if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
+  header('Location: /painel');
+}else{
+  session_destroy();
+}
+
 // Se o usuário clicou no botão cadastrar efetua as ações
 if (isset($_POST['btnConfirmar'])) {
 
