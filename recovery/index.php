@@ -4,37 +4,46 @@ require ("../conexao.php");
 $msg = '';
 $email = "";
 
-session_start();
+// Se o usuário clicou no botão enviar efetua as ações
+if (isset($_POST['btnEnviar'])) {
 
-if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
-  header('Location: /painel');
-}else{
-  session_destroy();
-}
-
-// Se o usuário clicou no botão login efetua as ações
-if (isset($_POST['btnLogin'])) {
-
-  session_start();
-  session_destroy();
   $email = $_POST['email'];
-  $senha = $_POST['passwordinput'];
-  $enrypt = md5($senha);
-  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
-  $dados = mysqli_fetch_assoc($query);
-  $row = mysqli_num_rows($query);
-  if ($row > 0){
-    session_start();
-    $_SESSION['id']    = $dados['id'];
-    $_SESSION['nome']  = $dados['nome'];
-    $_SESSION['login'] = $dados['email'];
-    $_SESSION['senha'] = $dados['senha'];
-    $_SESSION['senha'] = $dados['foto'];
-    header('Location: /painel');
-  }else{
-    $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
+
+  $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
+  $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
+
+  if ($rowEmail == 0){
+    $msg = "<span style='color: red;'>O e-mail não existe</span>";
   }
 
+  if(empty($msg)){ 
+
+   $enrypt = md5($senha);
+
+  // Insere os dados no banco
+   $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enrypt."' WHERE `usuarios`.`email` = '"$email;"'");
+
+  // Se os dados forem atualizado com sucesso
+   if ($sql){
+
+    $email_remetente = "contato@kraimondi.tech";
+    $email_destinatario = $email;
+    $email_reply = $email_remetente;
+    $email_assunto = "OTSB - Esqueceu sua senha?"; 
+    $email_conteudo = "Sua nova senha é: ".$enrypt;
+    $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+
+    if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
+      $msg = "<span>Sua nova senha foi enviada por e-mail</span>";
+    }else{
+      $msg = "<span style='color: red;'>Houve algum problema ao enviar sua nova senha!</span>";
+    }
+
+  }else{
+    $msg = "<span style='color: red;'>Não foi possivel recuperar sua conta.</span>";
+  }
+
+}
 }
 
 ?>
@@ -148,7 +157,7 @@ if (isset($_POST['btnLogin'])) {
       <div class="col-lg-4">
         <div class="panel panel-default" >
           <div class="panel-heading">
-            <div class="panel-title text-center">Entrar</div>
+            <div class="panel-title text-center">Recuperar senha</div>
           </div>     
 
           <div class="panel-body" >
@@ -163,27 +172,10 @@ if (isset($_POST['btnLogin'])) {
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
               </div>
 
-              <div class="input-group width-100">
-                <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-              </div>
-              
-              <table class="width-100">
-                <tr>
-                  <td style="width: 40%;" class="align-left">
-                    <a href="/recovery">Esqueceu sua senha?</a>
-                  </td>
-
-                  <td style="width: 60%;" class="align-right">
-                    <span>Não tem conta?</span><a href="/cadastro" style="text-decoration: underline;"> cadastre-se.</a>
-                  </td>
-                </tr>
-              </table>
-
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
-                  <button id="btnLogin" name="btnLogin" type="submit" class="btn btn-primary pull-right"><i class="fa fa-sign-in"></i> Entrar</button>
+                  <button id="btnEnviar" name="btnEnviar" type="submit" class="btn btn-primary pull-right">Enviar</button>
                 </div>
               </div>
 

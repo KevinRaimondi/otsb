@@ -161,7 +161,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
       unlink($caminho_imagem);
     }
 
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao cadastrar! Favor entra em contato com o administrador</p>";
+    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao cadastrar! Favor entra em contato com o administrador.</p>";
   }
 
   return $msg;
