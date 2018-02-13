@@ -82,6 +82,9 @@ if (isset($_POST['btnConfirmar'])) {
 
         $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem, $token);
 
+        $usuario = "";
+        $email = "";
+
       }
 
     // Se houver mensagens de erro, exibe-as
@@ -93,6 +96,9 @@ if (isset($_POST['btnConfirmar'])) {
     }else{
       $nome_imagem = "2dd945d3c0471656ce5f0a4bb587bcbf.jpg";
       $msg = inserir($conn, $usuario, $email, $senha, $nome_imagem, "", $token);
+
+      $usuario = "";
+      $email = "";
     }
   }
 }
@@ -130,10 +136,6 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
       }
 
     }
-
-  }
-
-  if(!empty($msg)){
 
   }
 
