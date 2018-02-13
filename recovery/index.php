@@ -18,6 +18,8 @@ if (isset($_POST['btnEnviar'])) {
 
   if(empty($msg)){ 
 
+   $senha = md5(uniqid(time()));
+
    $enrypt = md5($senha);
 
   // Insere os dados no banco
@@ -30,7 +32,7 @@ if (isset($_POST['btnEnviar'])) {
     $email_destinatario = $email;
     $email_reply = $email_remetente;
     $email_assunto = "OTSB - Esqueceu sua senha?"; 
-    $email_conteudo = "Sua nova senha é: ".$enrypt;
+    $email_conteudo = "Sua nova senha é: ".$senha;
     $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
 
     if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
@@ -157,7 +159,7 @@ if (isset($_POST['btnEnviar'])) {
       <div class="col-lg-4">
         <div class="panel panel-default" >
           <div class="panel-heading">
-            <div class="panel-title text-center">Recuperar senha</div>
+            <div class="panel-title text-center">Recupere sua senha</div>
           </div>     
 
           <div class="panel-body" >
