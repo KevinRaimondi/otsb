@@ -75,11 +75,6 @@ if (isset($_POST['btnLogin'])) {
     });
   </script>
 
-  <style type="text/css">
-  a{
-    color: white;
-  }
-</style>
 
   <!-- =======================================================
   Theme Name: Squadfree
@@ -167,7 +162,7 @@ if (isset($_POST['btnLogin'])) {
                 <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
               </div>              
-              <a href="/recovery">Esqueceu sua senha?</a>
+              <a href="/recovery" style="color: #fff;">Esqueceu sua senha?</a>
 
               <div class="form-group">
                 <!-- Button -->
