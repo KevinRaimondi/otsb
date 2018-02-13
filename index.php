@@ -91,6 +91,13 @@ if(isset($_SESSION['cmsg'])){
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/login">Entrar</a></li>
+          </ul>
+        </div>
+
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#intro">Home</a></li>
