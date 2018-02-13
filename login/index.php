@@ -138,7 +138,7 @@ if (isset($_POST['btnLogin'])) {
 
   <div class="container">
     <div class="row centralizar-divs">
-      <div class="col-lg-5">
+      <div class="col-lg-4">
         <div class="panel panel-default" >
           <div class="panel-heading">
             <div class="panel-title text-center">Entrar</div>
@@ -157,7 +157,7 @@ if (isset($_POST['btnLogin'])) {
                 <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
               </div>
-              
+
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
