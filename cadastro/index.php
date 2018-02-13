@@ -238,7 +238,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
         <ul class="nav navbar-nav">
-          <li><a href="/login">Entrar</a></li>
+          <li><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Entrar</a></li>
         </ul>
       </div>
 

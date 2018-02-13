@@ -124,7 +124,7 @@ if (isset($_POST['btnEnviar'])) {
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/login">Entrar</a></li>
+          <li class="active"><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Entrar</a></li>
         </ul>
       </div>
 
