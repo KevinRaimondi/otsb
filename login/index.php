@@ -30,7 +30,7 @@ if (isset($_POST['btnLogin'])) {
     $_SESSION['senha'] = $dados['foto'];
     header('Location: /painel');
   }else{
-    $msg = ""
+    $msg = "";
   }
 
 }
