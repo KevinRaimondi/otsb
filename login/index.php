@@ -154,7 +154,7 @@ if (isset($_POST['btnLogin'])) {
               </div>
 
               <div class="input-group width-100">
-                <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <span class="input-group-addon" style="width: 11%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
               </div>
 
