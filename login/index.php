@@ -32,7 +32,7 @@ if (isset($_POST['btnLogin'])) {
     $_SESSION['senha'] = $dados['foto'];
     header('Location: /painel');
   }else{
-    $msg = "";
+    $msg = "<span style='color: red;'>Usúario ou Senha invalido</span>";
   }
 
 }
@@ -148,7 +148,7 @@ if (isset($_POST['btnLogin'])) {
           <div class="panel-body" >
 
             <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-
+              <?=$msg?>
               <div class="input-group width-100">
                 <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
