@@ -32,7 +32,7 @@ if (isset($_POST['btnLogin'])) {
     $_SESSION['senha'] = $dados['foto'];
     header('Location: /painel');
   }else{
-    $msg = "<span style='color: red;'>Usúario ou Senha invalido</span>";
+    $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
   }
 
 }
@@ -74,6 +74,12 @@ if (isset($_POST['btnLogin'])) {
       });
     });
   </script>
+
+  <style type="text/css">
+    a{
+      color: white;
+    }
+  </style>
 
   <!-- =======================================================
   Theme Name: Squadfree
