@@ -73,20 +73,27 @@
               <li><a href="/#contact">Contato</a></li>
               <li class="active"><a href="/galeria">Galeria</a></li>
               <li><a class="ifancybox" href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
-      <!--    <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-              <li><a href="#">Example menu</a></li>
-            </ul>
-          </li-->
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+          <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+          <li><a href="#">Example menu</a></li>
+          <li><a href="#">Example menu</a></li>
+          <li><a href="#">Example menu</a></li>
+          </ul>
+        </li-->
+      </ul>
     </div>
-    <!-- /.container -->
-  </nav>
+
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/login">Entrar</a></li>
+      </ul>
+    </div>
+
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
 
 </section>
 <!-- Section: intro -->
