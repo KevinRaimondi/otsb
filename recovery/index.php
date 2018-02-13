@@ -4,6 +4,12 @@ require ("../conexao.php");
 $msg = '';
 $email = "";
 
+if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
+  header('Location: /painel');
+}else{
+  session_destroy();
+}
+
 // Se o usuário clicou no botão enviar efetua as ações
 if (isset($_POST['btnEnviar'])) {
 
@@ -124,13 +130,7 @@ if (isset($_POST['btnEnviar'])) {
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
         <ul class="nav navbar-nav">
-          <?php 
-          if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
-            echo "<li class='active'><a href='/sair.php'><i class='fa fa-sign-out' aria-hidden='true'></i> Sair</a></li>";
-          }else{
-            echo "<li class='active'><a href='/login'><i class='fa fa-sign-in' aria-hidden='true'></i> Entrar</a></li>";
-          }
-          ?>
+          <li class="active"><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Entrar</a></li>
         </ul>
       </div>
 
