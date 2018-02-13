@@ -190,6 +190,21 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
   <!-- Squad theme CSS -->
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".ifancybox").fancybox({
+        'width' : '95%',
+        'height' : '95%',
+        'autoScale' : false,
+        'transitionIn' : 'none',
+        'transitionOut' : 'none',
+        'type' : 'iframe'
+      });
+    });
+  </script>
 
   <!-- =======================================================
   Theme Name: Squadfree
@@ -350,7 +365,6 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 </section>
 
 <!-- Core JavaScript Files -->
-<script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/jquery.easing.min.js"></script>
 <script src="../js/jquery.scrollTo.js"></script>
