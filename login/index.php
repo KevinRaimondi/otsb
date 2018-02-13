@@ -159,7 +159,7 @@ if (isset($_POST['btnLogin'])) {
               </div>
               
               <div class="input-group width-100">
-                <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span class="input-group-addon" style="width: 12%;"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
               </div>
 

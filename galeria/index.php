@@ -68,7 +68,7 @@
 
           <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/login">Entrar</a></li>
+              <li><a href="/login">Entrar</a></li>
             </ul>
           </div>
 
