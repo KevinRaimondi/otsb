@@ -244,10 +244,10 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#intro">Home</a></li>
-          <li><a href="#jogos">Jogos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#jogos">Jogos</a></li>
+          <li><a href="/#sobre">Sobre</a></li>
+          <li><a href="/#contact">Contato</a></li>
           <li><a href="/galeria">Galeria</a></li>
           <li><a class="ifancybox" href="https://docs.google.com/forms/d/e/1FAIpQLSfKUjGVnpolEFRAuxI2Ati2C28M1Doij9uQtZPqpjyZr0J6ww/viewform">Aliste-se Já</a></li>
           <!--<li class="dropdown">
