@@ -2,6 +2,7 @@
 // Conexão com o banco de dados
 require ("../conexao.php");
 $msg = '';
+$email = "";
 
 session_start();
 
@@ -137,7 +138,7 @@ if (isset($_POST['btnLogin'])) {
 
   <div class="container">
     <div class="row centralizar-divs">
-      <div class="col-lg-8">
+      <div class="col-lg-5">
         <div class="panel panel-default" >
           <div class="panel-heading">
             <div class="panel-title text-center">Entrar</div>
@@ -152,11 +153,11 @@ if (isset($_POST['btnLogin'])) {
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
               </div>
 
-              <div class="input-group width-100" style="display: flex;">
+              <div class="input-group width-100">
+                <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
-                <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-              </div>                                                                 
-
+              </div>
+              
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
