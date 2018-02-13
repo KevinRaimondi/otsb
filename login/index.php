@@ -33,6 +33,7 @@ if (isset($_POST['btnLogin'])) {
     header('Location: /painel');
   }else{
     $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
+    echo $enrypt. "ENTRADA";
   }
 
 }
