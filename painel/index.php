@@ -174,7 +174,7 @@ $email = "";
               <li class="active"><a href="#tab1default" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a></li>
               <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Minhas Fotos</a></li>
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
-              <li style="float: right;"><a class="isDisabled" href="#tab4default" data-toggle="tab"><i class="fas fa-cog"></i></li>
+              <li class="isDisabled" style="float: right;"><a href="#tab4default" data-toggle="tab"><i class="fa fa-cog"></i></li>
             </ul>
           </div>
           <div class="panel-body">
