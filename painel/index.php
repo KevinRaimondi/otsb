@@ -113,26 +113,32 @@ $email = "";
 
   <div class="container">
     <div class="row centralizar-divs">
-      <div class="col-lg-4">
-        <div class="panel panel-default" >
+      <div class="col-md-6">
+        <div class="panel with-nav-tabs panel-default">
           <div class="panel-heading">
-            <div class="panel-title text-center">Recupere sua senha</div>
-          </div>     
-
-          <ul class="nav nav-tabs"> 
-            
-            <li class="active"><a href="#tab1default" data-toggle="tab">Meu Perfil</a></li>
-            <li><a href="#tab2default" data-toggle="tab">Minhas Fotos</a></li>
-            <li><a href="#tab3default" data-toggle="tab">Enviar Fotos</a></li>
-          </ul>
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab1default" data-toggle="tab">Meu Perfil</a></li>
+              <li><a href="#tab2default" data-toggle="tab">Default 2</a></li>
+              <li><a href="#tab3default" data-toggle="tab">Default 3</a></li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#tab4default" data-toggle="tab">Default 4</a></li>
+                  <li><a href="#tab5default" data-toggle="tab">Default 5</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab1default">Default 1</div>
+              <div class="tab-pane fade" id="tab2default">Default 2</div>
+              <div class="tab-pane fade" id="tab3default">Default 3</div>
+              <div class="tab-pane fade" id="tab4default">Default 4</div>
+              <div class="tab-pane fade" id="tab5default">Default 5</div>
+            </div>
+          </div>
         </div>
-        <div class="panel-body">
-          <div class="tab-content">
-            <div class="tab-pane fade in active" id="tab1default">Default 1</div>
-            <div class="tab-pane fade" id="tab2default">Default 2</div>
-            <div class="tab-pane fade" id="tab3default">Default 3</div>
-          </div>                 
-        </div>  
       </div>
     </div>
   </div>
