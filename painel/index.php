@@ -165,9 +165,9 @@ $email = "";
         <div class="panel with-nav-tabs panel-default">
           <div class="panel-heading">
             <ul class="nav nav-tabs"> 
-              <li class="active"><a href="#tab1default" data-toggle="tab">Meu Perfil</a></li>
-              <li><a href="#tab2default" data-toggle="tab">Minhas Fotos</a></li>
-              <li><a href="#tab3default" data-toggle="tab">Enviar Fotos</a></li>
+              <li class="active"><a href="#tab1default" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a></li>
+              <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Minhas Fotos</a></li>
+              <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
             </ul>
           </div>
           <div class="panel-body">
