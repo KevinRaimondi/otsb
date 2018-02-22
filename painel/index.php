@@ -4,6 +4,11 @@ require ("../conexao.php");
 $msg = '';
 $email = "";
 
+session_start();
+
+if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
+  header ("Location: /login");
+}
 
 ?>
 <!DOCTYPE html>
@@ -45,62 +50,62 @@ $email = "";
 
   <style type="text/css">
 
-.panel.with-nav-tabs .panel-heading{
+  .panel.with-nav-tabs .panel-heading{
     padding: 5px 5px 0 5px;
-}
-.panel.with-nav-tabs .nav-tabs{
-  border-bottom: none;
-}
-.panel.with-nav-tabs .nav-justified{
-  margin-bottom: -1px;
-}
-/********************************************************************/
-/*** PANEL DEFAULT ***/
-.with-nav-tabs.panel-default .nav-tabs > li > a,
-.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+  }
+  .panel.with-nav-tabs .nav-tabs{
+    border-bottom: none;
+  }
+  .panel.with-nav-tabs .nav-justified{
+    margin-bottom: -1px;
+  }
+  /********************************************************************/
+  /*** PANEL DEFAULT ***/
+  .with-nav-tabs.panel-default .nav-tabs > li > a,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:focus {
     color: #777;
-}
-.with-nav-tabs.panel-default .nav-tabs > .open > a,
-.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
-.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+  }
+  .with-nav-tabs.panel-default .nav-tabs > .open > a,
+  .with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li > a:focus {
     color: #777;
-  background-color: #ddd;
-  border-color: transparent;
-}
-.with-nav-tabs.panel-default .nav-tabs > li.active > a,
-.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
-  color: #555;
-  background-color: #fff;
-  border-color: #ddd;
-  border-bottom-color: transparent;
-}
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #ddd;
+    border-color: transparent;
+  }
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a,
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border-color: #ddd;
+    border-bottom-color: transparent;
+  }
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
     background-color: #f5f5f5;
     border-color: #ddd;
-}
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+  }
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
     color: #777;   
-}
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+  }
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
     background-color: #ddd;
-}
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
-.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+  }
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
     color: #fff;
     background-color: #555;
-}
-.isDisabled {
-  color: currentColor;
-  cursor: not-allowed;
-  opacity: 0.5;
-  text-decoration: none;
-}
+  }
+  .isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+  }
 </style>
 
   <!-- =======================================================
@@ -135,7 +140,7 @@ $email = "";
 
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse" style="padding-left: 10px;">
         <ul class="nav navbar-nav">
-          <li><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Entrar</a></li>
+          <li><a href='/sair.php'><i class='fa fa-sign-out' aria-hidden='true'></i> Sair</a></li>
         </ul>
       </div>
 
@@ -176,30 +181,30 @@ $email = "";
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
               <!-- SERAR EXIBIDO QUANDO PERFIL DE ADMINISTRADOR -->
               <!--<li style="float: right;"><a href="#tab4default" data-toggle="tab"><i class="fa fa-cog"></i></li> -->
-            </ul>
-          </div>
-          <div class="panel-body">
-            <div class="tab-content">
-              <div class="tab-pane fade in active" id="tab1default">Default 1</div>
-              <div class="tab-pane fade" id="tab2default">Default 2</div>
-              <div class="tab-pane fade" id="tab3default">Default 3</div>
-              <div class="tab-pane fade" id="tab4default">Default 4</div>
+              </ul>
+            </div>
+            <div class="panel-body">
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab1default">Default 1</div>
+                <div class="tab-pane fade" id="tab2default">Default 2</div>
+                <div class="tab-pane fade" id="tab3default">Default 3</div>
+                <div class="tab-pane fade" id="tab4default">Default 4</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
-<!-- Core JavaScript Files -->
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.easing.min.js"></script>
-<script src="../js/jquery.scrollTo.js"></script>
-<script src="../js/wow.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="../js/custom.js"></script>
+  <!-- Core JavaScript Files -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/jquery.scrollTo.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="../js/custom.js"></script>
 
 </body>
 
