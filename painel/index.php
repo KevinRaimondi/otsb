@@ -17,8 +17,6 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   $permissao =  $dados['permissao'];
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,6 +37,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
   <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
+  <link href="style.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -57,60 +56,6 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
     });
   </script>
 
-  <style type="text/css">
-
-  .panel.with-nav-tabs .panel-heading{
-    padding: 5px 5px 0 5px;
-  }
-  .panel.with-nav-tabs .nav-tabs{
-    border-bottom: none;
-  }
-  .panel.with-nav-tabs .nav-justified{
-    margin-bottom: -1px;
-  }
-  /********************************************************************/
-  /*** PANEL DEFAULT ***/
-  .with-nav-tabs.panel-default .nav-tabs > li > a,
-  .with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > li > a:focus {
-    color: #777;
-  }
-  .with-nav-tabs.panel-default .nav-tabs > .open > a,
-  .with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
-  .with-nav-tabs.panel-default .nav-tabs > li > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > li > a:focus {
-    color: #777;
-    background-color: #ddd;
-    border-color: transparent;
-  }
-  .with-nav-tabs.panel-default .nav-tabs > li.active > a,
-  .with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
-    color: #555;
-    background-color: #fff;
-    border-color: #ddd;
-    border-bottom-color: transparent;
-  }
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
-    background-color: #f5f5f5;
-    border-color: #ddd;
-  }
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
-    color: #777;   
-  }
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
-    background-color: #ddd;
-  }
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
-  .with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
-    color: #fff;
-    background-color: #555;
-  }
-
-</style>
 
   <!-- =======================================================
   Theme Name: Squadfree
