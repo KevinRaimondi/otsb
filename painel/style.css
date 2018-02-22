@@ -85,3 +85,9 @@
 .align-center {
     text-align: center;
 }
+
+.profile-classic li {
+    padding: 8px 0;
+    font-size: 13px;
+    border-top: solid 1px #f5f5f5;
+}
