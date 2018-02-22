@@ -149,9 +149,9 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                 </section>
                 <section class="block-content panel-margin">
 
-                  <ul class="unstyled">
+                  <ul class="nav">
                    <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
-                    <?php  echo "<li><span>Email:</span> <a href='mailto:".$dados['email']."'>".$dados['email']."</a></li>"; ?>
+                    <?php  echo "<li><span>Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
                     <li><span>Estado:</span> Ativo</li>
                     <li><span>Membro desde:</span> 01/12/2017</li>
                   </ul>
