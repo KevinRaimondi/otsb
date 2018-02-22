@@ -131,7 +131,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
               <?php 
               if($permissao != 0 && $permissao != 1){
-                echo "<li style='float: right;'><a href='#tab4default' data-toggle='tab'><i class='fa fa-cog'></i></li>";
+                echo "<li style='float: right;'><a href='#tab4default' data-toggle='tab'><i class='fa fa-cog'></i></a></li>";
               }?>
             </ul>
           </div>
