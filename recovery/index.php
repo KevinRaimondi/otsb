@@ -26,7 +26,7 @@ if (isset($_POST['btnEnviar'])) {
 
   if(empty($msg)){ 
 
-   $senha = md5(uniqid(time()));
+   $senha = gerarSenha();
 
    $enrypt = md5($senha);
 
@@ -54,6 +54,15 @@ if (isset($_POST['btnEnviar'])) {
   }
 
 }
+}
+
+function gerarSenha($size = 8){
+   $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";
+   $randomString = '';
+   for($i = 0; $i < $size; $i = $i+1){
+      $randomString .= $chars[mt_rand(0,60)];
+   }
+   return $randomString;
 }
 
 ?>
