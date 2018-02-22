@@ -32,7 +32,7 @@ if (isset($_POST['btnLogin'])) {
       $_SESSION['foto'] = $dados['foto'];
       header('Location: /painel');
     }else{
-     $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
+     $msg = "<span style='color: red;'>O usuário está desabilitado!</span>";
    }
  }else{
   $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
