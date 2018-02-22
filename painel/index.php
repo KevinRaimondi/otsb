@@ -144,9 +144,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
                   <section class="user-details push-top-sm">
-                    <ul>
-                      <?php  echo "<li><i class='fa fa-envelope'></i><span>".$dados['email']."</span></li>";  ?>
-                    </ul>
+                      <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
                   </section>
                 </section>
               </div>

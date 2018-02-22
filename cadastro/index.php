@@ -293,7 +293,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                     <!-- Text input-->
                     <div class="input-group width-100">
                       <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                      <input id="usuario" name="usuario" type="text" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
+                      <input id="usuario" name="usuario" type="text" maxlength="18" placeholder="Usuário" class="form-control input-md" value="<?php echo $usuario ?>" required="">
                     </div>
                   </td>
 
