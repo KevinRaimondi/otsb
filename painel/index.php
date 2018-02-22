@@ -144,10 +144,18 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
                   <section class="align-center push-top-sm">
-                      <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
+                    <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
                   </section>
                 </section>
                 <section class="block-content panel-margin">
+
+                  <ul class="unstyled">
+                   <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
+                    <?php  echo "<li><span>Email:</span> <a href='mailto:".$dados['email']."'>".$dados['email']."</a></li>"; ?>
+                    <li><span>Estado:</span> Ativo</li>
+                    <li><span>Membro desde:</span> 01/12/2017</li>
+                  </ul>
+
                 </section>
               </div>
               <div class="tab-pane fade" id="tab2default">Default 2</div>
