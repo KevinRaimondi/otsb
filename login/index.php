@@ -16,7 +16,6 @@ if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
 if (isset($_POST['btnLogin'])) {
 
   session_start();
-  session_destroy();
   $email = $_POST['email'];
   $senha = $_POST['passwordinput'];
   $enrypt = md5($senha);
@@ -24,16 +23,20 @@ if (isset($_POST['btnLogin'])) {
   $dados = mysqli_fetch_assoc($query);
   $row = mysqli_num_rows($query);
   if ($row > 0){
-    session_start();
-    $_SESSION['id']    = $dados['id'];
-    $_SESSION['nome']  = $dados['nome'];
-    $_SESSION['login'] = $dados['email'];
-    $_SESSION['senha'] = $dados['senha'];
-    $_SESSION['senha'] = $dados['foto'];
-    header('Location: /painel');
-  }else{
-    $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
-  }
+    $status = $dados['status'];
+    if ($status == 1){
+      $_SESSION['id']    = $dados['id'];
+      $_SESSION['nome']  = $dados['nome'];
+      $_SESSION['login'] = $dados['email'];
+      $_SESSION['senha'] = $dados['senha'];
+      $_SESSION['senha'] = $dados['foto'];
+      header('Location: /painel');
+    }else{
+     $msg = "<span style='color: red;'>Usúario desativado!</span>";
+   }
+ }else{
+  $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
+}
 
 }
 
