@@ -11,12 +11,10 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
   $email = $_SESSION["login"];
   $senha = $_SESSION["senha"];
-  $enrypt = md5($senha);
 
-  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
+  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'");
   $dados = mysqli_fetch_assoc($query);
   $permissao =  $dados['permissao'];
-echo "" .$permissao;
 }
 
 

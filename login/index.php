@@ -28,8 +28,8 @@ if (isset($_POST['btnLogin'])) {
       $_SESSION['id']    = $dados['id'];
       $_SESSION['nome']  = $dados['nome'];
       $_SESSION['login'] = $dados['email'];
-      $_SESSION['senha'] = $dados['senha'];
-      $_SESSION['senha'] = $dados['foto'];
+      $_SESSION['senha'] = $enrypt;
+      $_SESSION['foto'] = $dados['foto'];
       header('Location: /painel');
     }else{
      $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
