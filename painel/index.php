@@ -137,7 +137,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
           </div>
           <div class="panel-body" style="color: #777;">
             <div class="tab-content">
-              <div class="tab-pane fade in active" id="tab1default">
+              <div class="tab-pane fade in active columns" id="tab1default">
                 <section class="block-content col-md-3">
                   <?php  echo "<img class='block-center img-responsive img-circle' src='".$path.$dados['foto']."'/>";  ?>
                   <section class="push-top-sm hr">
