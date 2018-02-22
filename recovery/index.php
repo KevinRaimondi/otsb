@@ -3,6 +3,7 @@
 require ("../conexao.php");
 $msg = '';
 $email = "";
+$status = 0;
 
 session_start();
 
@@ -19,7 +20,7 @@ if (isset($_POST['btnEnviar'])) {
 
   $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
   $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
-
+  $dados = mysqli_fetch_assoc($verificarExistenciaEmail);
   $status = $dados['status'];
   if ($status != 0){
    $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
