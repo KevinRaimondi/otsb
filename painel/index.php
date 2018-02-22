@@ -186,7 +186,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
               <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Minhas Fotos</a></li>
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
               <?php 
-              if($permissao != 0){
+              if(!$permissao == 0){
                 echo "<li style='float: right;''><a href='#tab4default' data-toggle='tab'><i class='fa fa-cog'></i></li>";
               }?>
             </ul>
