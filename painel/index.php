@@ -2,6 +2,7 @@
 // Conexão com o banco de dados
 require ("../conexao.php");
 $permissao = 0;
+$path = "img/profile/";
 
 session_start();
 
@@ -136,7 +137,22 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
           </div>
           <div class="panel-body">
             <div class="tab-content">
-              <div class="tab-pane fade in active" id="tab1default">Default 1</div>
+              <div class="tab-pane fade in active" id="tab1default">
+                <section class="block-content">
+                  <?php  echo "<img class='block-center img-responsive img-circle' src='".$path.$dados['foto']."'/>";  ?>
+                  <section class="push-top-sm hr">
+                    <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
+                  </section>
+                  <section class="user-details push-top-sm">
+                    <ul>
+                      <?php  echo "<li><i class='fa fa-envelope'></i><span>".$dados['email']."</span></li>";  ?>
+                    </ul>
+                  </section>
+                </section>
+
+
+
+              Default 1</div>
               <div class="tab-pane fade" id="tab2default">Default 2</div>
               <div class="tab-pane fade" id="tab3default">Default 3</div>
               <div class="tab-pane fade" id="tab4default">Default 4</div>
