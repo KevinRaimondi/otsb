@@ -76,8 +76,7 @@
     margin-right: auto;
 }
 
-.teste {
-    float: left;
+.panel-margin {
     display: inline;
     margin-left: 10px;
     margin-right: 10px;
