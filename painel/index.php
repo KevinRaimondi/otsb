@@ -135,7 +135,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
               }?>
             </ul>
           </div>
-          <div class="panel-body-black">
+          <div class="panel-body" style="color: #777;">
             <div class="tab-content">
               <div class="tab-pane fade in active" id="tab1default">
                 <section class="block-content col-md-3">
