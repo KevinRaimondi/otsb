@@ -27,7 +27,7 @@ if (isset($_POST['btnEnviar'])) {
   } else {
     $status = $dados['status']; 
     if ($status != 0){
-      $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
+      $msg = "<span style='color: red;'>O usuário está desabilitado!</span>";
     }
   }
 
