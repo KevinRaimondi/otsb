@@ -96,6 +96,7 @@ if(isset($_SESSION['cmsg'])){
           <ul class="nav navbar-nav">
             <?php 
             if(isset($_SESSION["login"]) || isset($_SESSION["senha"])){
+              echo "<li><a href='/painel'>Painel</a></li>";
               echo "<li><a href='/sair.php'><i class='fa fa-sign-out' aria-hidden='true'></i> Sair</a></li>";
             }else{
               echo "<li><a href='/login'><i class='fa fa-sign-in' aria-hidden='true'></i> Entrar</a></li>";
