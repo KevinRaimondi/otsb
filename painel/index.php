@@ -143,7 +143,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <section class="push-top-sm hr">
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
-                  <section class="user-details push-top-sm">
+                  <section class="align-center push-top-sm">
                       <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
                   </section>
                 </section>
