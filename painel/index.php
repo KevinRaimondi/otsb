@@ -3,12 +3,21 @@
 require ("../conexao.php");
 $msg = '';
 $email = "";
+$permissao = 0;
 
 session_start();
 
 if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   header ("Location: /login");
+}else{
+
+  $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
+  $dados = mysqli_fetch_assoc($query);
+  $permissao =  $dados['permissao'];
+
 }
+
+
 
 ?>
 <!DOCTYPE html>
@@ -100,12 +109,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
     color: #fff;
     background-color: #555;
   }
-  .isDisabled {
-    color: currentColor;
-    cursor: not-allowed;
-    opacity: 0.5;
-    text-decoration: none;
-  }
+
 </style>
 
   <!-- =======================================================
@@ -179,32 +183,34 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
               <li class="active"><a href="#tab1default" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Meu Perfil</a></li>
               <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Minhas Fotos</a></li>
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
-              <!-- SERAR EXIBIDO QUANDO PERFIL DE ADMINISTRADOR -->
-              <!--<li style="float: right;"><a href="#tab4default" data-toggle="tab"><i class="fa fa-cog"></i></li> -->
-              </ul>
-            </div>
-            <div class="panel-body">
-              <div class="tab-content">
-                <div class="tab-pane fade in active" id="tab1default">Default 1</div>
-                <div class="tab-pane fade" id="tab2default">Default 2</div>
-                <div class="tab-pane fade" id="tab3default">Default 3</div>
-                <div class="tab-pane fade" id="tab4default">Default 4</div>
-              </div>
+              <?php 
+              if($permissao != 0){
+                echo "<li style='float: right;''><a href='#tab4default' data-toggle='tab'><i class='fa fa-cog'></i></li>";
+              }?>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab1default">Default 1</div>
+              <div class="tab-pane fade" id="tab2default">Default 2</div>
+              <div class="tab-pane fade" id="tab3default">Default 3</div>
+              <div class="tab-pane fade" id="tab4default">Default 4</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-  </section>
+</section>
 
-  <!-- Core JavaScript Files -->
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery.easing.min.js"></script>
-  <script src="../js/jquery.scrollTo.js"></script>
-  <script src="../js/wow.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src="../js/custom.js"></script>
+<!-- Core JavaScript Files -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.scrollTo.js"></script>
+<script src="../js/wow.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="../js/custom.js"></script>
 
 </body>
 
