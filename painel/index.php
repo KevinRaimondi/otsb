@@ -147,6 +147,8 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                       <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
                   </section>
                 </section>
+                <section class="block-content panel-margin">
+                </section>
               </div>
               <div class="tab-pane fade" id="tab2default">Default 2</div>
               <div class="tab-pane fade" id="tab3default">Default 3</div>

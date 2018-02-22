@@ -77,7 +77,7 @@
 }
 
 .panel-margin {
-    display: inline;
+    display: grid;
     margin-left: 10px;
     margin-right: 10px;
 }
