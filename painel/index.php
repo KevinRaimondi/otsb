@@ -2,7 +2,7 @@
 // Conexão com o banco de dados
 require ("../conexao.php");
 $permissao = 0;
-$path = "img/profile/";
+$path = "../img/profile/";
 
 session_start();
 
@@ -148,30 +148,26 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                       <?php  echo "<li><i class='fa fa-envelope'></i><span>".$dados['email']."</span></li>";  ?>
                     </ul>
                   </section>
-                </section>
-
-
-
-              Default 1</div>
-              <div class="tab-pane fade" id="tab2default">Default 2</div>
-              <div class="tab-pane fade" id="tab3default">Default 3</div>
-              <div class="tab-pane fade" id="tab4default">Default 4</div>
+                </section></div>
+                <div class="tab-pane fade" id="tab2default">Default 2</div>
+                <div class="tab-pane fade" id="tab3default">Default 3</div>
+                <div class="tab-pane fade" id="tab4default">Default 4</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
-<!-- Core JavaScript Files -->
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.easing.min.js"></script>
-<script src="../js/jquery.scrollTo.js"></script>
-<script src="../js/wow.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="../js/custom.js"></script>
+  <!-- Core JavaScript Files -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/jquery.scrollTo.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="../js/custom.js"></script>
 
 </body>
 
