@@ -20,49 +20,54 @@ if (isset($_POST['btnEnviar'])) {
   $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
   $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
 
-  if ($rowEmail == 0){
-    $msg = "<span style='color: red;'>O e-mail não existe</span>";
-  }
+  $status = $dados['status'];
+  if ($status != 0){
+   $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
+ }
 
-  if(empty($msg)){ 
+ if ($rowEmail == 0){
+  $msg = "<span style='color: red;'>O e-mail não existe</span>";
+}
 
-   $senha = gerarSenha();
+if(empty($msg)){ 
 
-   $enrypt = md5($senha);
+ $senha = gerarSenha();
+
+ $enrypt = md5($senha);
 
   // Insere os dados no banco
-   $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enrypt."' WHERE `usuarios`.`email` = '".$email."'");
+ $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enrypt."' WHERE `usuarios`.`email` = '".$email."'");
 
   // Se os dados forem atualizado com sucesso
-   if ($sql){
+ if ($sql){
 
-    $email_remetente = "contato@kraimondi.tech";
-    $email_destinatario = $email;
-    $email_reply = $email_remetente;
-    $email_assunto = "OTSB - Esqueceu sua senha?"; 
-    $email_conteudo = "Sua nova senha é: ".$senha;
-    $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+  $email_remetente = "contato@kraimondi.tech";
+  $email_destinatario = $email;
+  $email_reply = $email_remetente;
+  $email_assunto = "OTSB - Esqueceu sua senha?"; 
+  $email_conteudo = "Sua nova senha é: ".$senha;
+  $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
 
-    if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
-      $msg = "<span>Sua nova senha foi enviada por e-mail</span>";
-    }else{
-      $msg = "<span style='color: red;'>Houve algum problema ao enviar sua nova senha!</span>";
-    }
-
+  if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
+    $msg = "<span>Sua nova senha foi enviada por e-mail</span>";
   }else{
-    $msg = "<span style='color: red;'>Não foi possivel recuperar sua conta.</span>";
+    $msg = "<span style='color: red;'>Houve algum problema ao enviar sua nova senha!</span>";
   }
+
+}else{
+  $msg = "<span style='color: red;'>Não foi possivel recuperar sua conta.</span>";
+}
 
 }
 }
 
 function gerarSenha($size = 8){
-   $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";
-   $randomString = '';
-   for($i = 0; $i < $size; $i = $i+1){
-      $randomString .= $chars[mt_rand(0,60)];
-   }
-   return $randomString;
+ $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";
+ $randomString = '';
+ for($i = 0; $i < $size; $i = $i+1){
+  $randomString .= $chars[mt_rand(0,60)];
+}
+return $randomString;
 }
 
 ?>

@@ -24,7 +24,7 @@ if (isset($_POST['btnLogin'])) {
   $row = mysqli_num_rows($query);
   if ($row > 0){
     $status = $dados['status'];
-    if ($status == 1){
+    if ($status == 0){
       $_SESSION['id']    = $dados['id'];
       $_SESSION['nome']  = $dados['nome'];
       $_SESSION['login'] = $dados['email'];
@@ -32,7 +32,7 @@ if (isset($_POST['btnLogin'])) {
       $_SESSION['senha'] = $dados['foto'];
       header('Location: /painel');
     }else{
-     $msg = "<span style='color: red;'>Usúario desativado!</span>";
+     $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
    }
  }else{
   $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
