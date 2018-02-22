@@ -24,9 +24,11 @@ if (isset($_POST['btnEnviar'])) {
 
   if ($rowEmail == 0){
     $msg = "<span style='color: red;'>O e-mail não existe</span>";
-  } else if ($status != 0){
+  } else {
     $status = $dados['status']; 
-    $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
+    if ($status != 0){
+      $msg = "<span style='color: red;'O usuário está desabilitado!</span>";
+    }
   }
 
   if(empty($msg)){ 
