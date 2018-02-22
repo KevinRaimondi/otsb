@@ -16,7 +16,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
   $dados = mysqli_fetch_assoc($query);
   $permissao =  $dados['permissao'];
-echo $permissao;
+echo "" .$permissao;
 }
 
 
@@ -186,7 +186,7 @@ echo $permissao;
               <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Minhas Fotos</a></li>
               <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-share-square"></i> Enviar Fotos</a></li>
               <?php 
-              if(!$permissao == 0){
+              if($permissao != 0){
                 echo "<li style='float: right;''><a href='#tab4default' data-toggle='tab'><i class='fa fa-cog'></i></li>";
               }?>
             </ul>
