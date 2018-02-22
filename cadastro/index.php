@@ -157,13 +157,12 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
   $enrypt = md5($senha);
 
   // Insere os dados no banco
-  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$enrypt."', '".$nome_imagem."', '0')");
-
-  $sqlToken = mysqli_query($conn, "DELETE FROM `tokens` WHERE `tokens`.`token` = '".$token."'");
+  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$enrypt."', '".$nome_imagem."', '0', '0')");
 
   // Se os dados forem inseridos com sucesso
   if ($sql){
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Você foi cadastrado com sucesso.</p>";
+    $sqlToken = mysqli_query($conn, "DELETE FROM `tokens` WHERE `tokens`.`token` = '".$token."'");
+    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Você foi cadastrado com sucesso.</p>";    
   }else{
     if(!empty($caminho_imagem)){
       unlink($caminho_imagem);
