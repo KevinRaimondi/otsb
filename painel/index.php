@@ -1,8 +1,6 @@
 <?php
 // Conexão com o banco de dados
 require ("../conexao.php");
-$msg = '';
-$email = "";
 $permissao = 0;
 
 session_start();
@@ -10,6 +8,10 @@ session_start();
 if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   header ("Location: /login");
 }else{
+
+  $email = $_SESSION["login"];
+  $senha = $_SESSION["senha"];
+  $enrypt = md5($senha);
 
   $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email' AND senha = '$enrypt'");
   $dados = mysqli_fetch_assoc($query);
