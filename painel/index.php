@@ -38,11 +38,14 @@ if (isset($_POST['btnAtualizar'])) {
     }
 
     if(empty($msg)){
-      if($email != $emailNovo){
+      if(($email != $emailNovo) && !empty($senhaNova) && ($senhaAtual != $senhaNova)){
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+      }else if($email != $emailNovo) {
+        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."' WHERE `usuarios`.`id` = '".$id."'");
       }else{
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }
+
       if ($sql){
         $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
       }else{
