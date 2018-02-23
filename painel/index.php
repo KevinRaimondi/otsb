@@ -33,10 +33,9 @@ if (isset($_POST['btnAtualizar'])) {
   if($enryptSenhaAtual == $senha){
     if($senhaNova != $senhaNovaConfim){
       $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>As senhas não conferem!2</p>";
-    }else if ((!empty($senhaNova) && !empty($senhaNovaConfim)) || strlen($senhaNova) < 8) {
+    }else if (!empty($senhaNova) && strlen($senhaNova) < 8) {
       $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
     }
-
 
     if(empty($msg)){
       if($email != $emailNovo){
