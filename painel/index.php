@@ -143,13 +143,11 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <section class="push-top-sm hr">
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
-                  <div class="panel with-nav-tabs panel-default">
                     <ul class="nav">
                       <li class="active"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
                       <li ><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
                       <li ><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
                     </ul>
-                  </div>
                 </section>
 
                 <div class="tab-content">
