@@ -150,7 +150,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                 </section>
 
-                <div id="tab1default1" class="tab-pane fade">
+                <div id="tab1default1" class="tab-pane fade in active">
                   <section class="block-content panel-margin profile-classic">
 
                     <ul class="nav">
