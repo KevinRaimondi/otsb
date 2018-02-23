@@ -143,21 +143,21 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <section class="push-top-sm hr">
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
-                    <ul class="nav nav-tabs">
-                      <li class="active" style="width: 100%;"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
-                      <li style="width: 100%;"><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
-                      <li style="width: 100%;"><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
-                    </ul>
+                  <ul class="nav nav-tabs">
+                    <li class="active" style="width: 100%;"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
+                    <li style="width: 100%;"><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
+                    <li style="width: 100%;"><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
+                  </ul>
                 </section>
 
                 <div class="tab-content">
                   <div id="tab1default1" class="tab-pane fade in active">
                     <section class="block-content panel-margin profile-classic">
                       <ul class="nav">
-                       <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
+                        <?php  echo "<li><span><i class='fa fa-user' aria-hidden='true'></i> Usuário:</span> ".$dados['nome']."</li>";?>
                        <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
                        <li><span>Estado:</span> Ativo</li>
-                       <?php  echo "<li><span>Membro desde:</span> ".date("d/m/Y", strtotime($dados['data_cadastro']))."</li>"; ?>
+                       <?php  echo "<li><span><i class='fa fa-calendar-o' aria-hidden='true'></i> Membro desde:</span> ".date("d/m/Y", strtotime($dados['data_cadastro']))."</li>"; ?>
                      </ul>
                    </section>
                  </div>
