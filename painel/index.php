@@ -208,7 +208,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                           <td style="width: 2%;"/>
 
-                          <td colspan="3" style="width: 49%;">
+                          <td colspan="3" style="width: 49%; vertical-align: bottom;">
                             <div class="form-group">
                               <!-- Button -->
                               <div class="col-sm-12 controls">
