@@ -101,8 +101,8 @@ function readURL(input) {
 		reader.onload = function (e) {
 			$('.imgCircle')
 			.attr('src', e.target.result)
-			.width(200)
-			.height(200);
+			.width(150)
+			.height(150);
 		};
 		reader.readAsDataURL(input.files[0]);
 	}
