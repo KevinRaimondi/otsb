@@ -55,6 +55,7 @@ if (isset($_POST['btnAtualizar'])) {
     $row = mysqli_num_rows($query);
 
     if ($row > 0){
+      $email = $dados['email'];
       $_SESSION['login'] = $dados['email'];
       $_SESSION['senha'] = $dados['senha'];
     }else{
