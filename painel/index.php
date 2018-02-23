@@ -196,7 +196,28 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   </section>
 
                   <section class="block-content panel-margin profile-classic">
+                    <table class="width-100">
+                      <tr>
+                        <td colspan="3" style="width: 49%; height: 65px;">
+                          <div class="input-group width-100">
+                            <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <input id="passwordatual" name="passwordatual" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
+                          </div>      
+                        </td>
 
+                        <td style="width: 2%;"/>
+
+                        <td colspan="3" style="width: 49%;">
+                          <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-sm-12 controls">
+                              <button id="btnAtualizar" name="btnAtualizar" type="submit" class="btn btn-primary pull-right"><i class="fa fa-edit"></i> Atualizar</button>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
                   </section>
                 </div>
 
