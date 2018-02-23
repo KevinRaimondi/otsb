@@ -163,40 +163,40 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   </div>
 
                   <div id="tab1default2" class="tab-pane fade">
-                    <section class="block-content panel-margin profile-classic">
-                      <span>Atualizar dados cadastrais</span>
-                      <table class="width-100">
-                       <tr>
-                        <td colspan="3" style="width: 49%; height: 65px;">
-                          <div class="input-group width-100">
-                            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                            <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td colspan="3" style="width: 49%; height: 65px;">
-                          <div class="input-group width-100" style="display: flex;">
-                            <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua nova senha" class="form-control input-md" required="">
-                            <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                          </div>
-                        </td>
-
-                        <td style="width: 2%;"/>
-
-                        <td colspan="3" style="width: 49%;">
-                          <div class="input-group width-100" style="display: flex;">
-                            <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
-                            <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </section>
-
-                  <section class="block-content panel-margin profile-classic">
                     <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="atualizarCadastro">
+                      <section class="block-content panel-margin profile-classic">
+                        <span>Atualizar dados cadastrais</span>
+                        <table class="width-100">
+                         <tr>
+                          <td colspan="3" style="width: 49%; height: 65px;">
+                            <div class="input-group width-100">
+                              <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                              <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="3" style="width: 49%; height: 65px;">
+                            <div class="input-group width-100" style="display: flex;">
+                              <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua nova senha" class="form-control input-md" required="">
+                              <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                            </div>
+                          </td>
+
+                          <td style="width: 2%;"/>
+
+                          <td colspan="3" style="width: 49%;">
+                            <div class="input-group width-100" style="display: flex;">
+                              <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
+                              <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </section>
+
+                    <section class="block-content panel-margin profile-classic">
                       <table class="width-100">
                         <tr>
                           <td colspan="3" style="width: 49%; height: 65px;">
@@ -218,8 +218,8 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                           </td>
                         </tr>
                       </table>
-                    </form>
-                  </section>
+                    </section>
+                  </form>
                 </div>
 
                 <div id="tab1default3" class="tab-pane fade">
