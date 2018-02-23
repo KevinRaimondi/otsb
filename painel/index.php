@@ -164,7 +164,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                   <div id="tab1default2" class="tab-pane fade">
                     <section class="block-content panel-margin profile-classic">
-                      <span>Atualizar e-mail</span>
+                      <span>Atualizar informações de cadastro</span>
                       <table class="width-100">
                        <tr>
                         <td colspan="3" style="width: 49%; height: 65px;">
@@ -174,12 +174,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                           </div>
                         </td>
                       </tr>
-                    </table>
-                  </section>
 
-                  <section class="block-content panel-margin profile-classic">
-                    <span>Atualizar senha</span>
-                    <table class="width-100">
                       <tr>
                         <td colspan="3" style="width: 49%; height: 65px;">
                           <div class="input-group width-100" style="display: flex;">
@@ -198,6 +193,9 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                         </td>
                       </tr>
                     </table>
+                  </section>
+
+                  <section class="block-content panel-margin profile-classic">
 
                   </section>
                 </div>
