@@ -157,7 +157,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
   $enrypt = md5($senha);
 
   // Insere os dados no banco
-  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$enrypt."', '".$nome_imagem."', '0', '0')");
+  $sql = mysqli_query($conn, "INSERT INTO usuarios VALUES ('', '".$usuario."', '".$email."', '".$enrypt."', '".$nome_imagem."', '0', '0', '".date('y-m-d')."')");
 
   // Se os dados forem inseridos com sucesso
   if ($sql){
