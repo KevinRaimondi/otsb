@@ -156,7 +156,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                       <ul class="nav">
                         <?php  echo "<li><span><i class='fa fa-user' aria-hidden='true'></i> Usuário:</span> ".$dados['nome']."</li>";?>
                        <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
-                       <li><span>Estado:</span> Ativo</li>
+                       <li><span><i class="fa fa-circle" aria-hidden="true"></i> Estado:</span> Ativo</li>
                        <?php  echo "<li><span><i class='fa fa-calendar-o' aria-hidden='true'></i> Membro desde:</span> ".date("d/m/Y", strtotime($dados['data_cadastro']))."</li>"; ?>
                      </ul>
                    </section>
