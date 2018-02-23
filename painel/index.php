@@ -164,7 +164,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                   <div id="tab1default2" class="tab-pane fade">
                     <section class="block-content panel-margin profile-classic">
-                      <span>Atualizar informações de cadastro</span>
+                      <span>Atualizar dados cadastrais</span>
                       <table class="width-100">
                        <tr>
                         <td colspan="3" style="width: 49%; height: 65px;">
@@ -196,57 +196,59 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   </section>
 
                   <section class="block-content panel-margin profile-classic">
-                    <table class="width-100">
-                      <tr>
-                        <td colspan="3" style="width: 49%; height: 65px;">
-                          <div class="input-group width-100">
-                            <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                            <input id="passwordatual" name="passwordatual" type="password" placeholder="Informe sua senha atual" class="form-control input-md" required="">
-                          </div>      
-                        </td>
+                    <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="atualizarCadastro">
+                      <table class="width-100">
+                        <tr>
+                          <td colspan="3" style="width: 49%; height: 65px;">
+                            <div class="input-group width-100">
+                              <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                              <input id="passwordatual" name="passwordatual" type="password" placeholder="Informe sua senha atual" class="form-control input-md" required="">
+                            </div>      
+                          </td>
 
-                        <td style="width: 2%;"/>
+                          <td style="width: 2%;"/>
 
-                        <td colspan="3" style="width: 49%;">
-                          <div class="form-group">
-                            <!-- Button -->
-                            <div class="col-sm-12 controls">
-                              <button id="btnAtualizar" name="btnAtualizar" type="submit" class="btn btn-primary pull-right"><i class="fa fa-edit"></i> Atualizar</button>
+                          <td colspan="3" style="width: 49%;">
+                            <div class="form-group">
+                              <!-- Button -->
+                              <div class="col-sm-12 controls">
+                                <button id="btnAtualizar" name="btnAtualizar" type="submit" class="btn btn-primary pull-right"><i class="fa fa-edit"></i> Atualizar</button>
+                              </div>
                             </div>
-                          </div>
-                        </td>
-                      </tr>
-
-                    </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
                   </section>
                 </div>
 
                 <div id="tab1default3" class="tab-pane fade">
                   <section class="block-content panel-margin profile-classic">
-                    <table class="width-100">
-                      <tr>
-                        <td colspan="3" style="width: 49%; height: 65px;">
-                         <?php  echo "<img class='block-center img-responsive img-circle imgCircle' src='".$path.$dados['foto']."'/>";  ?>
-                       </td>
-                     </tr>
-                     <tr>
-                      <td>
-                       <div colspan="3" style="width: 100%; vertical-align: top; margin-top: 10%;">
-                        <input id="filebutton" name="file-input" onchange="readURL(this);" class="input-file width-100" type="file" accept="image/jpeg">
-                        <span style="font-size: 12px;">*Foto do perfil (150 x 150)</span>
-                      </div>
-                    </td>
-                    <td colspan="3" style="width: 49%;">
-                      <div class="form-group">
-                        <!-- Button -->
-                        <div class="col-sm-12 controls">
-                          <button id="btnAtualizarFoto" name="btnAtualizarFoto" type="submit" class="btn btn-primary pull-right"><i class="fa fa-edit"></i> Atualizar</button>
+                    <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="atualizarFoto">
+                      <table class="width-100">
+                        <tr>
+                          <td colspan="3" style="width: 49%; height: 65px;">
+                           <?php  echo "<img class='block-center img-responsive img-circle imgCircle' src='".$path.$dados['foto']."'/>";  ?>
+                         </td>
+                       </tr>
+                       <tr>
+                        <td>
+                         <div colspan="3" style="width: 100%; vertical-align: top; margin-top: 10%;">
+                          <input id="filebutton" name="file-input" onchange="readURL(this);" class="input-file width-100" type="file" accept="image/jpeg">
+                          <span style="font-size: 12px;">*Foto do perfil (150 x 150)</span>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-
+                      </td>
+                      <td colspan="3" style="width: 49%;">
+                        <div class="form-group">
+                          <!-- Button -->
+                          <div class="col-sm-12 controls">
+                            <button id="btnAtualizarFoto" name="btnAtualizarFoto" type="submit" class="btn btn-primary pull-right"><i class="fa fa-edit"></i> Atualizar</button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
               </section>
             </div>
           </div>
