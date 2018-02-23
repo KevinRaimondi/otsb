@@ -161,13 +161,13 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                  </section>
                </div>
 
-               <div id="tab1default2" class="tab-pane fade in active">
+               <div id="tab1default2" class="tab-pane fade">
                 <section class="block-content panel-margin profile-classic">
                   <span>Editar Perfil</span>
                 </section>
               </div>
 
-               <div id="tab1default3" class="tab-pane fade in active">
+               <div id="tab1default3" class="tab-pane fade">
                 <section class="block-content panel-margin profile-classic">
                   <span>Imagem do perfil</span>
                 </section>
