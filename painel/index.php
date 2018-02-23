@@ -146,27 +146,32 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <section class="align-center push-top-sm">
                     <?php  echo "<span><i class='fa fa-envelope'></i> ".$dados['email']."</span>";  ?>
                   </section>
-                </section>
-                <section class="block-content panel-margin profile-classic">
-
-                  <ul class="nav">
-                   <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
-                    <?php  echo "<li><span>Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
-                    <li><span>Estado:</span> Ativo</li>
-                    <li><span>Membro desde:</span> 01/12/2017</li>
-                  </ul>
+                  <li class="active"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
 
                 </section>
-              </div>
-              <div class="tab-pane fade" id="tab2default">Default 2</div>
-              <div class="tab-pane fade" id="tab3default">Default 3</div>
-              <div class="tab-pane fade" id="tab4default">Default 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+                <div id="tab1default1" class="tab-pane fade">
+                  <section class="block-content panel-margin profile-classic">
+
+                    <ul class="nav">
+                     <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
+                     <?php  echo "<li><span>Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
+                     <li><span>Estado:</span> Ativo</li>
+                     <li><span>Membro desde:</span> 01/12/2017</li>
+                   </ul>
+
+                 </section>
+               </div>
+             </div>
+             <div class="tab-pane fade" id="tab2default">Default 2</div>
+             <div class="tab-pane fade" id="tab3default">Default 3</div>
+             <div class="tab-pane fade" id="tab4default">Default 4</div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
 </section>
 
