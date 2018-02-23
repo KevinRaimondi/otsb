@@ -4,6 +4,7 @@ require ("../conexao.php");
 $permissao = 0;
 $path = "../img/profile/";
 $msg = '';
+$email = '';
 
 session_start();
 
