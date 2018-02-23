@@ -223,21 +223,25 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                 <div id="tab1default3" class="tab-pane fade">
                   <section class="block-content panel-margin profile-classic">
-                    <span>Imagem do perfil</span>
-                  </section>
-                </div>
+                   <?php  echo "<img class='block-center img-responsive img-circle imgCircle' src='".$path.$dados['foto']."'/>";  ?>
+                   <div colspan="3" style="width: 100%; vertical-align: top;">
+                    <input id="filebutton" name="file-input" onchange="readURL(this);" class="input-file width-100" type="file" accept="image/jpeg">
+                    <span style="font-size: 12px;">*Foto do perfil</span>
+                  </div>
+                </section>
               </div>
-
-
             </div>
-            <div class="tab-pane fade" id="tab2default">Default 2</div>
-            <div class="tab-pane fade" id="tab3default">Default 3</div>
-            <div class="tab-pane fade" id="tab4default">Default 4</div>
+
+
           </div>
+          <div class="tab-pane fade" id="tab2default">Default 2</div>
+          <div class="tab-pane fade" id="tab3default">Default 3</div>
+          <div class="tab-pane fade" id="tab4default">Default 4</div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 </section>

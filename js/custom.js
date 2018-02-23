@@ -57,29 +57,29 @@ $(document).ready(function(){
 });
 
 $(function() {
-  $("#btnPasswordinput").click(function(){
-        var pass_input = document.getElementById("passwordinput");
-        if (pass_input.type === "password") {
-            pass_input.type = "text";
-            $(this).removeClass("fa-eye").addClass("fa-eye-slash")
-        } else {
-            pass_input.type = "password";
-            $(this).removeClass("fa-eye-slash").addClass("fa-eye")
-        }
-   });
+	$("#btnPasswordinput").click(function(){
+		var pass_input = document.getElementById("passwordinput");
+		if (pass_input.type === "password") {
+			pass_input.type = "text";
+			$(this).removeClass("fa-eye").addClass("fa-eye-slash")
+		} else {
+			pass_input.type = "password";
+			$(this).removeClass("fa-eye-slash").addClass("fa-eye")
+		}
+	});
 });
 
 $(function() {
-  $("#btnPasswordinputConfirm").click(function(){
-        var pass_input = document.getElementById("passwordinputConfirm");
-        if (pass_input.type === "password") {
-            pass_input.type = "text";
-            $(this).removeClass("fa-eye").addClass("fa-eye-slash")
-        } else {
-            pass_input.type = "password";
-            $(this).removeClass("fa-eye-slash").addClass("fa-eye")
-        }
-   });
+	$("#btnPasswordinputConfirm").click(function(){
+		var pass_input = document.getElementById("passwordinputConfirm");
+		if (pass_input.type === "password") {
+			pass_input.type = "text";
+			$(this).removeClass("fa-eye").addClass("fa-eye-slash")
+		} else {
+			pass_input.type = "password";
+			$(this).removeClass("fa-eye-slash").addClass("fa-eye")
+		}
+	});
 });
 
 $(document).ready(function(){
@@ -94,3 +94,16 @@ $(document).ready(function(){
 	});
 
 });
+
+function readURL(input) {
+	if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			$('.imgCircle')
+			.attr('src', e.target.result)
+			.width(200)
+			.height(200);
+		};
+		reader.readAsDataURL(input.files[0]);
+	}
+}
