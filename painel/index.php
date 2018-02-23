@@ -165,57 +165,63 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <div id="tab1default2" class="tab-pane fade">
                     <section class="block-content panel-margin profile-classic">
                       <span>Atualizar e-mail</span>
-                      <div class="input-group width-100">
-                        <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                        <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
-                      </div>
-                    </section>
-
-                    <section class="block-content panel-margin profile-classic">
-                      <span>Atualizar senha</span>
-
                       <table class="width-100">
-                        <!-- Password input-->
-                        <tr>
-                          <td colspan="3" style="width: 49%; height: 65px;">
-                            <div class="input-group width-100" style="display: flex;">
-                              <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua nova senha" class="form-control input-md" required="">
-                              <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                            </div>
-                          </td>
+                       <tr>
+                        <td>
+                          <div class="input-group width-100">
+                            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </section>
 
-                          <td style="width: 2%;"/>
+                  <section class="block-content panel-margin profile-classic">
+                    <span>Atualizar senha</span>
 
-                          <td colspan="3" style="width: 49%;">
-                            <div class="input-group width-100" style="display: flex;">
-                              <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
-                              <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
-                            </div>
-                          </td>
-                        </tr>
-                      </table>
+                    <table class="width-100">
+                      <!-- Password input-->
+                      <tr>
+                        <td colspan="3" style="width: 49%; height: 65px;">
+                          <div class="input-group width-100" style="display: flex;">
+                            <input id="passwordinput" name="passwordinput" type="password" placeholder="Informe sua nova senha" class="form-control input-md" required="">
+                            <button id="btnPasswordinput" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                          </div>
+                        </td>
 
-                    </section>
-                  </div>
+                        <td style="width: 2%;"/>
 
-                  <div id="tab1default3" class="tab-pane fade">
-                    <section class="block-content panel-margin profile-classic">
-                      <span>Imagem do perfil</span>
-                    </section>
-                  </div>
+                        <td colspan="3" style="width: 49%;">
+                          <div class="input-group width-100" style="display: flex;">
+                            <input id="passwordinputConfirm" name="passwordinputConfirm" type="password" placeholder="Confirme sua senha" class="form-control input-md" required="">
+                            <button id="btnPasswordinputConfirm" class="input-group-addon fa fa-eye" type="button" style="width: 11%;"></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </section>
                 </div>
 
-
+                <div id="tab1default3" class="tab-pane fade">
+                  <section class="block-content panel-margin profile-classic">
+                    <span>Imagem do perfil</span>
+                  </section>
+                </div>
               </div>
-              <div class="tab-pane fade" id="tab2default">Default 2</div>
-              <div class="tab-pane fade" id="tab3default">Default 3</div>
-              <div class="tab-pane fade" id="tab4default">Default 4</div>
+
+
             </div>
+            <div class="tab-pane fade" id="tab2default">Default 2</div>
+            <div class="tab-pane fade" id="tab3default">Default 3</div>
+            <div class="tab-pane fade" id="tab4default">Default 4</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 </section>
 
