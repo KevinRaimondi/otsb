@@ -12,7 +12,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
   header ("Location: /login");
 }else{
 
-  $id = $_SESSION["id"]
+  $id = $_SESSION["id"];
   $email = $_SESSION["login"];
   $senha = $_SESSION["senha"];
 
