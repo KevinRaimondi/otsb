@@ -149,29 +149,31 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                     <li ><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
                   </ul>
                 </section>
-                
-                <div class="tab-content">
-                  <div id="tab1default1" class="tab-pane fade in active">
+
+                <div class="panel with-nav-tabs panel-default">
+                  <div class="tab-content">
+                    <div id="tab1default1" class="tab-pane fade in active">
+                      <section class="block-content panel-margin profile-classic">
+                        <ul class="nav">
+                         <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
+                         <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
+                         <li><span>Estado:</span> Ativo</li>
+                         <li><span>Membro desde:</span> 01/12/2017</li>
+                       </ul>
+                     </section>
+                   </div>
+
+                   <div id="tab1default2" class="tab-pane fade">
                     <section class="block-content panel-margin profile-classic">
-                      <ul class="nav">
-                       <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
-                       <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
-                       <li><span>Estado:</span> Ativo</li>
-                       <li><span>Membro desde:</span> 01/12/2017</li>
-                     </ul>
-                   </section>
-                 </div>
+                      <span>Editar Perfil</span>
+                    </section>
+                  </div>
 
-                 <div id="tab1default2" class="tab-pane fade">
-                  <section class="block-content panel-margin profile-classic">
-                    <span>Editar Perfil</span>
-                  </section>
-                </div>
-
-                <div id="tab1default3" class="tab-pane fade">
-                  <section class="block-content panel-margin profile-classic">
-                    <span>Imagem do perfil</span>
-                  </section>
+                  <div id="tab1default3" class="tab-pane fade">
+                    <section class="block-content panel-margin profile-classic">
+                      <span>Imagem do perfil</span>
+                    </section>
+                  </div>
                 </div>
               </div>
 
