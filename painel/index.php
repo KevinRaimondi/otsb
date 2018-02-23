@@ -153,7 +153,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                 <div class="tab-content">
                   <div id="tab1default1" class="tab-pane fade in active">
                     <section class="block-content panel-margin profile-classic">
-                      <ul class="nav">
+                      <ul class="nav nav-tabs">
                        <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
                        <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
                        <li><span>Estado:</span> Ativo</li>
