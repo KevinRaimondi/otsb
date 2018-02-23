@@ -201,7 +201,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                         <td colspan="3" style="width: 49%; height: 65px;">
                           <div class="input-group width-100">
                             <span class="input-group-addon" style="width: 12%;"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                            <input id="passwordatual" name="passwordatual" type="password" placeholder="Informe sua senha" class="form-control input-md" required="">
+                            <input id="passwordatual" name="passwordatual" type="password" placeholder="Informe sua senha atual" class="form-control input-md" required="">
                           </div>      
                         </td>
 
