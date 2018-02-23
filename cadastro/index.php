@@ -331,7 +331,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
                 <tr>
                   <td colspan="3" style="width: 49%; vertical-align: top;">
                     <input id="filebutton" name="file-input" class="input-file width-100" type="file" accept="image/jpeg">
-                    <span style="font-size: 12px;">*Foto do perfil</span>
+                    <span style="font-size: 12px;">*Foto do perfil (150 x 150)</span>
                   </td>
 
                   <td style="width: 2%;"/>
