@@ -39,7 +39,7 @@ if (isset($_POST['btnAtualizar'])) {
       $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
     }else{
       if($email != $emailNovo){
-        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '"$emailNovo"', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }else{
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }
