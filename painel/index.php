@@ -144,9 +144,9 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
                     <ul class="nav nav-tabs">
-                      <li class="active"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
-                      <li ><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
-                      <li ><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
+                      <li class="active" style="width: 100%;"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
+                      <li style="width: 100%;"><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
+                      <li style="width: 100%;"><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
                     </ul>
                 </section>
 
