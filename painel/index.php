@@ -143,7 +143,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                   <section class="push-top-sm hr">
                     <?php  echo "<h4 class='text-center'>".$dados['nome']."</h4>";  ?>
                   </section>
-                    <ul class="nav">
+                    <ul class="nav nav-tabs">
                       <li class="active"><a href="#tab1default1" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações do perfil</a></li>
                       <li ><a href="#tab1default2" data-toggle="tab"><i class="fa fa-edit" aria-hidden="true"></i> Editar perfil</a></li>
                       <li ><a href="#tab1default3" data-toggle="tab"><i class="fa fa-image" aria-hidden="true"></i> Imagem do perfil</a></li>
@@ -153,7 +153,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                 <div class="tab-content">
                   <div id="tab1default1" class="tab-pane fade in active">
                     <section class="block-content panel-margin profile-classic">
-                      <ul class="nav nav-tabs">
+                      <ul class="nav">
                        <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
                        <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
                        <li><span>Estado:</span> Ativo</li>
