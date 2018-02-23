@@ -44,7 +44,7 @@ if (isset($_POST['btnAtualizar'])) {
    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha atual não confere!</p>";
  }
 
- if(empty($msg){
+ if(empty($msg)){
   if($email != $emailNovo){
     $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
   }else{
