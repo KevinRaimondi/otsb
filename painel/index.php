@@ -157,7 +157,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                        <?php  echo "<li><span>Usuário:</span> ".$dados['nome']."</li>";?>
                        <?php  echo "<li><span><span><i class='fa fa-envelope'></i> Email: <a href='mailto:".$dados['email']."'>".$dados['email']."</a></span></li>"; ?>
                        <li><span>Estado:</span> Ativo</li>
-                       <li><span>Membro desde:</span> 01/12/2017</li>
+                       <?php  echo "<li><span>Membro desde:</span> ".date("d/m/Y", strtotime($dados['data_cadastro']))."</li>"; ?>
                      </ul>
                    </section>
                  </div>
