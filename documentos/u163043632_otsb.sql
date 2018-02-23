@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 22/02/2018 às 20:27
+-- Tempo de geração: 23/02/2018 às 02:49
 -- Versão do servidor: 10.1.29-MariaDB
 -- Versão do PHP: 7.0.25
 
@@ -71,17 +71,19 @@ CREATE TABLE `usuarios` (
   `senha` varchar(100) NOT NULL,
   `foto` varchar(100) NOT NULL,
   `permissao` int(1) NOT NULL DEFAULT '0',
-  `status` int(1) NOT NULL DEFAULT '0'
+  `status` int(1) NOT NULL DEFAULT '0',
+  `data_cadastro` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `permissao`, `status`) VALUES
-(8, 'faael', '', '', '2dd945d3c0471656ce5f0a4bb587bcbf.jpg', 8, 1),
-(46, 'fabiolucenaribas', 'fabio.luce@outlook.com', '76e3e53ee06d9bfdd7f26c36e0633de7', 'cbdfec6d3f86516e2490ea43c72a21d2.jpg', 1, 0),
-(50, 'teste', 'teste@teste.com', 'a41c539148ac5d11fa08f2703e9ff138', '2dd945d3c0471656ce5f0a4bb587bcbf.jpg', 1, 0);
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `foto`, `permissao`, `status`, `data_cadastro`) VALUES
+(8, 'faael', '', '', '2dd945d3c0471656ce5f0a4bb587bcbf.jpg', 8, 1, '0000-00-00'),
+(46, 'Fábio Lucena Ribas', 'fabio.luce@outlook.com', 'f577e7d638721daab5ac8694920ae49d', 'cbdfec6d3f86516e2490ea43c72a21d2.jpg', 2, 0, '2018-01-01'),
+(50, 'teste', 'teste@teste.com', 'a41c539148ac5d11fa08f2703e9ff138', '2dd945d3c0471656ce5f0a4bb587bcbf.jpg', 1, 0, '0000-00-00'),
+(51, 'testertyu', 'teste@teste333.com', 'a41c539148ac5d11fa08f2703e9ff138', '2dd945d3c0471656ce5f0a4bb587bcbf.jpg', 0, 0, '2018-02-23');
 
 --
 -- Índices de tabelas apagadas
@@ -131,13 +133,13 @@ ALTER TABLE `log`
 -- AUTO_INCREMENT de tabela `tokens`
 --
 ALTER TABLE `tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
