@@ -238,7 +238,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                           <span style="font-size: 12px;">*Foto do perfil (150 x 150)</span>
                         </div>
                       </td>
-                      <td colspan="3" style="width: 49%;">
+                      <td colspan="3" style="width: 49%; vertical-align: bottom;">
                         <div class="form-group">
                           <!-- Button -->
                           <div class="col-sm-12 controls">
