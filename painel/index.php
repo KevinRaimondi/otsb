@@ -38,33 +38,36 @@ if (isset($_POST['btnAtualizar'])) {
     }else if (strlen($senhaNova) < 8) {
       $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
     }
+    
+
+    if(empty($msg)){
+      if($email != $emailNovo){
+        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+      }else{
+        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+      }
+      if ($sql){
+        $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
+      }else{
+        $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao tualizar! Favor entra em contato com o administrador.</p>";
+      }
+    }
+
+    $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE `usuarios`.`id` = '".$id."'");
+    $dados = mysqli_fetch_assoc($query);
+    $row = mysqli_num_rows($query);
+
+    if ($row > 0){
+      $_SESSION['login'] = $dados['email'];
+      $_SESSION['senha'] = $dados['senha'];
+    }else{
+      header('Location: /sair.php');
+    }
+
+
   }else{
    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha atual não confere!3</p>";
  }
-
- if(empty($msg)){
-  if($email != $emailNovo){
-    $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
-  }else{
-    $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
-  }
-  if ($sql){
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
-  }else{
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao tualizar! Favor entra em contato com o administrador.</p>";
-  }
-}
-
-$query = mysqli_query($conn,"SELECT * FROM usuarios WHERE `usuarios`.`id` = '".$id."'");
-$dados = mysqli_fetch_assoc($query);
-$row = mysqli_num_rows($query);
-
-if ($row > 0){
-  $_SESSION['login'] = $dados['email'];
-  $_SESSION['senha'] = $dados['senha'];
-}else{
-  header('Location: /sair.php');
-}
 
 }
 
