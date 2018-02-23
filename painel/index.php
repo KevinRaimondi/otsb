@@ -155,7 +155,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                     <section class="block-content panel-margin profile-classic">
                       <ul class="nav">
                         <?php  echo "<li><span><i class='fa fa-user' aria-hidden='true'></i> Usuário:</span> ".$dados['nome']."</li>";?>
-                        <?php  echo "<li><span><i class='fa fa-envelope'></i> Email:</span> <a href='mailto:".$dados['email']."'>".$dados['email']."</a></li>"; ?>
+                        <?php  echo "<li><span><i class='fa fa-envelope'></i> Email:</span><a href='mailto:".$dados['email']."'>".$dados['email']."</a></li>"; ?>
                         <li><span><i class="fa fa-circle" aria-hidden="true"></i> Estado:</span> Ativo</li>
                         <?php  echo "<li><span><i class='fa fa-calendar-o' aria-hidden='true'></i> Membro desde:</span> ".date("d/m/Y", strtotime($dados['data_cadastro']))."</li>"; ?>
                       </ul>
