@@ -167,7 +167,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                       <span>Atualizar e-mail</span>
                       <table class="width-100">
                        <tr>
-                        <td>
+                        <td colspan="3" style="width: 49%; height: 65px;">
                           <div class="input-group width-100">
                             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                             <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
@@ -179,9 +179,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
 
                   <section class="block-content panel-margin profile-classic">
                     <span>Atualizar senha</span>
-
                     <table class="width-100">
-                      <!-- Password input-->
                       <tr>
                         <td colspan="3" style="width: 49%; height: 65px;">
                           <div class="input-group width-100" style="display: flex;">
