@@ -233,7 +233,7 @@ if(!isset($_SESSION["login"]) || !isset($_SESSION["senha"])){
                        </tr>
                        <tr>
                         <td>
-                         <div colspan="3" style="width: 100%; vertical-align: top; margin-top: 10%;">
+                         <div colspan="3" style="margin-top: 10%;">
                           <input id="filebutton" name="file-input" onchange="readURL(this);" class="input-file width-100" type="file" accept="image/jpeg">
                           <span style="font-size: 12px;">*Foto do perfil (150 x 150)</span>
                         </div>
