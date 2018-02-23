@@ -61,7 +61,7 @@ $row = mysqli_num_rows($query);
 
 if ($row > 0){
   $_SESSION['login'] = $dados['email'];
-  $_SESSION['senha'] = $$dados['senha'];
+  $_SESSION['senha'] = $dados['senha'];
 }else{
   header('Location: /sair.php');
 }
