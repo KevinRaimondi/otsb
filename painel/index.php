@@ -45,7 +45,7 @@ if (isset($_POST['btnAtualizar'])) {
       }else if(!empty($senhaNova) && ($senhaNova != $senhaAtual)){
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }else{
-          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Não existe alterações.</div></div></div>";
+          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil não sofreu alterações.</div></div></div>";
       }
 
       if(empty($msg)){
