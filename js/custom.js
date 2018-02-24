@@ -107,3 +107,10 @@ function readURL(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 }
+
+$(function() {
+	$("#close-toast").click(function(){
+		var toast = document.getElementById("toast-container");
+		toast.style.visibility = 'hidden';
+	});
+});

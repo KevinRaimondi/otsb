@@ -33,13 +33,13 @@ if (isset($_POST['btnAtualizar'])) {
   if($enryptSenhaAtual == $senha){
     if($senhaNova != $senhaNovaConfim){
 
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>As senhas não conferem!</div></div></div>";
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>As senhas não conferem!</div></div></div>";
 
      // $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>As senhas não conferem!</p>";
     }else if (!empty($senhaNova) && strlen($senhaNova) < 8) {
       //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
 
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Senha com no minimo 8 caracteres!</div></div></div>";
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha com no minimo 8 caracteres!</div></div></div>";
     }
 
     if(empty($msg)){
@@ -54,11 +54,11 @@ if (isset($_POST['btnAtualizar'])) {
       if ($sql){
         //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
 
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
 
       }else{
 
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>";
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>";
 
         //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao tualizar! Favor entra em contato com o administrador.</p>";
       }
@@ -80,7 +80,7 @@ if (isset($_POST['btnAtualizar'])) {
   }else{
     //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha atual não confere!</p>";
 
-   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Senha atual não confere!</div></div></div>";
+   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha atual não confere!</div></div></div>";
  }
 
 }
