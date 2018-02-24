@@ -32,9 +32,14 @@ if (isset($_POST['btnAtualizar'])) {
 
   if($enryptSenhaAtual == $senha){
     if($senhaNova != $senhaNovaConfim){
-      $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>As senhas não conferem!</p>";
+
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>As senhas não conferem!</div></div></div>"
+
+     // $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>As senhas não conferem!</p>";
     }else if (!empty($senhaNova) && strlen($senhaNova) < 8) {
-      $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
+      //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
+
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Senha com no minimo 8 caracteres!</div></div></div>"
     }
 
     if(empty($msg)){
@@ -47,9 +52,15 @@ if (isset($_POST['btnAtualizar'])) {
       }
 
       if ($sql){
-        $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
+        //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
+
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Informações atualizadas com sucesso.</div></div></div>"
+
       }else{
-        $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao tualizar! Favor entra em contato com o administrador.</p>";
+
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>"
+
+        //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao tualizar! Favor entra em contato com o administrador.</p>";
       }
     }
 
@@ -67,7 +78,9 @@ if (isset($_POST['btnAtualizar'])) {
 
 
   }else{
-   $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha atual não confere!</p>";
+    //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha atual não confere!</p>";
+
+   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Senha atual não confere!</div></div></div>"
  }
 
 }
@@ -77,13 +90,6 @@ if (isset($_POST['btnAtualizar'])) {
 if (isset($_POST['btnAtualizarFoto'])) {
 
 }
-
-
-
-
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -106,10 +112,13 @@ if (isset($_POST['btnAtualizarFoto'])) {
   <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
   <link href="style.css" rel="stylesheet">
+  <link href="toastr/toastr.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script type="text/javascript" src="toastr/toastr.js"></script>
+  <script type="text/javascript" src="toastr/toastr.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <script type="text/javascript">
     $(document).ready(function(){
@@ -285,8 +294,6 @@ Theme Name: Squadfree
                             </td>
                           </tr>
                         </table>
-
-                        <?=$msg?>
                       </section>
                     </form>
                   </div>
