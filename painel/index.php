@@ -54,7 +54,7 @@ if (isset($_POST['btnAtualizar'])) {
       if ($sql){
         //$msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Informações atualizadas com sucesso.</p>";
 
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Informações atualizadas com sucesso.</div></div></div>";
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
 
       }else{
 
