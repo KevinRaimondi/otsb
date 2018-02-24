@@ -49,7 +49,7 @@ if (isset($_POST['btnAtualizar'])) {
       if ($sql){
         $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
       }else{
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>"
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>";
       }
     }
 
