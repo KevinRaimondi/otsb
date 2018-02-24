@@ -960,3 +960,21 @@ td .col-100 {
     padding: 1px 15px;
     color: #000;
 }
+
+div#toast-container {
+  margin-top: 35px;
+}
+
+#toast-container>:hover { 
+  -moz-box-shadow: 0 0 2px #2b2b2b; 
+  -webkit-box-shadow: 0 0 2px #2b2b2b; 
+  box-shadow: 0 0 2px #2b2b2b; 
+}
+
+#toast-container>.toast-success { 
+  background-size: 15px; 
+} 
+
+#toast-container>div { 
+  padding: 15px 15px 15px 40px; 
+}

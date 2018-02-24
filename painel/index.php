@@ -113,7 +113,7 @@ function toast_message($tipo, $msg){
   <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
   <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
-  <link href="style.css" rel="stylesheet">
+  <link href="custom-painel.css" rel="stylesheet">
   <link href="../toastr/toastr.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
