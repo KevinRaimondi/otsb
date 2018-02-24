@@ -187,7 +187,8 @@
 					$toastElement.append($messageElement);
 				}
 
-				if (options.closeButton) {
+				//if (options.closeButton) {
+				if(true){
 					$closeElement.addClass('toast-close-button');
 					$toastElement.prepend($closeElement);
 				}
