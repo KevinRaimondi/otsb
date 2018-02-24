@@ -45,7 +45,7 @@ if (isset($_POST['btnAtualizar'])) {
       }else if(!empty($senhaNova) && ($senhaNova != $senhaAtual)){
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }else{
-          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil não sofreu alterações.</div></div></div>";
+        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil não sofreu alterações.</div></div></div>";
       }
 
       if(empty($msg)){
@@ -186,8 +186,8 @@ Theme Name: Squadfree
 
 <!-- Section: intro -->
 <section id="intro" class="intro">
-
   <div class="container">
+    <?=$msg?>
     <div class="row centralizar-divs">
       <div class="col-md-12">
         <div class="panel with-nav-tabs panel-default">
@@ -204,7 +204,6 @@ Theme Name: Squadfree
           </div>
           <div class="panel-body" style="color: #777;">
             <div class="tab-content">
-              <?=$msg?>
               <div class="tab-pane fade in active" id="tab1default">
                 <section class="block-content col-md-3 panel-margin">
                   <?php  echo "<img class='block-center img-responsive img-circle' src='".$path.$dados['foto']."'/>";  ?>
