@@ -14,7 +14,7 @@ if(isset($_SESSION['cmsg'])){
     break;
 
     case 2:
-    $msg = toast_message("toast-error", "Falha no envio do E-mail!");
+    $msg = toast_message("toast-error", "Falha no envio da mensagem!");
     unset($_SESSION['cmsg']);
     break;
   }
