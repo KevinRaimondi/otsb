@@ -301,7 +301,7 @@ Theme Name: Squadfree
 
                   <div id="tab1default3" class="tab-pane fade">
                     <section class="block-content panel-margin profile-classic">
-                      <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="atualizarFoto">
+                      <form id="formFoto" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="atualizarFoto">
                         <table class="width-100">
                           <tr>
                             <td colspan="3" style="width: 49%; height: 65px;">
