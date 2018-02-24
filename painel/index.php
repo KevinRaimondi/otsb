@@ -32,47 +32,47 @@ if (isset($_POST['btnAtualizar'])) {
 
   if($enryptSenhaAtual == $senha){
     if($senhaNova != $senhaNovaConfim){
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>As senhas não correspondem.</div></div></div>";
+      $msg = toast_message("toast-warning", "As senhas não correspondem.");
     }else if (!empty($senhaNova) && strlen($senhaNova) < 8) {
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha correspondente muito curta minimo de 8 caracteres!</div></div></div>";
+     $msg = toast_message("toast-warning", "Senha correspondente muito curta minimo de 8 caracteres.");
+   }
+
+   if(empty($msg)){
+    if(($emailNovo != $email) && !empty($senhaNova) && ($senhaNova != $senhaAtual)){
+      $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+    }else if($email != $emailNovo) {
+      $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."' WHERE `usuarios`.`id` = '".$id."'");
+    }else if(!empty($senhaNova) && ($senhaNova != $senhaAtual)){
+      $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+    }else{
+      $msg = toast_message("toast-info", "Seu perfil não sofreu alterações.");
     }
 
     if(empty($msg)){
-      if(($emailNovo != $email) && !empty($senhaNova) && ($senhaNova != $senhaAtual)){
-        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
-      }else if($email != $emailNovo) {
-        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."' WHERE `usuarios`.`id` = '".$id."'");
-      }else if(!empty($senhaNova) && ($senhaNova != $senhaAtual)){
-        $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+      if ($sql){
+        $msg = toast_message("toast-success", "Seu perfil foi atualizado.");
       }else{
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil não sofreu alterações.</div></div></div>";
-      }
-
-      if(empty($msg)){
-        if ($sql){
-          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
-        }else{
-          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Favor entra em contato com o administrador.</div></div></div>";
-        }
-      }
-    }
-
-    $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE `usuarios`.`id` = '".$id."'");
-    $dados = mysqli_fetch_assoc($query);
-    $row = mysqli_num_rows($query);
-
-    if ($row > 0){
-      $email = $dados['email'];
-      $_SESSION['login'] = $dados['email'];
-      $_SESSION['senha'] = $dados['senha'];
-    }else{
-      header('Location: /sair.php');
-    }
-
-
-  }else{
-   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Sua senha está incorreta.</div></div></div>";
+       $msg = toast_message("toast-error", "Favor entra em contato com o administrador.");
+     }
+   }
  }
+
+ $query = mysqli_query($conn,"SELECT * FROM usuarios WHERE `usuarios`.`id` = '".$id."'");
+ $dados = mysqli_fetch_assoc($query);
+ $row = mysqli_num_rows($query);
+
+ if ($row > 0){
+  $email = $dados['email'];
+  $_SESSION['login'] = $dados['email'];
+  $_SESSION['senha'] = $dados['senha'];
+}else{
+  header('Location: /sair.php');
+}
+
+
+}else{
+ $msg = toast_message("toast-warning", "Sua senha está incorreta.");
+}
 
 }
 
@@ -80,6 +80,17 @@ if (isset($_POST['btnAtualizar'])) {
 
 if (isset($_POST['btnAtualizarFoto'])) {
 
+}
+
+
+
+function toast_message($tipo, $msg){
+
+// Tipos: toast-success, toast-info, toast-warning, toast-error;
+
+  $retorno = "<div id='toast-container' class='toast-top-right'><div class='toast ".$tipo."' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>".$msg."</div></div></div>";
+
+  return $retorno;
 }
 
 ?>
