@@ -32,24 +32,28 @@ if (isset($_POST['btnAtualizar'])) {
 
   if($enryptSenhaAtual == $senha){
     if($senhaNova != $senhaNovaConfim){
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>As senhas não conferem!</div></div></div>";
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>As senhas não correspondem.</div></div></div>";
     }else if (!empty($senhaNova) && strlen($senhaNova) < 8) {
-      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha com no minimo 8 caracteres!</div></div></div>";
+      $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha correspondente muito curta minimo de 8 caracteres!</div></div></div>";
     }
 
     if(empty($msg)){
-      if(($email != $emailNovo) && !empty($senhaNova) && ($senhaAtual != $senhaNova)){
+      if(($emailNovo != $email) && !empty($senhaNova) && ($senhaNova != $senhaAtual)){
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."', `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
       }else if($email != $emailNovo) {
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `email` = '".$emailNovo."' WHERE `usuarios`.`id` = '".$id."'");
-      }else{
+      }else if(!empty($senhaNova) && ($senhaNova != $senhaAtual)){
         $sql = mysqli_query($conn, "UPDATE `usuarios` SET `senha` = '".$enryptSenhaNova."' WHERE `usuarios`.`id` = '".$id."'");
+      }else{
+          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-info' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Não existe alterações.</div></div></div>";
       }
 
-      if ($sql){
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
-      }else{
-        $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Erro ao tualizar! Favor entra em contato com o administrador.</div></div></div>";
+      if(empty($msg)){
+        if ($sql){
+          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-success' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Seu perfil foi atualizado.</div></div></div>";
+        }else{
+          $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-error' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Favor entra em contato com o administrador.</div></div></div>";
+        }
       }
     }
 
@@ -67,7 +71,7 @@ if (isset($_POST['btnAtualizar'])) {
 
 
   }else{
-   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Senha atual não confere!</div></div></div>";
+   $msg = "<div id='toast-container' class='toast-top-right'><div class='toast toast-warning' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>Sua senha está incorreta.</div></div></div>";
  }
 
 }
