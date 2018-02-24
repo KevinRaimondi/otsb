@@ -9,16 +9,25 @@ if(isset($_SESSION['cmsg'])){
 
   switch($cmsg){
     case 1:
-    $msg='</b>E-mail enviado com sucesso!</b>';
+    $msg = toast_message("toast-success", "Sua mensagem foi enviada. Obrigado!");
     unset($_SESSION['cmsg']);
     break;
 
     case 2:
-    $msg='</b>Falha no envio do E-mail!</b>';
+    $msg = toast_message("toast-error", "Falha no envio do E-mail!");
     unset($_SESSION['cmsg']);
     break;
   }
 
+}
+
+function toast_message($tipo, $msg){
+
+// Tipos: toast-success, toast-info, toast-error, toast-error;
+
+  $retorno = "<div id='toast-container' class='toast-top-right'><div class='toast ".$tipo."' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>".$msg."</div></div></div>";
+
+  return $retorno;
 }
 
 ?>
@@ -42,10 +51,13 @@ if(isset($_SESSION['cmsg'])){
   <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
   <link href="css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
+  <link href="../toastr/toastr.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.min.js"></script>
   <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <script type="text/javascript">
     $(document).ready(function(){
@@ -539,7 +551,7 @@ if(isset($_SESSION['cmsg'])){
     </div>
   </div>
   <div class="container">
-
+<?=$msg?>
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5">
         <hr class="marginbot-50">
@@ -548,9 +560,6 @@ if(isset($_SESSION['cmsg'])){
     <div class="row">
       <div class="col-lg-8">
         <div class="boxed-grey">
-
-          <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
-          <div id="errormessage"></div>
           <form id="contact-form" action="enviar.php" method="post" >
             <div class="row">
               <div class="col-md-6">
@@ -584,7 +593,6 @@ if(isset($_SESSION['cmsg'])){
                 </div>
               </div>
               <div class="col-md-12">
-               <?=$msg?>
                <button type="submit" name="enviar" class="btn btn-default pull-right" id="btnContactUs">
                Enviar</button>
              </div>
