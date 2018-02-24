@@ -44,7 +44,7 @@ if (isset($_POST['btnConfirmar'])) {
 
       // Verifica se o arquivo é uma imagem
       if(!preg_match("/^image\/(pjpeg|jpeg|png|gif|bmp)$/", $foto["type"])){
-        $error[1] = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Formato de imagem Invalido!</p>";
+        $error[1] = toast_message("toast-error", "Formato de imagem Invalido!");
       } 
 
     // Pega as dimensões da imagem
@@ -62,7 +62,7 @@ if (isset($_POST['btnConfirmar'])) {
 
     // Verifica se o tamanho da imagem é maior que o tamanho permitido
       if($foto["size"] > $tamanho) {
-        $error[2] = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>A imagem deve ter no máximo ".$tamanho." bytes!</p>";
+        $error[2] = toast_message("toast-error", "A imagem deve ter no máximo ".$tamanho." bytes!");
       }
 
       $largura_orig = $dimensoes[0];
@@ -116,30 +116,30 @@ function validar($senha, $senhaConfim, $conn, $usuario, $email, $token){
   $msg = "";
 
   if($senha != $senhaConfim){
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>As senhas não conferem!</p>";
+    $msg = toast_message("toast-error", "As senhas não correspondem!");
   }else if (strlen($senha) < 8) {
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Senha com no minimo 8 caracteres!</p>";
+    $msg = toast_message("toast-error", "Senha com no minimo 8 caracteres!");
   }else{
 
     $verificarExistenciaToken = mysqli_query($conn,"SELECT * FROM tokens WHERE  token = '$token'");
     $rowToken = mysqli_num_rows($verificarExistenciaToken);
 
     if ($rowToken == 0){
-      $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Token Invalido!</p>";
+      $msg = toast_message("toast-error", "Token Invalido!");
     }else{
 
       $verificarExistenciaLogin = mysqli_query($conn,"SELECT * FROM usuarios WHERE  nome = '$usuario'");
       $rowUsuarios = mysqli_num_rows($verificarExistenciaLogin);
 
       if ($rowUsuarios > 0){
-        $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Já existe um usuário cadastrado!</p>";
+        $msg = toast_message("toast-error", "Já existe um usuário cadastrado!");
       }else{
 
         $verificarExistenciaEmail = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = '$email'");
         $rowEmail = mysqli_num_rows($verificarExistenciaEmail);
 
         if ($rowEmail > 0){
-          $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Já existe um e-mail cadastrado!</p>";
+          $msg = toast_message("toast-error", "Já existe um e-mail cadastrado!");
         }
       }
 
@@ -162,18 +162,25 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
   // Se os dados forem inseridos com sucesso
   if ($sql){
     $sqlToken = mysqli_query($conn, "DELETE FROM `tokens` WHERE `tokens`.`token` = '".$token."'");
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #000; margin: 0;'>Você foi cadastrado com sucesso.</p>";    
+    $msg = toast_message("toast-success", "Você foi cadastrado com sucesso.");    
   }else{
     if(!empty($caminho_imagem)){
       unlink($caminho_imagem);
     }
-
-    $msg = "<p id='mensagem' style='text-shadow: 0px 0px 5px #f00; margin: 0;'>Erro ao cadastrar! Favor entra em contato com o administrador.</p>";
+    $msg = toast_message("toast-error", "Favor entra em contato com o administrador!");
   }
 
   return $msg;
 }
 
+function toast_message($tipo, $msg){
+
+// Tipos: toast-success, toast-info, toast-error, toast-error;
+
+  $retorno = "<div id='toast-container' class='toast-top-right'><div class='toast ".$tipo."' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>".$msg."</div></div></div>";
+
+  return $retorno;
+}
 
 ?>
 <!DOCTYPE html>
@@ -276,6 +283,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
 <section id="intro" class="intro">
 
   <div class="container">
+    <?=$msg?>
     <div class="row centralizar-divs">
       <div class="col-lg-8">
         <div class="panel panel-default" >
@@ -350,11 +358,7 @@ function inserir($conn, $usuario, $email, $senha, $nome_imagem, $caminho_imagem,
             <!-- Button (Double) -->
             <table class="align-center width-100">
               <tr>
-                <td  style="width: 70%;" class="align-center">
-                  <?=$msg?>
-                </td>
-
-                <td style="width: 21%;">
+                <td>
                   <button id="btnLimpar" name="btnLimpar" class="btn btn-default" type="button">Limpar</button>
                   <button id="btnConfirmar" name="btnConfirmar" class="btn btn-primary" type="submit">Confirmar</button>
                 </td>

@@ -32,12 +32,21 @@ if (isset($_POST['btnLogin'])) {
       $_SESSION['foto'] = $dados['foto'];
       header('Location: /painel');
     }else{
-     $msg = "<span style='color: red;'>O usuário está desabilitado!</span>";
+     $msg = toast_message("toast-error", "O usuário está desabilitado!");
    }
  }else{
-  $msg = "<span style='color: red;'>Usúario ou senha invalido</span>";
+  $msg = toast_message("toast-error", "Usúario ou senha invalido!");
 }
 
+}
+
+function toast_message($tipo, $msg){
+
+// Tipos: toast-success, toast-info, toast-error, toast-error;
+
+  $retorno = "<div id='toast-container' class='toast-top-right'><div class='toast ".$tipo."' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>".$msg."</div></div></div>";
+
+  return $retorno;
 }
 
 ?>

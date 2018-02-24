@@ -23,11 +23,11 @@ if (isset($_POST['btnEnviar'])) {
   $dados = mysqli_fetch_assoc($verificarExistenciaEmail);
 
   if ($rowEmail == 0){
-    $msg = "<span style='color: red;'>O e-mail não existe</span>";
+    $msg = toast_message("toast-error", "O e-mail não existe!");
   } else {
     $status = $dados['status']; 
     if ($status != 0){
-      $msg = "<span style='color: red;'>O usuário está desabilitado!</span>";
+      $msg = toast_message("toast-error", "O usuário está desabilitado!");
     }
   }
 
@@ -53,11 +53,11 @@ if (isset($_POST['btnEnviar'])) {
     if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
       $msg = "<span>Sua nova senha foi enviada por e-mail</span>";
     }else{
-      $msg = "<span style='color: red;'>Houve algum problema ao enviar sua nova senha!</span>";
+      $msg = toast_message("toast-error", "Houve algum problema ao enviar sua nova senha!");
     }
 
   }else{
-    $msg = "<span style='color: red;'>Não foi possivel recuperar sua conta.</span>";
+    $msg = toast_message("toast-error", "Não foi possivel recuperar sua conta!");
   }
 
 }
@@ -70,6 +70,15 @@ function gerarSenha($size = 8){
   $randomString .= $chars[mt_rand(0,60)];
 }
 return $randomString;
+}
+
+function toast_message($tipo, $msg){
+
+// Tipos: toast-success, toast-info, toast-error, toast-error;
+
+  $retorno = "<div id='toast-container' class='toast-top-right'><div class='toast ".$tipo."' style=''><button id='close-toast' class='toast-close-button'>×</button><div class='toast-message'>".$msg."</div></div></div>";
+
+  return $retorno;
 }
 
 ?>
@@ -177,8 +186,8 @@ return $randomString;
 
 <!-- Section: intro -->
 <section id="intro" class="intro">
-
   <div class="container">
+    <?=$msg?>
     <div class="row centralizar-divs">
       <div class="col-lg-4">
         <div class="panel panel-default" >
@@ -189,10 +198,6 @@ return $randomString;
           <div class="panel-body" >
 
             <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-              <div style="margin: 0; text-align:  center;">
-                <?=$msg?>
-              </div>
-              
               <div class="input-group width-100">
                 <span class="input-group-addon" style="width: 12%;"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">
