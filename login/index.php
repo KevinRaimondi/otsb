@@ -69,13 +69,13 @@ function toast_message($tipo, $msg){
   <script src="https://use.fontawesome.com/0ca22a4c02.js"></script>
   <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
-  <link href="toastr/toastr.min.css" rel="stylesheet">
+  <link href="../toastr/toastr.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-  <script type="text/javascript" src="toastr/toastr.js"></script>
-  <script type="text/javascript" src="toastr/toastr.min.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <script type="text/javascript">
     $(document).ready(function(){
@@ -152,8 +152,8 @@ function toast_message($tipo, $msg){
 
 <!-- Section: intro -->
 <section id="intro" class="intro">
-
   <div class="container">
+    <?=$msg?>
     <div class="row centralizar-divs">
       <div class="col-lg-4">
         <div class="panel panel-default" >
@@ -163,11 +163,7 @@ function toast_message($tipo, $msg){
 
           <div class="panel-body" >
 
-            <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-              <div style="margin: 0; text-align:  center;">
-                <?=$msg?>
-              </div>
-              
+            <form id="form" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">           
               <div class="input-group width-100">
                 <span class="input-group-addon" style="width: 12%;"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 <input id="email" name="email" class="form-control" placeholder="E-mail" type="email" value="<?php echo $email ?>" required="">

@@ -114,13 +114,13 @@ function toast_message($tipo, $msg){
   <link href="../css/animate.css" rel="stylesheet" />
   <!-- Squad theme CSS -->
   <link href="style.css" rel="stylesheet">
-  <link href="toastr/toastr.min.css" rel="stylesheet">
+  <link href="../toastr/toastr.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
   <link href="../color/default.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-  <script type="text/javascript" src="toastr/toastr.js"></script>
-  <script type="text/javascript" src="toastr/toastr.min.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.js"></script>
+  <script type="text/javascript" src="../toastr/toastr.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <script type="text/javascript">
     $(document).ready(function(){
