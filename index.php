@@ -140,7 +140,8 @@ function toast_message($tipo, $msg){
   </nav>
 
   <!-- Section: intro -->
-  <section id="intro" class="intro pattern">
+  <section id="intro" class="intro">
+    <div class="pattern"></div>
 
     <div class="slogan">
       <h2>BEM-VINDOS</h2>
