@@ -982,7 +982,7 @@ div#toast-container {
 /* === pattern overlay === */
 .pattern {
   background: url(../img/pattern.png);
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
